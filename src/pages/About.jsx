@@ -1,10 +1,10 @@
-import React from "react"
-import Nav from "../components/Navbar"
+import React from "react";
 
 export default function About() {
-    return (
-        <div><Nav/>
-        About
-        </div>
-    )
+  return (
+    <div style={{ height: "600px" }}>
+      <div style={{ height: "500px" }} />
+      About
+    </div>
+  );
 }
