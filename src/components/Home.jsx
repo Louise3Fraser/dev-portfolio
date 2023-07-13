@@ -81,6 +81,7 @@ export default function Home() {
               </Toolbar>
             </AppBar>
           </ThemeProvider>
+          <div style={{height: "600px"}}/>
           <div ref={aboutRef}>
             <About />
           </div>
@@ -91,6 +92,7 @@ export default function Home() {
             <Portfolio />
           </div>
         </Box>
+        
       </Box>
     </div>
   );

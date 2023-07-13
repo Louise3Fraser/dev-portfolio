@@ -15,7 +15,7 @@ const theme = createTheme({
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          borderColor: "#b23a2a",
+          borderColor: "transparent",
           backgroundColor: "transparent"
         }
       }
@@ -55,10 +55,10 @@ export default function Sidebar() {
     <ThemeProvider theme={theme}>
       <Drawer
         sx={{
-          width: 450,
+          width: 500,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: 450,
+            width: 500,
             boxSizing: "border-box",
           },
         }}
@@ -70,23 +70,20 @@ export default function Sidebar() {
           sx={{
             justifyContent: "left",
             alignContent: "left",
-            marginLeft: "50px",
+            marginLeft: "100px",
           }}
         >
           <Typography variant="h2" fontSize={"20px"} color="#1a1a1a">
             Hello! My name is
           </Typography>
-          <Typography variant="h1" fontSize={"50px"} color="#1a1a1a">
+          <Typography variant="h1" fontSize={"45px"} color="#1a1a1a">
             louise.fraser
           </Typography>
           <div style={{ height: "10px" }} />
           <Typography variant="h3" fontSize={"15px"} color="#1a1a1a">
-            I am a computer science and psychology major <br />
-            at Vanderbilt University. In my free time, I love to <br />
-            design, watch movies, read fantasy novels, go to <br />
-            the gym, and play videogames.
+            I am a full time student at Vanderbilt <br />University, studying computer science <br />and psychology.
           </Typography>
-          <div style={{ height: "300px" }} />
+          <div style={{ height: "400px" }} />
           <Box
             sx={{
               display: "flex",
@@ -99,7 +96,6 @@ export default function Sidebar() {
                 scale: 1.2,
               }}
               whileTap={{ scale: 0.9 }}
-              // style={{ width: "fit-content" }}
             >
               <GitHubIcon />
             </motion.button>
@@ -108,7 +104,6 @@ export default function Sidebar() {
                 scale: 1.2,
               }}
               whileTap={{ scale: 0.9 }}
-              // style={{ width: "fit-content" }}
             >
               <LinkedInIcon />
             </motion.button>
@@ -117,7 +112,6 @@ export default function Sidebar() {
                 scale: 1.2,
               }}
               whileTap={{ scale: 0.9 }}
-              // style={{ width: "fit-content" }}
             >
               <EmailIcon />
             </motion.button>
