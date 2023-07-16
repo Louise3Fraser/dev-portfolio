@@ -1,0 +1,76 @@
+.about {
+  background-color: #24252b;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  justify-content: space-evenly;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-header {
+  background-color: #24252b;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  width: 400px;
+}
+
+.job {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+p {
+  color: #999898;
+}
+.job-info {
+  display: flex;
+  flex-direction: column;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+.skills-used {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  width: 600px;
+}
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skills-used p {
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 12px;
+    background-color: #88a869;
+}
+p {
+    color: #edece8;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+}

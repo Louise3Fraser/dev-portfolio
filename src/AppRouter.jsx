@@ -6,9 +6,6 @@ function AppRouter() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      {/* <Route exact path="/About" element={<About/>}/>
-      <Route exact path="/Skills" element={<Skills/>}/>
-      <Route exact path="/Portfolio" element={<Portfolio/>}/> */}
     </Routes>
   );
 }

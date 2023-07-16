@@ -1,20 +1,17 @@
 import React, { useRef } from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
+import { AppBar, Box, Toolbar, Button } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import About from "../pages/About";
 import Skills from "../pages/Skills";
 import Portfolio from "../pages/Portfolio";
-import Sidebar from "./Sidebar";
+import Title from "../pages/Title";
 
 const theme = createTheme({
   components: {
     MuiAppBar: {
       styleOverrides: {
         colorPrimary: {
-          backgroundColor: "transparent",
+          backgroundColor: "#edece8",
         },
         colorSecondary: {
           backgroundColor: "transparent",
@@ -41,22 +38,16 @@ export default function Home() {
     ref.current && ref?.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const drawerWidth = 450;
   return (
     <div>
       <Box sx={{ display: "flex" }}>
-        <Sidebar />
-        <Box
-          component="main"
-          sx={{ flexGrow: 1, p: 3 }}
-        >
+        <Box component="main" sx={{ flexGrow: 1 }}>
           <ThemeProvider theme={theme}>
             <AppBar
               elevation={0}
               position="fixed"
               sx={{
-                width: `calc(100% - ${drawerWidth}px)`,
-                ml: `${drawerWidth}px`,
+                height: "60px",
               }}
             >
               <Toolbar sx={{ justifyContent: "right" }}>
@@ -81,7 +72,7 @@ export default function Home() {
               </Toolbar>
             </AppBar>
           </ThemeProvider>
-          <div style={{height: "600px"}}/>
+          <Title />
           <div ref={aboutRef}>
             <About />
           </div>
@@ -92,25 +83,7 @@ export default function Home() {
             <Portfolio />
           </div>
         </Box>
-        
       </Box>
     </div>
   );
-}
-
-{
-  /* <Parallax pages={4} style={{ top: "0", left: "0" }} className="animation">
-        <ParallaxLayer offset={0} speed={0.25}>
-          <img src={fourth} alt="Back" style={{ width: "100%" }} />
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={0.3}>
-          <img src={third} alt="Middle1" style={{ width: "100%" }} />
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={0.35}>
-          <img src={second} alt="Middle2" style={{ width: "100%" }} />
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={.4}>
-          <img src={first} alt="Front" style={{ width: "100%" }} />
-        </ParallaxLayer>
-      </Parallax> */
 }
