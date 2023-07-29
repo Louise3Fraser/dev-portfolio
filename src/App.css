@@ -1,7 +1,20 @@
 
+.name-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 html {
-  background-color:#edece8;
+  background-color:#f7f3ef;
+}
+
+.title-ref {
+  padding-top: 250px;
+  padding-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -32,32 +45,13 @@ ol li {
   left: 0;
   pointer-events: none;
 }
-/* .animation {
-  display: block;
-	position: relative;
-	z-index: 10;
+
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
-.animation_layer {
-	background-position: bottom center;
-	background-size: auto 1038px;
-	background-repeat: repeat-x;
-	width: 100%;
-	position: absolute;
+.main-layout {
+  display: flex;
+  flex-direction: row;
 }
-.animation_layer.parallax {
-	position: fixed;
-} */
-
-/* #first {
-  background-image: url(./images/4.png)
-}
-#second {
-  background-image: url(./images/3.png)
-}
-#third {
-  background-image: url(./images/2.png)
-}
-#fourth {
-  background-image: url(./images/1.png)
-} */

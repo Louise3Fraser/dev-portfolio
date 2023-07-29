@@ -1,65 +1,63 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
+import { Typography, ThemeProvider } from "@mui/material";
+import AWS from "../images/aws.png";
+import cplus from "../images/c++.png";
+import java from "../images/java.png";
+import javascript from "../images/javascript.png";
+import python from "../images/python.png";
+import react from "../images/react.png";
+import typescript from "../images/typescript.png";
+import "../pages-css/Skills.css";
+import SkillCard from "../components/SkillCard";
+import { theme } from "../Theme";
 
 export default function Skills() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "flex-end",
-        flexDirection: "column",
-        gap: "20px",
-      }}
-    >
-      <Card
-        sx={{
-          width: "70%",
-          backgroundColor: "transparent",
-          border: "1px solid #1a1a1a",
-        }}
-      >
-        <CardContent>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              alignItems: "flex-end",
-              flexDirection: "column",
-              gap: "20px",
-            }}
+    <div className="skills">
+      <ThemeProvider theme={theme}>
+        <div className="about-header">
+          <Typography
+            sx={{ paddingTop: 5 }}
+            variant="h1"
+            fontSize={"30px"}
+            color="#24252b"
           >
-            <Typography sx={{ fontSize: 14 }}> Testing</Typography>
-            <Typography variant="h5">Test2</Typography>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-              flexDirection: "column",
-              gap: "20px",
-            }}
+            Skills
+          </Typography>
+          {/* <Typography
+            variant="h3"
+            sx={{ paddingTop: 5 }}
+            fontSize={"15px"}
+            color="#24252b"
           >
-            <Typography sx={{ fontSize: 14 }}> Testing</Typography>
-            <Typography variant="h5">Test2</Typography>
-          </div>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          width: "70%",
-          backgroundColor: "transparent",
-          border: "1px solid #1a1a1a",
-        }}
-      >
-        <CardContent>
-          <Typography sx={{ fontSize: 14 }}> Testing</Typography>
-          <Typography variant="h5">Test2</Typography>
-        </CardContent>
-      </Card>
+            One of my biggest regrets is not learning about software development
+            sooner. In my free time, I enjoy going to the gym, drawing, coding,
+            and watching movies.
+          </Typography> */}
+        </div>
+      </ThemeProvider>
+
+      <div className="first-row">
+        <SkillCard
+          image={cplus}
+          description={
+            "C++ is the primary language used in computer science classes at Vanderbilt. As such, I have "
+          }
+        />
+        <SkillCard image={java} description={"Hi this is a description"} />
+        <SkillCard
+          image={javascript}
+          description={"Hi this is a description"}
+        />
+        <SkillCard image={react} description={"Hi this is a description"} />
+
+        <SkillCard image={python} description={"Hi this is a description"} />
+        <SkillCard image={AWS} description={"Hi this is a description"} />
+        <SkillCard
+          image={typescript}
+          description={"Hi this is a description"}
+        />
+      </div>
     </div>
   );
 }

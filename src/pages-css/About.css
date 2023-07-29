@@ -1,9 +1,10 @@
 .about {
-  background-color: #24252b;
+  background-color: #f7f3ef;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 40px;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
 
 .date {
@@ -12,15 +13,13 @@
 }
 
 .about-header {
-  background-color: #24252b;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
-  align-content: flex-start;
+  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
   margin-top: 70px;
-  width: 400px;
 }
 
 .job {
@@ -51,8 +50,10 @@ ol {
 .experience {
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
-  width: 600px;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  max-width: 550px;
+  min-width: 10px;
 }
 .experience-list {
   display: flex;
@@ -61,16 +62,19 @@ ol {
 }
 
 .skills-used p {
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 12px;
-    background-color: #88a869;
+  border-radius: 12px;
+  border: 1px solid #24252b;
+  padding: 8px;
+  font-size: 12px;
+  /* background: linear-gradient(to left, #f4ecce, #fffeff 25%, #fffeff 75%, #f4ecce 100%); */
+  background-color: #fffeff;
 }
 p {
-    color: #edece8;
+  color: #24252b;
+  font-weight: 600;
 }
 
 .title {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }

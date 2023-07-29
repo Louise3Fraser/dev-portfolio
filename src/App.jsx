@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { BrowserRouter } from "react-router-dom";
 import {motion} from "framer-motion"
+import Sidebar from "./components/Sidebar";
 import AppRouter from "./AppRouter"
 import "./App.css";
 // import { motion } from "framer-motion";
