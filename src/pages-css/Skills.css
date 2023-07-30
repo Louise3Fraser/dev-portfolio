@@ -1,8 +1,7 @@
 .skills {
     display: flex;
     flex-direction: column;
-    min-width: 0px;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .card {
@@ -17,13 +16,6 @@
     flex-direction: column;
     padding-top: 100px;
     gap: 100px;
-}
-
-.second-row {
-    display: flex;
-    flex-direction: row;
-    padding-top: 250px;
-    gap:100px;
 }
 
 .skills img {

@@ -1,16 +1,4 @@
-.sidebar {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-    margin-top: 100px;
-    width: 20%;
-    flex-grow: 1;
+.socials {
+  display: flex;
+  flex-direction: column;
 }
-
-.title-intro {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
-

@@ -5,10 +5,8 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "../pages-css/Skills.css";
 import { IconButton } from "@mui/material";
 
-export default function SkillCard(props) {
+export default function SkillCard({image, description}) {
   const [expanded, setExpanded] = useState(false);
-  const image = props.image;
-  const description = props.description;
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -21,7 +19,7 @@ export default function SkillCard(props) {
         <CardContent>
           <img src={image} alt="cplus" />
         </CardContent>
-        <IconButton sx={{backgroundColor: "#c4c8ee"}} onClick={() => setExpanded(!expanded)}>
+        <IconButton onClick={() => setExpanded(!expanded)}>
           {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
         </IconButton>
         </div>

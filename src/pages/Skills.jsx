@@ -14,29 +14,6 @@ import { theme } from "../Theme";
 export default function Skills() {
   return (
     <div className="skills">
-      <ThemeProvider theme={theme}>
-        <div className="about-header">
-          <Typography
-            sx={{ paddingTop: 5 }}
-            variant="h1"
-            fontSize={"30px"}
-            color="#24252b"
-          >
-            Skills
-          </Typography>
-          {/* <Typography
-            variant="h3"
-            sx={{ paddingTop: 5 }}
-            fontSize={"15px"}
-            color="#24252b"
-          >
-            One of my biggest regrets is not learning about software development
-            sooner. In my free time, I enjoy going to the gym, drawing, coding,
-            and watching movies.
-          </Typography> */}
-        </div>
-      </ThemeProvider>
-
       <div className="first-row">
         <SkillCard
           image={cplus}
@@ -50,7 +27,6 @@ export default function Skills() {
           description={"Hi this is a description"}
         />
         <SkillCard image={react} description={"Hi this is a description"} />
-
         <SkillCard image={python} description={"Hi this is a description"} />
         <SkillCard image={AWS} description={"Hi this is a description"} />
         <SkillCard

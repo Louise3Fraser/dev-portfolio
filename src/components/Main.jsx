@@ -3,17 +3,17 @@ import {
   AppBar,
   Toolbar,
   Button,
-  IconButton,
   ThemeProvider,
+  Typography,
 } from "@mui/material";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import About from "../pages/About";
 import Skills from "../pages/Skills";
 import Portfolio from "../pages/Portfolio";
 import Sidebar from "./Sidebar";
+import Home from "../pages/Home";
 import { theme } from "../Theme";
 
-export default function Home() {
+export default function Main() {
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const portfolioRef = useRef(null);
@@ -29,57 +29,57 @@ export default function Home() {
           elevation={0}
           position="fixed"
           sx={{
+            backgroundColor: "#9cacad",
             height: "60px",
           }}
         >
           <Toolbar sx={{ justifyContent: "right", gap: "15px" }}>
-            <IconButton onClick={() => executeScroll(titleRef)}>
-              <KeyboardArrowUpIcon />
-            </IconButton>
             <Button
               onClick={() => executeScroll(aboutRef)}
               sx={{
-                color: "#030b15",
-                backgroundColor: "#b0c5fa",
+                color: "#f7f3ef",
                 borderRadius: "20px",
               }}
             >
-              About
+              <Typography fontSize={"15px"} variant="h1">
+                About
+              </Typography>
             </Button>
             <Button
               onClick={() => executeScroll(skillsRef)}
               sx={{
-                color: "#030b15",
-                backgroundColor: "#f5bdad",
+                color: "#f7f3ef",
                 borderRadius: "20px",
               }}
             >
-              Skills
+              <Typography fontSize={"15px"} variant="h1">
+                Skills
+              </Typography>
             </Button>
             <Button
               onClick={() => executeScroll(portfolioRef)}
               sx={{
-                color: "#030b15",
-                backgroundColor: "#ceb7fa",
+                color: "#f7f3ef",
                 borderRadius: "20px",
               }}
             >
-              Portfolio
+              <Typography fontSize={"15px"} variant="h1">
+                Portfolio
+              </Typography>
             </Button>
           </Toolbar>
         </AppBar>
-        <div className="main-layout">
-          <Sidebar />
-          <div className="main">
-            <div ref={aboutRef}>
-              <About />
-            </div>
-            <div ref={skillsRef}>
-              <Skills />
-            </div>
-            <div ref={portfolioRef}>
-              <Portfolio />
-            </div>
+        <Sidebar />
+        <Home />
+        <div className="main">
+          <div ref={aboutRef}>
+            <About />
+          </div>
+          <div ref={skillsRef}>
+            <Skills />
+          </div>
+          <div ref={portfolioRef}>
+            <Portfolio />
           </div>
         </div>
       </ThemeProvider>
