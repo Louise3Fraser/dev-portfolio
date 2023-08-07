@@ -9,7 +9,6 @@ import {
 import About from "../pages/About";
 import Skills from "../pages/Skills";
 import Portfolio from "../pages/Portfolio";
-import Sidebar from "./Sidebar";
 import Home from "../pages/Home";
 import { theme } from "../Theme";
 
@@ -17,20 +16,19 @@ export default function Main() {
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const portfolioRef = useRef(null);
-  const titleRef = useRef(null);
+
   const executeScroll = (ref) => {
     ref.current && ref?.current.scrollIntoView({ behavior: "smooth" });
   };
-
+  
   return (
     <div>
       <ThemeProvider theme={theme}>
         <AppBar
           elevation={0}
-          position="fixed"
+          position="sticky"
           sx={{
-            backgroundColor: "#9cacad",
-            height: "60px",
+            backgroundColor: "transparent",
           }}
         >
           <Toolbar sx={{ justifyContent: "right", gap: "15px" }}>
@@ -69,15 +67,14 @@ export default function Main() {
             </Button>
           </Toolbar>
         </AppBar>
-        <Sidebar />
-        <Home />
+        <Home/>
         <div className="main">
-          <div ref={aboutRef}>
-            <About />
+          <div className="about" ref={aboutRef}>
+            <About/>
           </div>
-          <div ref={skillsRef}>
+          {/* <div ref={skillsRef}>
             <Skills />
-          </div>
+          </div> */}
           <div ref={portfolioRef}>
             <Portfolio />
           </div>

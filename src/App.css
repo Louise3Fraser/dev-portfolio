@@ -6,7 +6,7 @@
 }
 
 html {
-  background-color:#9eadaf;
+  background-color:#ee7857
 }
 
 .title-ref {
@@ -40,15 +40,16 @@ ol li {
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  
   top: 0;
   left: 0;
   pointer-events: none;
 }
 
-.main {
+.about {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  background-color: #efdfd4;
 }
 
 .main-layout {
