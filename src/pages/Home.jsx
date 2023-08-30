@@ -19,9 +19,8 @@ export default function Home() {
           color="#63605b"
           lineHeight={"25px"}
         >
-          I am a double major in computer science and psychology. In my free
-          time, I enjoy coding, drawing, going to the gym, and trying new
-          restraunts in the area.
+          I am current junior at Vanderbilt University double majoring in computer science and psychology. In my free
+          time, I enjoy coding, drawing, playing videogames, going to the gym, and trying new cuisines.
         </Typography>
         <div className="socials">
           <motion.button
