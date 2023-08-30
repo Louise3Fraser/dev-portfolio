@@ -31,7 +31,7 @@ export default function Home() {
             whileTap={{ scale: 0.9 }}
             onClick={() => window.open("https://github.com/Louise3Fraser")}
           >
-            <GitHubIcon color="primary"/>
+            <GitHubIcon style={{color: "black"}}/>
           </motion.button>
           <motion.button
             whileHover={{
@@ -44,7 +44,7 @@ export default function Home() {
               )
             }
           >
-            <LinkedInIcon color="primary"/>
+            <LinkedInIcon style={{color: "black"}}/>
           </motion.button>
           <motion.button
             whileHover={{
@@ -53,7 +53,7 @@ export default function Home() {
             whileTap={{ scale: 0.9 }}
             // onClick={() => window.open("https://www.hc1.com")}
           >
-            <EmailIcon color="primary" />
+            <EmailIcon style={{color: "black"}} />
           </motion.button>
         </div>
       </div>
