@@ -1,41 +1,22 @@
-
-.about-divide {
+.experience-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
 }
 
-.experience {
-  padding: 60px;
-}
-ul,
-ol {
-  padding: 0;
-  margin: 0;
-}
-
-.skills {
+.skills-list {
   display: flex;
-  flex-direction: row !important;
-  gap: 4px;
+  flex-direction: column !important;
+  gap: 5px;
+  min-width: 20%
 }
 
 .skill {
-  border-radius: 12px;
-  /* border: 1px solid #24252b; */
-  padding: 7px;
+  padding: 8px;
   font-size: 12px;
-  /* background: linear-gradient(to left, #f4ecce, #fffeff 25%, #fffeff 75%, #f4ecce 100%); */
-  background-color: #ee7857;
-}
-
-li {
-  padding: 20px;
-}
-
-.list-row {
-  display: flex;
-  flex-direction: row;
+  border-radius: 20px;
+  cursor: default
 }
 
 .link {

@@ -14,21 +14,19 @@ const images = [java, javascript, cplus, react, python, typescript, AWS];
 
 export default function Skills() {
   return (
-    <div className="skills">
-      <div style={{ height: 900 }} />
-      {images.map((image) => {
-        return (
-          <Card
-            key={image}
-            elevation={0}
-            style={{ backgroundColor: "transparent", width: "150px" }}
-          >
-            <CardContent>
-              <img src={image} alt="cplus" />
-            </CardContent>
-          </Card>
-        );
-      })}
-    </div>
+    <ThemeProvider theme={theme}>
+      <h1 style={{ fontSize: "25px" }}>Skills</h1>
+      <div className="skills-section">
+        
+
+        {images.map((image) => {
+          return (
+            <div key={image}>
+              <img src={image} style={{ maxWidth: "100px" }} />
+            </div>
+          );
+        })}
+      </div>
+    </ThemeProvider>
   );
 }

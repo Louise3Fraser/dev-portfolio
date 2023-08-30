@@ -1,0 +1,25 @@
+.layout {
+  border-left: 1px solid #facdbc;
+}
+
+.first-row {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+  max-width: 550px;
+  padding: 20px;
+  align-items: flex-start
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

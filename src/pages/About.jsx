@@ -1,317 +1,38 @@
 import React from "react";
-import { Typography, ThemeProvider, Card, CardContent } from "@mui/material";
-import CallMissedOutgoingIcon from "@mui/icons-material/CallMissedOutgoing";
-import { motion } from "framer-motion";
-import "../pages-css/Title.css";
-import { theme } from "../Theme";
+import { ThemeProvider } from "@mui/material";
+import ExperienceCards from "../components/sub_components/ExperienceCards";
+import { useTheme, useMediaQuery, Box } from "@mui/material";
 
-const hc1 = ["Javascript", "React", "APIs", "AWS"];
+const hc1 = {
+  date: "SUMMER 2023",
+  title: "Software Engineer Intern - hc1",
+  description:
+    "Created a full React app for user management of 3Aware. App allows admin to edit, create, delete users. The App utilized CAS endpoints, MUI library, and React Final Form. It was eventually deployed to AWS using S3 and CloudFront.",
+  img: "null",
+  skills: ["Javascript", "React", "APIs", "AWS"],
+  takeaways:
+    "My experience with full stack development has skyrocketed since this internship.",
+};
+
+const lifeomic = {
+  date: "SUMMER 2022",
+  title: "Computer Science Intern - LifeOmic",
+  description:
+    "Created applet with APIs for searching physicians in a designated geographic region and providing physician information. Developed applets and translated code using React, Javascript, Typescript, and Python. Tested code with unit and Cypress testing",
+  skills: ["Javascript", "React", "Typescript", "Python", "Cypress"],
+  takeaways: "I learned",
+};
+
 export default function About() {
+  const theme = useTheme();
+  const screenSize = useMediaQuery(theme.breakpoints.up("md"));
+
   return (
     <ThemeProvider theme={theme}>
-      <div className="about-divide">
-        <div className="main-about">
-          <Typography fontSize={"12px"} color="#ee7857">
-            I was born and raised in Indianapolis, Indiana. One of my biggest
-            regrets is not learning about software development sooner. In my
-            free time, I enjoy going to the gym, drawing, coding, and watching
-            movies.
-          </Typography>
-          <div className="name-rotate">
-            <Typography variant="h1" fontSize={"40px"} color="#ee7857">
-              About
-            </Typography>
-          </div>
-        </div>
-        <div className="experience">
-          <ol type="none" className="experience-list">
-            <div className="list-row">
-              <li className="job">
-                <Card
-                  sx={{
-                    borderRadius: "0px",
-                    maxHeight: "400vh",
-                    maxWidth: "450vh",
-                    backgroundColor: "#ead0be",
-                  }}
-                >
-                  <CardContent sx={{ padding: "20px" }}>
-                    <Typography
-                      className="date"
-                      fontSize={"12px"}
-                      color="#f7f3ef"
-                      variant="h1"
-                    >
-                      Summer 2023
-                    </Typography>
-                    <div className="job-info">
-                      <div className="link">
-                        <Typography
-                          variant="h1"
-                          fontSize={"20px"}
-                          color="#ee7857"
-                        >
-                          Software Engineer Intern - hc1
-                        </Typography>
-                        <motion.button
-                          whileHover={{
-                            scale: 1.2,
-                          }}
-                          whileTap={{ scale: 0.9 }}
-                          onClick={() => window.open("https://www.hc1.com")}
-                        >
-                          <CallMissedOutgoingIcon
-                            style={{ color: "#f7f3ef" }}
-                          />
-                        </motion.button>
-                      </div>
-                      <Typography fontSize={"14px"} color="#ee7857">
-                        Deliver high-quality, robust production code for a
-                        diverse array of projects for clients including Harvard
-                        Business School, Everytown for Gun Safety, Pratt
-                        Institute, Koala Health, Vanderbilt University, The 19th
-                        News, and more. Provide leadership within engineering
-                        department through close collaboration, knowledge
-                        shares, and mentorship.
-                      </Typography>
-                      <div className="skills">
-                        {hc1.map((skill) => {
-                          return (
-                            <motion.div
-                              key={skill}
-                              className="animatable"
-                              whileHover={{
-                                scale: 1.07,
-                              }}
-                            >
-                              <div className="skill">
-                                <Typography
-                                  variant="h1"
-                                  color="#f7f3ef"
-                                  fontSize={"12px"}
-                                >
-                                  {skill}
-                                </Typography>
-                              </div>
-                            </motion.div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </li>
-
-              <li className="job">
-                <Card
-                  sx={{
-                    borderRadius: "0px",
-                    maxHeight: "400vh",
-                    maxWidth: "450vh",
-                    backgroundColor: "#ead0be",
-                  }}
-                >
-                  <CardContent sx={{ padding: "20px" }}>
-                    <Typography
-                      className="date"
-                      fontSize={"12px"}
-                      color="#f7f3ef"
-                      variant="h1"
-                    >
-                      Summer 2023
-                    </Typography>
-                    <div className="job-info">
-                      <div className="link">
-                        <Typography
-                          variant="h1"
-                          fontSize={"20px"}
-                          color="#ee7857"
-                        >
-                          Software Engineer Intern - hc1
-                        </Typography>
-                        <motion.button
-                          whileHover={{
-                            scale: 1.2,
-                          }}
-                          whileTap={{ scale: 0.9 }}
-                          onClick={() => window.open("https://www.hc1.com")}
-                        >
-                          <CallMissedOutgoingIcon
-                            style={{ color: "#f7f3ef" }}
-                          />
-                        </motion.button>
-                      </div>
-                      <Typography fontSize={"14px"} color="#ee7857">
-                        Deliver high-quality, robust production code for a
-                        diverse array of projects for clients including Harvard
-                        Business School, Everytown for Gun Safety, Pratt
-                        Institute, Koala Health, Vanderbilt University, The 19th
-                        News, and more. Provide leadership within engineering
-                        department through close collaboration, knowledge
-                        shares, and mentorship.
-                      </Typography>
-                      <div className="skills">
-                        {hc1.map((skill) => {
-                          return (
-                            <motion.div
-                              key={skill}
-                              className="animatable"
-                              whileHover={{
-                                scale: 1.07,
-                              }}
-                            >
-                              <div className="skill">
-                                <Typography
-                                  variant="h1"
-                                  color="#f7f3ef"
-                                  fontSize={"12px"}
-                                >
-                                  {skill}
-                                </Typography>
-                              </div>
-                            </motion.div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </li>
-            </div>
-
-            <div className="list-row">
-              <li className="job">
-                <Card
-                  sx={{
-                    borderRadius: "0px",
-                    maxHeight: "400vh",
-                    maxWidth: "450vh",
-                    backgroundColor: "#ead0be",
-                  }}
-                >
-                  <CardContent sx={{ padding: "20px" }}>
-                    <Typography
-                      className="date"
-                      fontSize={"12px"}
-                      color="#f7f3ef"
-                      variant="h1"
-                    >
-                      Summer 2023
-                    </Typography>
-                    <div className="job-info">
-                      <div className="link">
-                        <Typography
-                          variant="h1"
-                          fontSize={"20px"}
-                          color="#ee7857"
-                        >
-                          Software Engineer Intern - hc1
-                        </Typography>
-                        <motion.button
-                          whileHover={{
-                            scale: 1.2,
-                          }}
-                          whileTap={{ scale: 0.9 }}
-                          onClick={() => window.open("https://www.hc1.com")}
-                        >
-                          <CallMissedOutgoingIcon
-                            style={{ color: "#f7f3ef" }}
-                          />
-                        </motion.button>
-                      </div>
-                      <Typography fontSize={"14px"} color="#ee7857">
-                        Deliver high-quality, robust production code for a
-                        diverse array of projects for clients including Harvard
-                        Business School, Everytown for Gun Safety, Pratt
-                        Institute, Koala Health, Vanderbilt University, The 19th
-                        News, and more. Provide leadership within engineering
-                        department through close collaboration, knowledge
-                        shares, and mentorship.
-                      </Typography>
-                      <div className="skills">
-                        {hc1.map((skill) => {
-                          return (
-                            <motion.div
-                              key={skill}
-                              className="animatable"
-                              whileHover={{
-                                scale: 1.07,
-                              }}
-                            >
-                              <div className="skill">
-                                <Typography
-                                  variant="h1"
-                                  color="#f7f3ef"
-                                  fontSize={"12px"}
-                                >
-                                  {skill}
-                                </Typography>
-                              </div>
-                            </motion.div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </li>
-
-              <li className="job">
-                <Card
-                  sx={{
-                    borderRadius: "0px",
-                    maxHeight: "400vh",
-                    maxWidth: "450vh",
-                    backgroundColor: "#ead0be",
-                  }}
-                >
-                  <CardContent sx={{ padding: "20px" }}>
-                    <Typography
-                      className="date"
-                      fontSize={"12px"}
-                      color="#f7f3ef"
-                      variant="h1"
-                    >
-                      Summer 2023
-                    </Typography>
-                    <div className="job-info">
-                      <div className="link">
-                        <Typography
-                          variant="h1"
-                          fontSize={"20px"}
-                          color="#ee7857"
-                        >
-                          Software Engineer Intern - hc1
-                        </Typography>
-                        <motion.button
-                          whileHover={{
-                            scale: 1.2,
-                          }}
-                          whileTap={{ scale: 0.9 }}
-                          onClick={() => window.open("https://www.hc1.com")}
-                        >
-                          <CallMissedOutgoingIcon
-                            style={{ color: "#f7f3ef" }}
-                          />
-                        </motion.button>
-                      </div>
-                      <Typography fontSize={"14px"} color="#ee7857">
-                        Deliver high-quality, robust production code for a
-                        diverse array of projects for clients including Harvard
-                        Business School, Everytown for Gun Safety, Pratt
-                        Institute, Koala Health, Vanderbilt University, The 19th
-                        News, and more. Provide leadership within engineering
-                        department through close collaboration, knowledge
-                        shares, and mentorship.
-                      </Typography>
-                      
-                    </div>
-                  </CardContent>
-                </Card>
-              </li>
-            </div>
-          </ol>
-        </div>
+      <h1 style={{ fontSize: "25px", paddingBottom: "30px" }}>Experience</h1>
+      <div className="experience-list">
+        <ExperienceCards job={hc1} />
+        <ExperienceCards job={lifeomic} />
       </div>
     </ThemeProvider>
   );

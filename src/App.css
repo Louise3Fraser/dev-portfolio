@@ -1,12 +1,7 @@
-
 .name-description {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-html {
-  background-color:#ee7857
 }
 
 .title-ref {
@@ -36,23 +31,33 @@ ol li {
 }
 
 .cursor {
-  background-color: rgb(184, 59, 59);
-  height: 32px;
-  width: 32px;
   border-radius: 50%;
   top: 0;
   left: 0;
   pointer-events: none;
 }
 
-.about {
+.App {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-color: #efdfd4;
+  justify-content: center;
 }
 
-.main-layout {
-  display: flex;
-  flex-direction: row;
+h1 {
+  font-family: "expo-sans-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 53px;
+  margin: 0px
 }
+
+html {
+  background-color: #f7f2ee;
+}
+
+button {
+  padding: 0px;
+}
+/* 
+body {
+  cursor: url('images/logo.png'), auto;
+} */
