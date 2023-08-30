@@ -1,0 +1,54 @@
+import { createTheme } from "@mui/material/styles";
+
+export const theme = createTheme({
+  components: {
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          padding: "0px"
+      },
+    },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        colorPrimary: {
+          backgroundColor: "transparent",
+        },
+        colorSecondary: {
+          backgroundColor: "transparent",
+        },
+      },
+    },
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          "@media (min-width: 600px)": {
+            padding: "0px",
+          },
+        },
+      },
+    },
+  },
+  typography: {
+    colorPrimary: "#030b15",
+    h1: {
+      fontFamily: "Economica",
+      letterSpacing: "2.5px",
+      fontWeight: "600",
+      textTransform: "none",
+      color: "#040103"
+    },
+    h2: {
+      fontFamily: "expo-sans-pro, sans-serif",
+      fontStyle: "normal",
+      fontWeight: "900",
+    },
+    h3: {
+      fontFamily: "komet, sans-serif",
+      fontWeight: "500",
+      fontStyle: "normal",
+      color: "#040103"
+    },
+  },
+
+});

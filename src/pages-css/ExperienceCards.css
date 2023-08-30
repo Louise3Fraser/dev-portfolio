@@ -1,0 +1,8 @@
+.job {
+  /* border-radius: 15px; */
+  display: flex;
+  flex-direction: row;
+  gap: 29px;
+  overflow: hidden;
+
+}

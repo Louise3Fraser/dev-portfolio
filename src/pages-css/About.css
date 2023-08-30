@@ -1,0 +1,25 @@
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column !important;
+  gap: 5px;
+  min-width: 20%
+}
+
+.skill {
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 20px;
+  cursor: default
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+}
