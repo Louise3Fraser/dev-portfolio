@@ -28,7 +28,7 @@ export default function ExperienceCards({ job }) {
       <div className="job">
         <div style={{ minWidth: "76%" }}>
           <div className="link">
-            <Typography variant="h3" fontSize={"23px"} color="#242526">
+            <Typography variant="h3" fontSize={"22px"} color="#242526">
               {job.title}
             </Typography>
             <motion.button

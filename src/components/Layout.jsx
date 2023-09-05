@@ -6,6 +6,7 @@ import {
   Drawer,
   useMediaQuery,
   useTheme,
+  Box,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import "../pages-css/Layout.css";
@@ -18,7 +19,7 @@ import Socials from "./sub_components/Socials";
 
 export default function Layout() {
   const themeQuery = useTheme();
-  const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
+  const screenSize = useMediaQuery(themeQuery.breakpoints.up("lg"));
 
   const homeRef = useRef(null);
   const experienceRef = useRef(null);
@@ -39,6 +40,7 @@ export default function Layout() {
   const executeScroll = (ref) => {
     ref.current && ref?.current.scrollIntoView({ behavior: "smooth" });
   };
+  const drawerWidth = 300;
 
   return (
     <ThemeProvider theme={theme}>
@@ -46,108 +48,127 @@ export default function Layout() {
         <>
           <Drawer
             sx={{
-              width: 80,
+              width: "25vw",
               flexShrink: 0,
               "& .MuiDrawer-paper": {
-                padding: 5,
-                paddingLeft: "18vh",
-                width: "40%",
+                padding: 9,
                 backgroundColor: "#f7f2ee",
-                boxSizing: "border-box",
-                display: "flex",
                 borderColor: "transparent",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                justifyContent: "flex-start",
-                gap: "5px",
+                width: "25vw",
               },
             }}
             variant="permanent"
             anchor="left"
           >
-            <img
-              src={title}
-              alt="logo"
-              style={{
-                maxWidth: "250px",
-                paddingTop: "20px",
-                paddingBottom: "20px",
-                paddingLeft: "8px",
-              }}
-            />
-            <Button
-              onClick={() => executeScroll(homeRef)}
+            <Box
               sx={{
-                ":hover": {
-                  bgcolor: "transparent",
-                  color: "transparent",
-                },
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
+                paddingLeft: "10vw",
+                gap: "5px",
               }}
             >
-              <motion.div
-                key="about"
-                className="animatable"
-                whileHover={{
-                  scale: 1.07,
+              <img
+                src={title}
+                alt="logo"
+                style={{
+                  maxWidth: "245px",
+                  paddingTop: "20px",
+                  paddingBottom: "20px",
+                  paddingLeft: "8px",
+                }}
+              />
+              <Button
+                onClick={() => executeScroll(homeRef)}
+                sx={{
+                  ":hover": {
+                    bgcolor: "transparent",
+                    color: "transparent",
+                  },
                 }}
               >
-                <div>
-                  <Typography variant="h3" color="black" fontSize={"15px"}>
-                    About
-                  </Typography>
-                </div>
-              </motion.div>
-            </Button>
-            <Button
-              onClick={() => executeScroll(experienceRef)}
-              sx={{
-                ":hover": {
-                  bgcolor: "transparent",
-                  color: "transparent",
-                },
-              }}
-            >
-              <motion.div
-                key="about"
-                className="animatable"
-                whileHover={{
-                  scale: 1.07,
+                <motion.div
+                  key="about"
+                  className="animatable"
+                  whileHover={{
+                    scale: 1.07,
+                  }}
+                >
+                  <div>
+                    <Typography variant="h3" color="black" fontSize={"15px"}>
+                      About
+                    </Typography>
+                  </div>
+                </motion.div>
+              </Button>
+              <Button
+                onClick={() => executeScroll(experienceRef)}
+                sx={{
+                  ":hover": {
+                    bgcolor: "transparent",
+                    color: "transparent",
+                  },
                 }}
               >
-                <div>
-                  <Typography variant="h3" color="black" fontSize={"15px"}>
-                    Experience
-                  </Typography>
-                </div>
-              </motion.div>
-            </Button>
-            <Button
-              onClick={() => executeScroll(portfolioRef)}
-              sx={{
-                ":hover": {
-                  bgcolor: "transparent",
-                  color: "transparent",
-                },
-              }}
-            >
-              <motion.div
-                key="about"
-                className="animatable"
-                whileHover={{
-                  scale: 1.07,
+                <motion.div
+                  key="about"
+                  className="animatable"
+                  whileHover={{
+                    scale: 1.07,
+                  }}
+                >
+                  <div>
+                    <Typography variant="h3" color="black" fontSize={"15px"}>
+                      Experience
+                    </Typography>
+                  </div>
+                </motion.div>
+              </Button>
+              <Button
+                onClick={() => executeScroll(portfolioRef)}
+                sx={{
+                  ":hover": {
+                    bgcolor: "transparent",
+                    color: "transparent",
+                  },
                 }}
               >
-                <div>
-                  <Typography variant="h3" color="black" fontSize={"15px"}>
-                    Portfolio
-                  </Typography>
-                </div>
-              </motion.div>
-            </Button>
-            <div style={{height: "40px"}}/>
-            <Socials />
+                <motion.div
+                  key="about"
+                  className="animatable"
+                  whileHover={{
+                    scale: 1.07,
+                  }}
+                >
+                  <div>
+                    <Typography variant="h3" color="black" fontSize={"15px"}>
+                      Portfolio
+                    </Typography>
+                  </div>
+                </motion.div>
+              </Button>
+              <div style={{ height: "40px" }} />
+              <Socials />
+            </Box>
           </Drawer>
-          <div className="main">
+          <Box
+            sx={{
+              position: "sticky",
+              overflowY: "scroll",
+              overflowX: "hidden",
+              width: `calc(100% - ${drawerWidth}px)`,
+              ml: `${drawerWidth}px`,
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              paddingTop: "90px",
+              paddingRight: "10vw",
+              paddingLeft: "3vw",
+              gap: "40px",
+            }}
+          >
             <div ref={homeRef} className="home">
               <Home />
             </div>
@@ -157,7 +178,7 @@ export default function Layout() {
             <div ref={portfolioRef} className="portfolio">
               <Portfolio />
             </div>
-          </div>
+          </Box>
         </>
       ) : (
         <div className="main-compact">
@@ -167,7 +188,7 @@ export default function Layout() {
               src={title}
               style={{
                 maxWidth: "250px",
-                paddingTop: "10px",
+                paddingTop: "20px",
               }}
             />
             <div id="buttons">

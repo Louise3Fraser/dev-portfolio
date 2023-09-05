@@ -36,7 +36,7 @@ export default function Home() {
           color="#63605b"
           lineHeight={"25px"}
         >
-          In my free time, I enjoy coding, drawing, playing videogames, going to
+          In my free time, I enjoy drawing, playing videogames, going to
           the gym, and trying new cuisines.
         </Typography>
       </div>

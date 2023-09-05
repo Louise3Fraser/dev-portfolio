@@ -8,22 +8,14 @@
   flex-wrap: wrap;
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 50vh;
-  padding-top: 50px;
-  padding-right: 15vh;
-  align-items: center;
-  gap: 40px
-}
-
 .main-compact {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  padding: 10px;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  padding-top: 2vw;
+
   align-items: center;
   gap: 40px
 }
