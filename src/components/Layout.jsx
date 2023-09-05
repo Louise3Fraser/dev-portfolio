@@ -52,7 +52,7 @@ export default function Layout() {
               flexShrink: 0,
               "& .MuiDrawer-paper": {
                 padding: 9,
-                backgroundColor: "#f7f2ee",
+                backgroundColor: "transparent",
                 borderColor: "transparent",
                 width: "25vw",
               },
@@ -76,7 +76,7 @@ export default function Layout() {
                 style={{
                   maxWidth: "245px",
                   paddingTop: "20px",
-                  paddingBottom: "20px",
+                  paddingBottom: "5vh",
                   paddingLeft: "8px",
                 }}
               />
@@ -93,7 +93,7 @@ export default function Layout() {
                   key="about"
                   className="animatable"
                   whileHover={{
-                    scale: 1.07,
+                    scale: 1.1,
                   }}
                 >
                   <div>
@@ -116,7 +116,7 @@ export default function Layout() {
                   key="about"
                   className="animatable"
                   whileHover={{
-                    scale: 1.07,
+                    scale: 1.1,
                   }}
                 >
                   <div>
@@ -139,7 +139,7 @@ export default function Layout() {
                   key="about"
                   className="animatable"
                   whileHover={{
-                    scale: 1.07,
+                    scale: 1.1,
                   }}
                 >
                   <div>
@@ -149,7 +149,7 @@ export default function Layout() {
                   </div>
                 </motion.div>
               </Button>
-              <div style={{ height: "40px" }} />
+              <div style={{ height: "100px" }} />
               <Socials />
             </Box>
           </Drawer>
@@ -166,7 +166,7 @@ export default function Layout() {
               paddingTop: "90px",
               paddingRight: "10vw",
               paddingLeft: "3vw",
-              gap: "40px",
+              gap: "85px",
             }}
           >
             <div ref={homeRef} className="home">

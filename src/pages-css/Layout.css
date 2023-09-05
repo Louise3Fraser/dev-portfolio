@@ -12,10 +12,9 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  padding-left: 7vw;
-  padding-right: 7vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
   padding-top: 2vw;
-
   align-items: center;
   gap: 40px
 }

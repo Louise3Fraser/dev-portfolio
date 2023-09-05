@@ -26,7 +26,7 @@ export default function ExperienceCards({ job }) {
         {job.date}
       </Typography>
       <div className="job">
-        <div style={{ minWidth: "76%" }}>
+        <div style={{ minWidth: "80%" }}>
           <div className="link">
             <Typography variant="h3" fontSize={"22px"} color="#242526">
               {job.title}

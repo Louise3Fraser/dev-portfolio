@@ -40,6 +40,7 @@ ol li {
 .App {
   display: flex;
   justify-content: flex-end;
+  
 }
 
 h1 {
@@ -51,7 +52,7 @@ h1 {
 }
 
 html {
-  background-color: #f7f2ee;
+  background-color: #f9f5f2;
 }
 
 button {
