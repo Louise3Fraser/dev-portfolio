@@ -39,7 +39,7 @@ ol li {
 
 .App {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 h1 {

@@ -9,25 +9,6 @@ export const theme = createTheme({
       },
     },
     },
-    MuiAppBar: {
-      styleOverrides: {
-        colorPrimary: {
-          backgroundColor: "transparent",
-        },
-        colorSecondary: {
-          backgroundColor: "transparent",
-        },
-      },
-    },
-    MuiToolbar: {
-      styleOverrides: {
-        root: {
-          "@media (min-width: 600px)": {
-            padding: "0px",
-          },
-        },
-      },
-    },
   },
   typography: {
     colorPrimary: "#030b15",

@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "@mui/material";
 import ExperienceCards from "../components/sub_components/ExperienceCards";
-import { useTheme, useMediaQuery, Box } from "@mui/material";
+import { useTheme } from "@mui/material";
 
 const hc1 = {
   date: "SUMMER 2023",
@@ -12,6 +12,7 @@ const hc1 = {
   skills: ["Javascript", "React", "APIs", "AWS"],
   takeaways:
     "My experience with full stack development has skyrocketed since this internship.",
+  url: "https://www.hc1.com/"
 };
 
 const lifeomic = {
@@ -21,15 +22,15 @@ const lifeomic = {
     "Created applet with APIs for searching physicians in a designated geographic region and providing physician information. Developed applets and translated code using React, Javascript, Typescript, and Python. Tested code with unit and Cypress testing",
   skills: ["Javascript", "React", "Typescript", "Python", "Cypress"],
   takeaways: "I learned",
+  url: "https://lifeomic.com/"
 };
 
-export default function About() {
+export default function Experience() {
   const theme = useTheme();
-  const screenSize = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <ThemeProvider theme={theme}>
-      <h1 style={{ fontSize: "25px", paddingBottom: "30px" }}>Experience</h1>
+      <h1 style={{ fontSize: "25px", paddingBottom: "20px"}}>Experience</h1>
       <div className="experience-list">
         <ExperienceCards job={hc1} />
         <ExperienceCards job={lifeomic} />

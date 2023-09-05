@@ -1,48 +1,40 @@
 import React, { useRef, useEffect } from "react";
 import {
-  AppBar,
-  Toolbar,
   ThemeProvider,
   Typography,
-  Drawer,
   Button,
+  Drawer,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import "../pages-css/Layout.css";
 import { theme } from "../Theme";
-import About from "../pages/About";
+import Experience from "../pages/Experience";
 import Portfolio from "../pages/Portfolio";
 import Home from "../pages/Home";
-import Skills from "../pages/Skills";
 import title from "../images/title.png";
+import Socials from "./sub_components/Socials";
 
-const fadeIn = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-  hidden: { opacity: 0, scale: 1 },
-};
-
-// MAKE MENU COLLAPSABLE
 export default function Layout() {
-  const aboutRef = useRef(null);
-  const skillsRef = useRef(null);
+  const themeQuery = useTheme();
+  const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
+
+  const homeRef = useRef(null);
+  const experienceRef = useRef(null);
   const portfolioRef = useRef(null);
-  const control = useAnimation();
-  const [refAbout, inViewAbout] = useInView();
-  const [refSkill, inViewSkill] = useInView();
-  const [refPort, inViewPort] = useInView();
 
   useEffect(() => {
-    if (inViewAbout) {
-      control.start("visible");
-    }
-    if (inViewSkill) {
-      control.start("visible");
-    }
-    if (inViewPort) {
-      control.start("visible");
-    }
-  }, [control, inViewAbout, inViewPort, inViewSkill]);
+    const targetSections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver((entries) => {
+      console.log(entries);
+    });
+
+    targetSections.forEach((section) => {
+      observer.observe(section);
+    });
+  }, []);
 
   const executeScroll = (ref) => {
     ref.current && ref?.current.scrollIntoView({ behavior: "smooth" });
@@ -50,92 +42,220 @@ export default function Layout() {
 
   return (
     <ThemeProvider theme={theme}>
-      <AppBar elevation={0}>
-        <Toolbar
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "15px",
-            backgroundColor: "#f7f2ee",
-          }}
-        >
-          <img src={title} style={{ paddingTop: "25px", maxWidth: "280px" }} />
-          <div style={{ paddingBottom: "10px" }}>
-            <Button
-              onClick={() => executeScroll(aboutRef)}
-              sx={{
-                color: "#222020",
-                borderRadius: "20px",
+      {screenSize ? (
+        <>
+          <Drawer
+            sx={{
+              width: 80,
+              flexShrink: 0,
+              "& .MuiDrawer-paper": {
+                padding: 5,
+                paddingLeft: "18vh",
+                width: "40%",
                 backgroundColor: "#f7f2ee",
+                boxSizing: "border-box",
+                display: "flex",
+                borderColor: "transparent",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                gap: "5px",
+              },
+            }}
+            variant="permanent"
+            anchor="left"
+          >
+            <img
+              src={title}
+              alt="logo"
+              style={{
+                maxWidth: "250px",
+                paddingTop: "20px",
+                paddingBottom: "20px",
+                paddingLeft: "8px",
+              }}
+            />
+            <Button
+              onClick={() => executeScroll(homeRef)}
+              sx={{
+                ":hover": {
+                  bgcolor: "transparent",
+                  color: "transparent",
+                },
               }}
             >
-              <Typography fontSize={"15px"} variant="h3">
-                About
-              </Typography>
+              <motion.div
+                key="about"
+                className="animatable"
+                whileHover={{
+                  scale: 1.07,
+                }}
+              >
+                <div>
+                  <Typography variant="h3" color="black" fontSize={"15px"}>
+                    About
+                  </Typography>
+                </div>
+              </motion.div>
+            </Button>
+            <Button
+              onClick={() => executeScroll(experienceRef)}
+              sx={{
+                ":hover": {
+                  bgcolor: "transparent",
+                  color: "transparent",
+                },
+              }}
+            >
+              <motion.div
+                key="about"
+                className="animatable"
+                whileHover={{
+                  scale: 1.07,
+                }}
+              >
+                <div>
+                  <Typography variant="h3" color="black" fontSize={"15px"}>
+                    Experience
+                  </Typography>
+                </div>
+              </motion.div>
             </Button>
             <Button
               onClick={() => executeScroll(portfolioRef)}
               sx={{
-                color: "#222020",
-                borderRadius: "20px",
-                backgroundColor: "#f7f2ee",
+                ":hover": {
+                  bgcolor: "transparent",
+                  color: "transparent",
+                },
               }}
             >
-              <Typography fontSize={"15px"} variant="h3">
-                Portfolio
-              </Typography>
+              <motion.div
+                key="about"
+                className="animatable"
+                whileHover={{
+                  scale: 1.07,
+                }}
+              >
+                <div>
+                  <Typography variant="h3" color="black" fontSize={"15px"}>
+                    Portfolio
+                  </Typography>
+                </div>
+              </motion.div>
             </Button>
-            <Button
-              onClick={() => executeScroll(skillsRef)}
-              sx={{
-                color: "#222020",
-                borderRadius: "20px",
-                backgroundColor: "#f7f2ee",
-              }}
-            >
-              <Typography fontSize={"15px"} variant="h3">
-                Skills
-              </Typography>
-            </Button>
+            <div style={{height: "40px"}}/>
+            <Socials />
+          </Drawer>
+          <div className="main">
+            <div ref={homeRef} className="home">
+              <Home />
+            </div>
+            <div ref={experienceRef} className="about">
+              <Experience />
+            </div>
+            <div ref={portfolioRef} className="portfolio">
+              <Portfolio />
+            </div>
           </div>
-        </Toolbar>
-      </AppBar>
-
-      <div className="main">
-        <Home />
-        <div ref={aboutRef} className="about">
-          <motion.div
-            ref={refAbout}
-            variants={fadeIn}
-            animate={control}
-            initial="hidden"
-          >
-            <About />
-          </motion.div>
+        </>
+      ) : (
+        <div className="main-compact">
+          <div className="title">
+            <img
+              alt="logo"
+              src={title}
+              style={{
+                maxWidth: "250px",
+                paddingTop: "10px",
+              }}
+            />
+            <div id="buttons">
+              <Button
+                onClick={() => executeScroll(homeRef)}
+                sx={{
+                  ":hover": {
+                    bgcolor: "transparent",
+                    color: "transparent",
+                  },
+                }}
+              >
+                <motion.div
+                  key="about"
+                  className="animatable"
+                  whileHover={{
+                    scale: 1.07,
+                  }}
+                >
+                  <div>
+                    <Typography variant="h3" color="black" fontSize={"15px"}>
+                      About
+                    </Typography>
+                  </div>
+                </motion.div>
+              </Button>
+              <Button
+                onClick={() => executeScroll(experienceRef)}
+                sx={{
+                  ":hover": {
+                    bgcolor: "transparent",
+                    color: "transparent",
+                  },
+                }}
+              >
+                <motion.div
+                  key="about"
+                  className="animatable"
+                  whileHover={{
+                    scale: 1.07,
+                  }}
+                >
+                  <div>
+                    <Typography variant="h3" color="black" fontSize={"15px"}>
+                      Experience
+                    </Typography>
+                  </div>
+                </motion.div>
+              </Button>
+              <Button
+                onClick={() => executeScroll(portfolioRef)}
+                sx={{
+                  ":hover": {
+                    bgcolor: "transparent",
+                    color: "transparent",
+                  },
+                }}
+              >
+                <motion.div
+                  key="about"
+                  className="animatable"
+                  whileHover={{
+                    scale: 1.07,
+                  }}
+                >
+                  <div>
+                    <Typography variant="h3" color="black" fontSize={"15px"}>
+                      Portfolio
+                    </Typography>
+                  </div>
+                </motion.div>
+              </Button>
+            </div>
+            <Socials />
+          </div>
+          <div className="main-compact">
+            <div ref={homeRef} className="home">
+              <Home />
+            </div>
+            <div ref={experienceRef} className="about">
+              <Experience />
+            </div>
+            <div ref={portfolioRef} className="portfolio">
+              <Portfolio />
+            </div>
+          </div>
         </div>
-        <div ref={portfolioRef} className="portfolio">
-          <motion.div
-            ref={refPort}
-            variants={fadeIn}
-            animate={control}
-            initial="hidden"
-          >
-            <Portfolio />
-          </motion.div>
-        </div>
-        <div ref={skillsRef} className="skills">
-          <motion.div
-            ref={refSkill}
-            variants={fadeIn}
-            animate={control}
-            initial="hidden"
-          >
-            <Skills />
-          </motion.div>
-        </div>
-      </div>
+      )}
     </ThemeProvider>
   );
 }

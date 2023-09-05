@@ -1,9 +1,0 @@
-.skills-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.skills img {
-    width: 200px;
-}

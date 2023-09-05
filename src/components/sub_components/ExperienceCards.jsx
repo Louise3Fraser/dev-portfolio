@@ -26,7 +26,7 @@ export default function ExperienceCards({ job }) {
         {job.date}
       </Typography>
       <div className="job">
-        <div style={{ minWidth: "78%" }}>
+        <div style={{ minWidth: "76%" }}>
           <div className="link">
             <Typography variant="h3" fontSize={"23px"} color="#242526">
               {job.title}
@@ -36,10 +36,10 @@ export default function ExperienceCards({ job }) {
                 scale: 1.2,
               }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => window.open("https://www.hc1.com")}
+              onClick={() => window.open(job.url)}
             >
               <CallMissedOutgoingIcon
-                style={{ color: "#242526", cursor: "pointer" }}
+                style={{ color: "black", cursor: "pointer" }}
               />
             </motion.button>
           </div>
