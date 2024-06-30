@@ -6,6 +6,7 @@
 }
 
 .skills-list {
+  padding-top: 2px;
   display: flex;
   flex-direction: column !important;
   gap: 5px;

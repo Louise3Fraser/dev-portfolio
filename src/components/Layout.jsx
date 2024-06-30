@@ -14,8 +14,9 @@ import { theme } from "../Theme";
 import Experience from "../pages/Experience";
 import Portfolio from "../pages/Portfolio";
 import Home from "../pages/Home";
-import title from "../images/title.png";
+import title from "../images/name.png";
 import Socials from "./sub_components/Socials";
+import stripe from "../images/stripe.png";
 
 export default function Layout() {
   const themeQuery = useTheme();
@@ -52,7 +53,7 @@ export default function Layout() {
               flexShrink: 0,
               "& .MuiDrawer-paper": {
                 padding: 9,
-                backgroundColor: "transparent",
+                backgroundColor: "#f4f2ef",
                 borderColor: "transparent",
                 width: "25vw",
               },
@@ -64,9 +65,9 @@ export default function Layout() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "flex-start",
+                justifyContent: "center",
                 alignItems: "flex-start",
-                paddingLeft: "10vw",
+                paddingLeft: "3vw",
                 gap: "5px",
               }}
             >

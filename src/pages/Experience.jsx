@@ -25,6 +25,15 @@ const lifeomic = {
   url: "https://lifeomic.com/"
 };
 
+const dores = {
+  date: "2021 - CURRENT",
+  title: "Graphic Designer - Dores' Design",
+  description:
+    "Design posters, banners, fliers, logos, graphics, etc. for 200+ Vanderbilt Student Organizations. Manage ongoing requests for graphic design projects throughout the year. Conduct creative development meetings with Vanderbilt affiliated clients and administration",
+  skills: ["Adobe Suite", "Illustrator", "Photoshop", "Procreate"],
+  url: "https://anchorlink.vanderbilt.edu/organization/doresdesign"
+};
+
 export default function Experience() {
   const theme = useTheme();
 
@@ -34,6 +43,7 @@ export default function Experience() {
       <div className="experience-list">
         <ExperienceCards job={hc1} />
         <ExperienceCards job={lifeomic} />
+        <ExperienceCards job={dores} />
       </div>
     </ThemeProvider>
   );

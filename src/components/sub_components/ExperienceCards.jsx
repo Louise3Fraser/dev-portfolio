@@ -13,6 +13,10 @@ export default function ExperienceCards({ job }) {
     if (skill === "Typescript") return "#f67d41";
     if (skill === "Python") return "#699b8a";
     if (skill === "Cypress") return "#e5c6d6";
+    if (skill === "Procreate") return "#ed9488";
+    if (skill === "Adobe Suite") return "#ed9488";
+    if (skill === "Photoshop") return "#ed9488";
+    if (skill === "Illustrator") return "#ed9488";
   };
 
   return (
@@ -45,7 +49,7 @@ export default function ExperienceCards({ job }) {
           </div>
 
           <Typography
-            align="left"
+            align="justify"
             variant="h3"
             fontSize={"16px"}
             color="#63605b"
