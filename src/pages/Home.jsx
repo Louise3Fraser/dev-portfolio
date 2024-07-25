@@ -8,7 +8,7 @@ export default function Home() {
     <ThemeProvider theme={theme}>
       <div className="home-title">
         <h1 style={{ fontSize: "25px" }}>About</h1>
-        <Typography
+        {/* <Typography
           align="justify"
           variant="h3"
           fontSize={"16px"}
@@ -16,7 +16,7 @@ export default function Home() {
           lineHeight={"25px"}
         >
          <i>Nice to meet you, and welcome to my dev portfolio!</i>
-        </Typography>
+        </Typography> */}
         <Typography
           align="justify"
           variant="h3"
@@ -24,7 +24,7 @@ export default function Home() {
           color="#63605b"
           lineHeight={"25px"}
         >          
-           I am a current junior at Vanderbilt University double majoring in
+           I am a current senior at Vanderbilt University double majoring in
           <b> computer science </b> and <b> psychology</b>. 
         </Typography>
         <Typography
@@ -34,9 +34,9 @@ export default function Home() {
           color="#63605b"
           lineHeight={"25px"}
         >
-          Coding and design are two things I love to challenge myself with. I am
-          interested in learning about all kinds of development, whether that be <b> frontend</b>,
-          <b> backend</b>, or <b>full stack</b>. 
+          Coding and design are two things I love to challenge myself with. I am particularly
+          interested in exploring <b> frontend</b> or <b>full-stack</b> development. I have a solid foundation in JavaScript, React.js, 
+          and Python.
         </Typography>
         <Typography
           align="justify"
