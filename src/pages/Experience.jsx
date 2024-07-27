@@ -30,7 +30,7 @@ const dores = {
   title: "Graphic Designer - Dores' Design",
   description:
     "Design posters, banners, fliers, logos, graphics, etc. for 200+ Vanderbilt Student Organizations. Manage ongoing requests for graphic design projects throughout the year. Conduct creative development meetings with Vanderbilt affiliated clients and administration",
-  skills: ["Adobe Suite", "Illustrator", "Photoshop", "Procreate"],
+  skills: ["Illustrator", "Photoshop", "Procreate"],
   url: "https://anchorlink.vanderbilt.edu/organization/doresdesign"
 };
 

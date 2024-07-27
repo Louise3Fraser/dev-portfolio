@@ -16,7 +16,6 @@ import Portfolio from "../pages/Portfolio";
 import Home from "../pages/Home";
 import title from "../images/name.png";
 import Socials from "./sub_components/Socials";
-import stripe from "../images/stripe.png";
 
 export default function Layout() {
   const themeQuery = useTheme();
@@ -164,7 +163,7 @@ export default function Layout() {
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
-              paddingTop: "90px",
+              paddingTop: "120px",
               paddingRight: "10vw",
               paddingLeft: "3vw",
               gap: "85px",

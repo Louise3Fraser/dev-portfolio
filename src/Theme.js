@@ -11,7 +11,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    colorPrimary: "#fffff",
+    colorPrimary: "#030b15",
     h1: {
       fontFamily: "Economica",
       letterSpacing: "2.5px",
