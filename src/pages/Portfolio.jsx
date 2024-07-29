@@ -11,11 +11,9 @@ import "../pages-css/Portfolio.css";
 export default function Portfolio() {
   return (
     <ThemeProvider theme={theme}>
-      <h1
-        style={{ fontSize: "25px", paddingBottom: "30px"}}
-      >
+      <h4 style={{paddingBottom: "10px"}}>
         Recent Work
-      </h1>
+      </h4>
       <div className="portfolio-cards">
         <ProjectCards
           title={"CarShare"}

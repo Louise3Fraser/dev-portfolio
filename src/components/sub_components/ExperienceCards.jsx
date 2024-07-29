@@ -36,17 +36,40 @@ export default function ExperienceCards({ job }) {
       <div
         style={{
           display: "flex",
-          flexDirection: screenSize ? "row": "column",
+          flexDirection: screenSize ? "row" : "column",
           gap: "20px",
           overflow: "hidden",
-          padding: "10px"
+          marginLeft: "-20px",
+          padding: "20px",
         }}
       >
         <div style={{ minWidth: "80%" }}>
           <div className="link">
-            <Typography variant="h3" fontSize={"22px"} color="#242526">
-              {job.title}
-            </Typography>
+            <div
+              style={{
+                transform: "skew(-20deg)",
+                // backgroundColor: "#c7d0d8",
+                marginLeft: "0px",
+                padding: "12px 30px",
+                marginLeft: "-20px",
+                height: "5px",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <Typography
+                variant="h3"
+                fontSize={"22px"}
+                color="#s"
+                sx={{
+                  transform: "skew(20deg)",
+                  marginLeft: "-5px",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {job.title}
+              </Typography>
+            </div>
             <motion.button
               whileHover={{
                 scale: 1.2,
@@ -59,9 +82,8 @@ export default function ExperienceCards({ job }) {
               />
             </motion.button>
           </div>
-
           <Typography
-            align="justify"
+            align="left"
             variant="h3"
             fontSize={"16px"}
             color="#63605b"
@@ -70,7 +92,10 @@ export default function ExperienceCards({ job }) {
             {job.description}
           </Typography>
         </div>
-        <div className="skills-list" style={{flexDirection: screenSize ? "column": "",}}>
+        <div
+          className="skills-list"
+          style={{ flexDirection: screenSize ? "column" : "" }}
+        >
           {job.skills.map((skill) => {
             return (
               <motion.div
@@ -82,9 +107,13 @@ export default function ExperienceCards({ job }) {
               >
                 <div
                   className="skill"
-                  style={{ backgroundColor: `${findColor(skill)}` }}
+                  // style={{ backgroundColor: `${findColor(skill)}` }}
+                  style={{
+                    backgroundColor: "transparent",
+                    border: "1px solid #6287bc",
+                  }}
                 >
-                  <Typography variant="h3" color="#24252b" fontSize={"12px"}>
+                  <Typography variant="h3" color="#6287bc" fontSize={"12px"}>
                     {skill}
                   </Typography>
                 </div>

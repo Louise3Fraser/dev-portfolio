@@ -12,7 +12,7 @@ const hc1 = {
   skills: ["Javascript", "React", "APIs", "AWS"],
   takeaways:
     "My experience with full stack development has skyrocketed since this internship.",
-  url: "https://www.hc1.com/"
+  url: "https://www.hc1.com/",
 };
 
 const lifeomic = {
@@ -22,16 +22,25 @@ const lifeomic = {
     "Created applet with APIs for searching physicians in a designated geographic region and providing physician information. Developed applets and translated code using React, Javascript, Typescript, and Python. Tested code with unit and Cypress testing",
   skills: ["Javascript", "React", "Typescript", "Python", "Cypress"],
   takeaways: "I learned",
-  url: "https://lifeomic.com/"
+  url: "https://lifeomic.com/",
 };
 
 const dores = {
   date: "2021 - CURRENT",
   title: "Graphic Designer - Dores' Design",
   description:
-    "Design posters, banners, fliers, logos, graphics, etc. for 200+ Vanderbilt Student Organizations. Manage ongoing requests for graphic design projects throughout the year. Conduct creative development meetings with Vanderbilt affiliated clients and administration",
+    "Design posters, banners, fliers, logos, graphics, etc. for 200+ Vanderbilt Student Organizations. Manage ongoing requests for graphic design projects throughout the year. Conduct creative development meetings with Vanderbilt affiliated clients and administration.",
   skills: ["Illustrator", "Photoshop", "Procreate"],
-  url: "https://anchorlink.vanderbilt.edu/organization/doresdesign"
+  url: "https://anchorlink.vanderbilt.edu/organization/doresdesign",
+};
+
+const abroad = {
+  date: "2024",
+  title: "CASA – University of Melbourne",
+  description:
+    "Enrolled for the semester at the University of Melbourne while participating in the CASA (Consortium for Advanced Studies Abroad) program focusing on indigenous studies and Melbourne history.",
+  skills: [],
+  url: "https://casa.education/melbourne",
 };
 
 export default function Experience() {
@@ -39,11 +48,12 @@ export default function Experience() {
 
   return (
     <ThemeProvider theme={theme}>
-      <h1 style={{ fontSize: "25px", paddingBottom: "20px"}}>Experience</h1>
+      <h4 style={{ paddingBottom: "10px" }}>Experience</h4>
       <div className="experience-list">
         <ExperienceCards job={hc1} />
         <ExperienceCards job={lifeomic} />
         <ExperienceCards job={dores} />
+        <ExperienceCards job={abroad} />
       </div>
     </ThemeProvider>
   );

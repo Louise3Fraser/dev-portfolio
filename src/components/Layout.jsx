@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import {
   ThemeProvider,
   Typography,
@@ -14,33 +14,96 @@ import { theme } from "../Theme";
 import Experience from "../pages/Experience";
 import Portfolio from "../pages/Portfolio";
 import Home from "../pages/Home";
-import title from "../images/name.png";
 import Socials from "./sub_components/Socials";
 
+const drawerWidth = 300;
 export default function Layout() {
   const themeQuery = useTheme();
-  const screenSize = useMediaQuery(themeQuery.breakpoints.up("lg"));
+  const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
 
   const homeRef = useRef(null);
   const experienceRef = useRef(null);
   const portfolioRef = useRef(null);
 
+  const [currentSection, setCurrentSection] = useState(null);
+
   useEffect(() => {
-    const targetSections = document.querySelectorAll("section");
-
+    const options = { root: null, rootMargin: "0px", threshold: 0.5 };
     const observer = new IntersectionObserver((entries) => {
-      console.log(entries);
-    });
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setCurrentSection(entry.target.id);
+        }
+      });
+    }, options);
 
-    targetSections.forEach((section) => {
-      observer.observe(section);
-    });
+    const sections = [homeRef, experienceRef, portfolioRef];
+    sections.forEach(
+      (section) => section.current && observer.observe(section.current)
+    );
+
+    return () =>
+      sections.forEach(
+        (section) => section.current && observer.unobserve(section.current)
+      );
   }, []);
 
-  const executeScroll = (ref) => {
-    ref.current && ref?.current.scrollIntoView({ behavior: "smooth" });
-  };
-  const drawerWidth = 300;
+  const executeScroll = (ref) =>
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+
+  const renderNavButton = (label, ref, section) => (
+    <Button
+      onClick={() => executeScroll(ref)}
+      sx={{
+        ":hover": { bgcolor: "transparent", color: "transparent" },
+        paddingLeft: "0px",
+      }}
+    >
+      <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
+        <div
+          style={{
+            transform: "skew(-20deg)",
+            width: "80px",
+            backgroundColor:
+              currentSection === section ? "#c7d0d8" : "transparent",
+            padding: "12px 30px",
+            height: "5px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <Typography
+            variant="h3"
+            color="black"
+            fontSize="15px"
+            sx={{
+              marginLeft: "-20px",
+              transform: "skew(20deg)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {label}
+          </Typography>
+        </div>
+      </motion.div>
+    </Button>
+  );
+
+  const renderNavButtonCompact = (label, ref, section) => (
+    <Button
+      onClick={() => executeScroll(ref)}
+      sx={{
+        ":hover": { bgcolor: "transparent", color: "transparent" },
+        paddingLeft: "0px",
+      }}
+    >
+      <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
+        <Typography variant="h3" color="black" fontSize="15px">
+          {label}
+        </Typography>
+      </motion.div>
+    </Button>
+  );
 
   return (
     <ThemeProvider theme={theme}>
@@ -51,8 +114,8 @@ export default function Layout() {
               width: "25vw",
               flexShrink: 0,
               "& .MuiDrawer-paper": {
-                padding: 9,
-                backgroundColor: "#f4f2ef",
+                padding: 12,
+                backgroundColor: "transparent",
                 borderColor: "transparent",
                 width: "25vw",
               },
@@ -64,93 +127,40 @@ export default function Layout() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center",
                 alignItems: "flex-start",
                 paddingLeft: "3vw",
                 gap: "5px",
               }}
             >
-              <img
-                src={title}
-                alt="logo"
-                style={{
-                  maxWidth: "245px",
-                  paddingTop: "20px",
-                  paddingBottom: "5vh",
-                  paddingLeft: "8px",
-                }}
-              />
-              <Button
-                onClick={() => executeScroll(homeRef)}
-                sx={{
-                  ":hover": {
-                    bgcolor: "transparent",
-                    color: "transparent",
-                  },
-                }}
-              >
-                <motion.div
-                  key="about"
-                  className="animatable"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                >
-                  <div>
-                    <Typography variant="h3" color="black" fontSize={"15px"}>
-                      About
-                    </Typography>
-                  </div>
-                </motion.div>
-              </Button>
-              <Button
-                onClick={() => executeScroll(experienceRef)}
-                sx={{
-                  ":hover": {
-                    bgcolor: "transparent",
-                    color: "transparent",
-                  },
-                }}
-              >
-                <motion.div
-                  key="about"
-                  className="animatable"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                >
-                  <div>
-                    <Typography variant="h3" color="black" fontSize={"15px"}>
-                      Experience
-                    </Typography>
-                  </div>
-                </motion.div>
-              </Button>
-              <Button
-                onClick={() => executeScroll(portfolioRef)}
-                sx={{
-                  ":hover": {
-                    bgcolor: "transparent",
-                    color: "transparent",
-                  },
-                }}
-              >
-                <motion.div
-                  key="about"
-                  className="animatable"
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                >
-                  <div>
-                    <Typography variant="h3" color="black" fontSize={"15px"}>
-                      Portfolio
-                    </Typography>
-                  </div>
-                </motion.div>
-              </Button>
-              <div style={{ height: "100px" }} />
-              <Socials />
+              <h3 className="h3-nowrap" style={{ paddingBottom: "5vh" }}>
+                Louise Fraser
+              </h3>
+              {renderNavButton("About", homeRef, "home")}
+              {renderNavButton("Experience", experienceRef, "experience")}
+              {renderNavButton("Portfolio", portfolioRef, "portfolio")}
+              <div style={{ height: "200px" }} />
+              <div className="socials-drawer">
+                <div className="spinner-container">
+                  <svg viewBox="0 0 100 100" className="spinner">
+                    <path
+                      id="text-path"
+                      d="M 50, 50 m -30, 0 a 30,30 0 1,1 60,0 a 30,30 0 1,1 -60,0"
+                      fill="none"
+                    />
+                    <text>
+                      <textPath
+                        href="#text-path"
+                        startOffset="50%"
+                        textAnchor="middle"
+                      >
+                        My socials • My socials • My socials •
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
+                <div style={{ height: "20px" }} />
+                <Socials />
+              </div>
             </Box>
           </Drawer>
           <Box
@@ -163,19 +173,19 @@ export default function Layout() {
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
-              paddingTop: "120px",
+              paddingTop: "100px",
               paddingRight: "10vw",
-              paddingLeft: "3vw",
               gap: "85px",
+              maxWidth: "600px",
             }}
           >
-            <div ref={homeRef} className="home">
+            <div ref={homeRef} id="home" className="home">
               <Home />
             </div>
-            <div ref={experienceRef} className="about">
+            <div ref={experienceRef} id="experience" className="about">
               <Experience />
             </div>
-            <div ref={portfolioRef} className="portfolio">
+            <div ref={portfolioRef} id="portfolio" className="portfolio">
               <Portfolio />
             </div>
           </Box>
@@ -183,95 +193,28 @@ export default function Layout() {
       ) : (
         <div className="main-compact">
           <div className="title">
-            <img
-              alt="logo"
-              src={title}
-              style={{
-                maxWidth: "250px",
-                paddingTop: "20px",
-              }}
-            />
+            <h3 className="h3-nowrap" style={{ paddingTop: "2vh" }}>
+              Louise Fraser
+            </h3>
             <div id="buttons">
-              <Button
-                onClick={() => executeScroll(homeRef)}
-                sx={{
-                  ":hover": {
-                    bgcolor: "transparent",
-                    color: "transparent",
-                  },
-                }}
-              >
-                <motion.div
-                  key="about"
-                  className="animatable"
-                  whileHover={{
-                    scale: 1.07,
-                  }}
-                >
-                  <div>
-                    <Typography variant="h3" color="black" fontSize={"15px"}>
-                      About
-                    </Typography>
-                  </div>
-                </motion.div>
-              </Button>
-              <Button
-                onClick={() => executeScroll(experienceRef)}
-                sx={{
-                  ":hover": {
-                    bgcolor: "transparent",
-                    color: "transparent",
-                  },
-                }}
-              >
-                <motion.div
-                  key="about"
-                  className="animatable"
-                  whileHover={{
-                    scale: 1.07,
-                  }}
-                >
-                  <div>
-                    <Typography variant="h3" color="black" fontSize={"15px"}>
-                      Experience
-                    </Typography>
-                  </div>
-                </motion.div>
-              </Button>
-              <Button
-                onClick={() => executeScroll(portfolioRef)}
-                sx={{
-                  ":hover": {
-                    bgcolor: "transparent",
-                    color: "transparent",
-                  },
-                }}
-              >
-                <motion.div
-                  key="about"
-                  className="animatable"
-                  whileHover={{
-                    scale: 1.07,
-                  }}
-                >
-                  <div>
-                    <Typography variant="h3" color="black" fontSize={"15px"}>
-                      Portfolio
-                    </Typography>
-                  </div>
-                </motion.div>
-              </Button>
+              {renderNavButtonCompact("About", homeRef, "home")}
+              {renderNavButtonCompact(
+                "Experience",
+                experienceRef,
+                "experience"
+              )}
+              {renderNavButtonCompact("Portfolio", portfolioRef, "portfolio")}
             </div>
             <Socials />
           </div>
           <div className="main-compact">
-            <div ref={homeRef} className="home">
+            <div ref={homeRef} id="home" className="home">
               <Home />
             </div>
-            <div ref={experienceRef} className="about">
+            <div ref={experienceRef} id="experience" className="about">
               <Experience />
             </div>
-            <div ref={portfolioRef} className="portfolio">
+            <div ref={portfolioRef} id="portfolio" className="portfolio">
               <Portfolio />
             </div>
           </div>

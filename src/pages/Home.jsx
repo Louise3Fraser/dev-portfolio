@@ -7,18 +7,9 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <div className="home-title">
-        <h1 style={{ fontSize: "25px" }}>About</h1>
-        {/* <Typography
-          align="justify"
-          variant="h3"
-          fontSize={"16px"}
-          color="#63605b"
-          lineHeight={"25px"}
-        >
-         <i>Nice to meet you, and welcome to my dev portfolio!</i>
-        </Typography> */}
+        <h4>About</h4>
         <Typography
-          align="justify"
+          align="left"
           variant="h3"
           fontSize={"16px"}
           color="#63605b"
@@ -28,7 +19,7 @@ export default function Home() {
           <b> computer science </b> and <b> psychology</b>. 
         </Typography>
         <Typography
-          align="justify"
+          align="left"
           variant="h3"
           fontSize={"16px"}
           color="#63605b"
@@ -39,7 +30,16 @@ export default function Home() {
           and Python.
         </Typography>
         <Typography
-          align="justify"
+          align="left"
+          variant="h3"
+          fontSize={"16px"}
+          color="#63605b"
+          lineHeight={"25px"}
+        >
+          I have two years of internship experience where I worked as a software engineer intern under the mentorship .
+        </Typography>
+        <Typography
+          align="left"
           variant="h3"
           fontSize={"16px"}
           color="#63605b"
