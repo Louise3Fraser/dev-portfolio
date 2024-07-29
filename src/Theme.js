@@ -11,13 +11,11 @@ export const theme = createTheme({
     },
   },
   typography: {
-    colorPrimary: "#030b15",
     h1: {
       fontFamily: "Economica",
       letterSpacing: "2.5px",
       fontWeight: "600",
       textTransform: "none",
-      color: "#040103"
     },
     h2: {
       fontFamily: "expo-sans-pro, sans-serif",
@@ -28,7 +26,6 @@ export const theme = createTheme({
       fontFamily: "komet, sans-serif",
       fontWeight: "500",
       fontStyle: "normal",
-      color: "#040103"
     },
   },
 
