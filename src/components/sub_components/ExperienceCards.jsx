@@ -19,57 +19,41 @@ const colorMap = {
 
 export default function ExperienceCards({ job }) {
   const themeQuery = useTheme();
-  const screenSize = useMediaQuery(themeQuery.breakpoints.up("lg"));
-
-  const findColor = (skill) => colorMap[skill] || "#000";
+  const screenSizeSm = useMediaQuery(themeQuery.breakpoints.up("sm"));
+  const screenSizeMd = useMediaQuery(themeQuery.breakpoints.up("lg"));
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: screenSizeMd ? "row" : "column",
+      }}
+    >
       <Typography
-        className="date"
         fontSize={"13px"}
         color="#242526"
         variant="h3"
+        style={{
+          paddingTop: "5px",
+          whiteSpace: "nowrap",
+          flex: screenSizeSm ? "1 0 20%" : "",
+        }}
       >
         {job.date}
       </Typography>
       <div
         style={{
           display: "flex",
-          flexDirection: screenSize ? "row" : "column",
+          flexDirection: "column",
           gap: "20px",
-          overflow: "hidden",
-          marginLeft: "-20px",
-          padding: "20px",
+          flex: "1 0 80%",
         }}
       >
-        <div style={{ minWidth: "80%" }}>
+        <div style={{}}>
           <div className="link">
-            <div
-              style={{
-                transform: "skew(-20deg)",
-                // backgroundColor: "#c7d0d8",
-                marginLeft: "0px",
-                padding: "12px 30px",
-                marginLeft: "-20px",
-                height: "5px",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <Typography
-                variant="h3"
-                fontSize={"22px"}
-                color="#s"
-                sx={{
-                  transform: "skew(20deg)",
-                  marginLeft: "-5px",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {job.title}
-              </Typography>
-            </div>
+            <h5 fontSize={"22px"} color="#s">
+              {job.title}
+            </h5>
             <motion.button
               whileHover={{
                 scale: 1.2,
@@ -92,10 +76,7 @@ export default function ExperienceCards({ job }) {
             {job.description}
           </Typography>
         </div>
-        <div
-          className="skills-list"
-          style={{ flexDirection: screenSize ? "column" : "" }}
-        >
+        <div className="skills-list" style={{ flexDirection: "row" }}>
           {job.skills.map((skill) => {
             return (
               <motion.div

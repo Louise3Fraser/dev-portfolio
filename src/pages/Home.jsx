@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <div className="home-title">
-        <h4>About</h4>
+        {/* <h4>About</h4> */}
         <Typography
           align="left"
           variant="h3"
@@ -36,7 +36,7 @@ export default function Home() {
           color="#63605b"
           lineHeight={"25px"}
         >
-          I have two years of internship experience where I worked as a software engineer intern under the mentorship .
+          I have two years of internship experience where I worked as a software engineer intern under the mentorship of experienced professionals. During this time, I developed and deployed an app and created applets, gaining expertise in React, JavaScript, Typescript, Python, and AWS.
         </Typography>
         <Typography
           align="left"

@@ -10,13 +10,13 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import "../pages-css/Layout.css";
-import { theme } from "../Theme";
+import { theme } from "../Theme"; 
 import Experience from "../pages/Experience";
 import Portfolio from "../pages/Portfolio";
 import Home from "../pages/Home";
 import Socials from "./sub_components/Socials";
 
-const drawerWidth = 300;
+const drawerWidth = 260;
 export default function Layout() {
   const themeQuery = useTheme();
   const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
@@ -62,8 +62,10 @@ export default function Layout() {
       <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
         <div
           style={{
-            transform: "skew(-20deg)",
+            backgroundColor: "transparent",
+                    border: "1px solid #6287bc",
             width: "80px",
+            borderRadius: "20px",
             backgroundColor:
               currentSection === section ? "#c7d0d8" : "transparent",
             padding: "12px 30px",
@@ -78,7 +80,6 @@ export default function Layout() {
             fontSize="15px"
             sx={{
               marginLeft: "-20px",
-              transform: "skew(20deg)",
               whiteSpace: "nowrap",
             }}
           >
@@ -111,13 +112,14 @@ export default function Layout() {
         <>
           <Drawer
             sx={{
-              width: "25vw",
+              width: "23vw",
               flexShrink: 0,
               "& .MuiDrawer-paper": {
-                padding: 12,
+                padding: 15,
+                paddingLeft: 20,
                 backgroundColor: "transparent",
                 borderColor: "transparent",
-                width: "25vw",
+                width: "23vw"
               },
             }}
             variant="permanent"
@@ -128,7 +130,6 @@ export default function Layout() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
-                paddingLeft: "3vw",
                 gap: "5px",
               }}
             >
@@ -168,15 +169,15 @@ export default function Layout() {
               position: "sticky",
               overflowY: "scroll",
               overflowX: "hidden",
-              width: `calc(100% - ${drawerWidth}px)`,
+              width: "100vw",
               ml: `${drawerWidth}px`,
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
-              paddingTop: "100px",
-              paddingRight: "10vw",
+              paddingTop: "130px",
+              paddingRight: "13vw",
               gap: "85px",
-              maxWidth: "600px",
+              maxWidth: "600px"
             }}
           >
             <div ref={homeRef} id="home" className="home">
