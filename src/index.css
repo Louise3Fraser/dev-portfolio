@@ -14,33 +14,33 @@ code {
 }
 
 h3 {
-  font-family: "Sora", sans-serif;
+  font-family: "Quicksand", sans-serif;
   /* font-family: 'CustomFont', sans-serif; */
   font-weight: 800;
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 40px;
-  color: #6287bc;
+  color: #222021;
 }
 
 .h3-nowrap {
-  font-family: "Sora", sans-serif;
+  font-family: "Quicksand", sans-serif;
   /* font-family: 'CustomFont', sans-serif; */
-  font-weight: 800;
+  font-weight: 400;
   margin-bottom: 0px;
   margin-top: 0px;
-  font-size: 40px;
-  color: #6287bc;
+  font-size: 30px;
+  color: #222021;
   white-space: nowrap;
 }
 
 h4 {
-  font-family: "Sora", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 700;
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 25px;
-  color: #6287bc;
+  color: #222021;
   margin-bottom: 0px;
   margin-top: 0px;
 
@@ -54,10 +54,22 @@ h4 {
 h5 {
   margin-bottom: 0px;
   margin-top: 0px;
-  font-family: "Sora", sans-serif;
+  font-family: "Quicksand", sans-serif;
   /* font-family: 'CustomFont', sans-serif; */
   font-size: 20px;
-  color: #6287bc;
+  color: #222021;
+  font-weight: 500;
+  white-space: nowrap;
+
+}
+
+h6 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: "Quicksand", sans-serif;
+  /* font-family: 'CustomFont', sans-serif; */
+  font-size: 12px;
+  color: #222021;
   font-weight: 500;
   white-space: nowrap;
 
@@ -70,7 +82,19 @@ h5 {
 }
 
 body {
-  font-family: "Sora", sans-serif;
-  font-size: 60px;
-  color: #6287bc;
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+  color: #222021;
+}
+
+.body-main {
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  color: #222021;
+}
+
+.body-skill {
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+  color: #e1d7cd;
 }

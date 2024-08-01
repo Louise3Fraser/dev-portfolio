@@ -29,18 +29,14 @@ export default function ExperienceCards({ job }) {
         flexDirection: screenSizeMd ? "row" : "column",
       }}
     >
-      <Typography
-        fontSize={"13px"}
-        color="#242526"
-        variant="h3"
+      <body
         style={{
           paddingTop: "5px",
-          whiteSpace: "nowrap",
           flex: screenSizeSm ? "1 0 20%" : "",
         }}
       >
         {job.date}
-      </Typography>
+      </body>
       <div
         style={{
           display: "flex",
@@ -66,15 +62,7 @@ export default function ExperienceCards({ job }) {
               />
             </motion.button>
           </div>
-          <Typography
-            align="left"
-            variant="h3"
-            fontSize={"16px"}
-            color="#63605b"
-            lineHeight={"25px"}
-          >
-            {job.description}
-          </Typography>
+          <body className="body-main">{job.description}</body>
         </div>
         <div className="skills-list" style={{ flexDirection: "row" }}>
           {job.skills.map((skill) => {
@@ -88,15 +76,13 @@ export default function ExperienceCards({ job }) {
               >
                 <div
                   className="skill"
-                  // style={{ backgroundColor: `${findColor(skill)}` }}
-                  style={{
-                    backgroundColor: "transparent",
-                    border: "1px solid #6287bc",
-                  }}
+                  style={{ backgroundColor: "#b23a2a",}}
+                  // style={{
+                  //   backgroundColor: "transparent",
+                  //   border: "1px solid #6287bc",
+                  // }}
                 >
-                  <Typography variant="h3" color="#6287bc" fontSize={"12px"}>
-                    {skill}
-                  </Typography>
+                  <body className="body-skill">{skill}</body>
                 </div>
               </motion.div>
             );

@@ -1,22 +1,6 @@
 .layout {
-  border-left: 1px solid #facdbc;
-}
-
-.first-row {
   display: flex;
-  align-content: space-between;
-  flex-wrap: wrap;
-}
-
-.main-compact {
-  display: flex;
-  justify-content: flex-end;
   flex-direction: column;
-  padding-left: 5vw;
-  padding-right: 4vw;
-  padding-top: 2vw;
-  align-items: center;
-  gap: 40px
 }
 
 .title {
@@ -25,12 +9,6 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .fade-in-section {
@@ -73,10 +51,18 @@ text {
   fill: black;
 }
 
-
 .socials-drawer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 50px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 50px
 }

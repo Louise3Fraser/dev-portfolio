@@ -1,46 +1,7 @@
-.name-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.title-ref {
-  padding-top: 250px;
-  padding-bottom: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 button {
   background-color: transparent;
   border-color: transparent;
-}
-
-ol li {
-  list-style-type: none;
-}
-
-.cursor {
-  border-radius: 50%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.App {
-  display: flex;
-  justify-content: flex-end;
-  
 }
 
 h1 {
@@ -52,7 +13,13 @@ h1 {
 }
 
 html {
-  background-color: #e4e1d7;
+  /* margin: 0;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(226,240,254,1) 0%, rgba(255,247,228,1) 90% );
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%; */
+  background-color: #e1d7cd;
 }
 
 button {
