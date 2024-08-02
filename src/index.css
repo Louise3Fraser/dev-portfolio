@@ -8,6 +8,18 @@ body {
   font-family: 'CustomFont', sans-serif;
 }
 
+
+button {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0px;
+}
+
+
+html {
+  background-color: #e1d7cd;
+
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

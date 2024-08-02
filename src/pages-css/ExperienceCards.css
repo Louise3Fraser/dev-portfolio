@@ -6,3 +6,8 @@
   overflow: hidden;
 
 }
+
+.link {
+  display: flex;
+  flex-direction: row;
+}

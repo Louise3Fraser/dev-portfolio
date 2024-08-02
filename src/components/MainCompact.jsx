@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import "../pages-css/MainSections.css";
 import Experience from "../pages/Experience";
 import Portfolio from "../pages/Portfolio";
-import Home from "../pages/Home";
+import Home from "../pages/About";
 import Socials from "./sub_components/Socials";
 
 export default function MainFull({ homeRef, experienceRef, portfolioRef }) {

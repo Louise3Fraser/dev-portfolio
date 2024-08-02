@@ -1,27 +1,20 @@
-
-button {
-  background-color: transparent;
-  border-color: transparent;
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 30px;
 }
 
-h1 {
-  font-family: "expo-sans-pro", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 53px;
-  margin: 0px
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-html {
-  /* margin: 0;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(226,240,254,1) 0%, rgba(255,247,228,1) 90% );
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%; */
-  background-color: #e1d7cd;
-}
-
-button {
-  padding: 0px;
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 700px;
 }

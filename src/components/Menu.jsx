@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import "../pages-css/MainSections.css";
 import Socials from "./sub_components/Socials";
 
-export default function Sidebar({
+export default function Menu({
   currentSection,
   homeRef,
   experienceRef,

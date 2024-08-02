@@ -47,14 +47,11 @@ export default function Experience() {
   const theme = useTheme();
 
   return (
-    <ThemeProvider theme={theme}>
-      {/* <h4 style={{ paddingBottom: "10px" }}>Experience</h4> */}
-      <div className="experience-list">
-        <ExperienceCards job={hc1} />
-        <ExperienceCards job={lifeomic} />
-        <ExperienceCards job={dores} />
-        <ExperienceCards job={abroad} />
-      </div>
-    </ThemeProvider>
+    <div>
+      <ExperienceCards job={hc1} />
+      <ExperienceCards job={lifeomic} />
+      <ExperienceCards job={dores} />
+      <ExperienceCards job={abroad} />
+    </div>
   );
 }

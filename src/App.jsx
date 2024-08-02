@@ -7,10 +7,11 @@ import {
   useMediaQuery,
   useTheme,
   Box,
+  AppBar,
 } from "@mui/material";
-import Sidebar from "./components/Sidebar.jsx";
-import MainFull from "./components/MainFull.jsx";
-import MainCompact from "./components/MainCompact.jsx";
+import Experience from "./pages/Experience"
+import Portfolio from "./pages/Portfolio";
+import About from "./pages/About";
 
 function App() {
   const themeQuery = useTheme();
@@ -22,8 +23,6 @@ function App() {
 
   const [currentSection, setCurrentSection] = useState(null);
 
-
-  // 
   useEffect(() => {
     const options = { root: null, rootMargin: "0px", threshold: 0.5 };
     const observer = new IntersectionObserver((entries) => {
@@ -47,7 +46,24 @@ function App() {
 
   return (
     <div className="layout">
-      {screenSize ? (
+      <div className="navigation">
+        <h4>about</h4>
+        <h4>experience</h4>
+        <h4>projects</h4>
+      </div>
+
+      <div className="main">
+        <div ref={homeRef} id="home" className="home">
+          <About />
+        </div>
+        <div ref={experienceRef} id="experience" className="about">
+          <Experience />
+        </div>
+        <div ref={portfolioRef} id="portfolio" className="portfolio">
+          <Portfolio />
+        </div>
+      </div>
+      {/* {screenSize ? (
         <div className="main-full">
           <Sidebar
             homeRef={homeRef}
@@ -67,7 +83,7 @@ function App() {
           experienceRef={experienceRef}
           portfolioRef={portfolioRef}
         />
-      )}
+      )} */}
     </div>
   );
 }
