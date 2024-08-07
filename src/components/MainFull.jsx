@@ -4,7 +4,7 @@ import Experience from "../pages/Experience";
 import Portfolio from "../pages/Portfolio";
 import Home from "../pages/Home";
 
-const drawerWidth = 560;
+const drawerWidth = 400;
 
 export default function MainFull({ homeRef, experienceRef, portfolioRef }) {
   return (
@@ -17,7 +17,7 @@ export default function MainFull({ homeRef, experienceRef, portfolioRef }) {
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
-        paddingTop: "100px",
+        paddingTop: "3rem",
         paddingRight: "13vw",
         gap: "85px",
         maxWidth: "600px",

@@ -50,20 +50,20 @@ export default function Sidebar({
   return (
     <Drawer
       sx={{
-        width: "23vw",
+        width: "40vw",
         "& .MuiDrawer-paper": {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "flex-start",
           backgroundColor: "transparent",
           borderColor: "transparent",
-          width: "23vw",
+          width: "40vw",
         },
       }}
       variant="permanent"
       anchor="left"
     >
-      <div className="title">
+      <div className="title-full">
         <h3 className="h3-nowrap" style={{ paddingBottom: "5vh" }}>
           Louise Fraser
         </h3>

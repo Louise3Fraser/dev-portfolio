@@ -22,8 +22,7 @@ function App() {
 
   const [currentSection, setCurrentSection] = useState(null);
 
-
-  // 
+  //
   useEffect(() => {
     const options = { root: null, rootMargin: "0px", threshold: 0.5 };
     const observer = new IntersectionObserver((entries) => {
@@ -47,6 +46,13 @@ function App() {
 
   return (
     <div className="layout">
+      <div class="container">
+        <div class="blobs">
+          <div class="blob a">a</div>
+          <div class="blob b">b</div>
+          <div class="blob c">c</div>
+        </div>
+      </div>
       {screenSize ? (
         <div className="main-full">
           <Sidebar
