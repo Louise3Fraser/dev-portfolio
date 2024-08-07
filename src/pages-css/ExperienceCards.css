@@ -11,3 +11,9 @@
   display: flex;
   flex-direction: row;
 }
+
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px
+}
