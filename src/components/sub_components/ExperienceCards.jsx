@@ -1,8 +1,8 @@
 import React from "react";
-import { Typography, useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery } from "@mui/material";
 import CallMissedOutgoingIcon from "@mui/icons-material/CallMissedOutgoing";
 import { motion } from "framer-motion";
-import "../../pages-css/ExperienceCards.css";
+import "../../pages-css/Experience.css";
 
 const colorMap = {
   Javascript: "#ee919b",
@@ -20,32 +20,33 @@ const colorMap = {
 export default function ExperienceCards({ job }) {
   const themeQuery = useTheme();
   const screenSizeSm = useMediaQuery(themeQuery.breakpoints.up("sm"));
-  const screenSizeMd = useMediaQuery(themeQuery.breakpoints.up("lg"));
 
   return (
     <div
+      className="experience-cards"
       style={{
         display: "flex",
-        flexDirection: screenSizeMd ? "row" : "column",
+        flexDirection: screenSizeSm ? "row" : "column",
       }}
     >
-      <body
+      <p
+        className="experience-date"
         style={{
-          paddingTop: "5px",
-          flex: screenSizeSm ? "1 0 20%" : "",
+          margin: "0px",
+          flex: screenSizeSm ? "1 0 30%" : "",
         }}
       >
         {job.date}
-      </body>
+      </p>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: "20px",
-          flex: "1 0 80%",
+          gap: "10px",
+          flex: "1 0 70%",
         }}
       >
-        <div style={{}}>
+        <div className="job-info">
           <div className="link">
             <h5 fontSize={"22px"} color="#s">
               {job.title}
@@ -62,7 +63,7 @@ export default function ExperienceCards({ job }) {
               />
             </motion.button>
           </div>
-          <body className="body-main">{job.description}</body>
+          <p className="body-text">{job.description}</p>
         </div>
         <div className="skills-list" style={{ flexDirection: "row" }}>
           {job.skills.map((skill) => {
@@ -76,13 +77,14 @@ export default function ExperienceCards({ job }) {
               >
                 <div
                   className="skill"
-                  style={{ backgroundColor: "#b23a2a",}}
-                  // style={{
-                  //   backgroundColor: "transparent",
-                  //   border: "1px solid #6287bc",
-                  // }}
+                  style={{
+                    backgroundColor: "#222021",
+                    borderRadius: "20px",
+                    position: "relative",
+                    overflow: "hidden",
+                  }}
                 >
-                  <body className="body-skill">{skill}</body>
+                  <p className="body-skill">{skill}</p>
                 </div>
               </motion.div>
             );

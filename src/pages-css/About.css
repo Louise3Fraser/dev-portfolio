@@ -1,13 +1,25 @@
 .about {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 20px
 }
 
-.about h4 {
-  flex: 0 0 40%
+.about-divide {
+  display: flex;
+  flex-direction: row;
+  gap: 38px;
+  align-items: flex-start;
 }
 
 .about-content {
-  flex: 1;
+  flex: 1 1 50%;
+}
+
+.about-skills {
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
 }

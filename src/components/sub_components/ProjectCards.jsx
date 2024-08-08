@@ -1,39 +1,37 @@
 import React from "react";
 import { Box, useTheme, useMediaQuery } from "@mui/material";
-import "../../pages-css/ProjectCards.css";
+import "../../pages-css/Projects.css";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import { motion } from "framer-motion";
 
 export default function ProjectCards({ title, image, description, url }) {
   const theme = useTheme();
-  const screenSize = useMediaQuery(theme.breakpoints.up("sm"));
+  const screenSizeSm = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
-    <Box
-      className="Stats"
-      display={screenSize ? "flex" : "block"}
-      flexDirection={screenSize ? "row" : "column"}
-      justifyContent={screenSize ? "start" : "start"}
-      alignItems={screenSize ? "start" : "start"}
-      sx={{ gap: "20px" }}
-    >
-      {screenSize ? (
-        <img alt="project-img" src={image} style={{ maxWidth: "50%" }} />
-      ) : (
-        <img alt="project-img" src={image} style={{ maxWidth: "100%" }} />
-      )}
-
+    <div className="project-cards">
+      <img
+        alt="project-img"
+        src={image}
+        style={{
+          margin: "0px",
+          flex: screenSizeSm ? "1 0 20%" : "",
+          maxWidth: "50%"
+        }}
+      />
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           gap: "10px",
           alignItems: "flex-start",
+          flex: "1 0 80%",
         }}
+       
       >
         <h5>{title}</h5>
 
-        <body>{description}</body>
+        <p className="body-text">{description}</p>
         <div
           style={{
             display: "flex",
@@ -41,7 +39,7 @@ export default function ProjectCards({ title, image, description, url }) {
             alignItems: "center",
           }}
         >
-          <body sx={{ fontStyle: "oblique" }}>Learn more on my Github</body>
+          <p sx={{ fontStyle: "oblique" }}>Learn more on my Github</p>
           <motion.button
             whileHover={{
               scale: 1.2,
@@ -56,6 +54,6 @@ export default function ProjectCards({ title, image, description, url }) {
           </motion.button>
         </div>
       </div>
-    </Box>
+    </div>
   );
 }

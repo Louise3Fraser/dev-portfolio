@@ -1,14 +1,9 @@
-.layout {
-  display: flex;
-  flex-direction: column;
-}
-
 .title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  height: 98vh;
 }
 
 .fade-in-section {
@@ -47,7 +42,7 @@
 }
 
 text {
-  font-size: 10.2px;
+  font-size: 11.4px;
   fill: black;
 }
 
@@ -56,13 +51,11 @@ text {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 2vh;
 }
 
-.title {
+.socials {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 50px
+  flex-direction: row;
+  gap: 10px
 }

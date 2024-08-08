@@ -1,7 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "@mui/material";
 import ExperienceCards from "../components/sub_components/ExperienceCards";
-import { useTheme } from "@mui/material";
 
 const hc1 = {
   date: "Summer 2023",
@@ -44,10 +42,10 @@ const abroad = {
 };
 
 export default function Experience() {
-  const theme = useTheme();
-
   return (
-    <div>
+    <div className="experience">
+      <h4 className="h4-sub">Experience</h4>
+      <div className="line-fade-to-right" />
       <ExperienceCards job={hc1} />
       <ExperienceCards job={lifeomic} />
       <ExperienceCards job={dores} />
