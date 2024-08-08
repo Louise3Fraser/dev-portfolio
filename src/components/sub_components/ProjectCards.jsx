@@ -9,14 +9,19 @@ export default function ProjectCards({ title, image, description, url }) {
   const screenSizeSm = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
-    <div className="project-cards">
+    <div className="project-cards" style={{
+      display: "flex",
+      flexDirection: screenSizeSm ? "row" : "column",
+    }}>
       <img
         alt="project-img"
         src={image}
         style={{
           margin: "0px",
-          flex: screenSizeSm ? "1 0 20%" : "",
-          maxWidth: "50%"
+          flex: screenSizeSm ? "1 0 10%" : "",
+          objectFit: "contain",
+          maxWidth: screenSizeSm ? "30%" : "60%",
+          borderRadius: "5px"
         }}
       />
       <div
@@ -25,13 +30,15 @@ export default function ProjectCards({ title, image, description, url }) {
           flexDirection: "column",
           gap: "10px",
           alignItems: "flex-start",
-          flex: "1 0 80%",
+          justifyContent: "space-between",
+          flex: "1 1 90%",
         }}
-       
       >
-        <h5>{title}</h5>
+        <div className="title-desc">
+          <h5>{title}</h5>
 
-        <p className="body-text">{description}</p>
+          <p className="body-text">{description}</p>
+        </div>
         <div
           style={{
             display: "flex",
@@ -39,7 +46,7 @@ export default function ProjectCards({ title, image, description, url }) {
             alignItems: "center",
           }}
         >
-          <p sx={{ fontStyle: "oblique" }}>Learn more on my Github</p>
+          <p className="small">Learn more on my Github</p>
           <motion.button
             whileHover={{
               scale: 1.2,

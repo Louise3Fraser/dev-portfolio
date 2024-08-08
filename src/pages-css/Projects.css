@@ -21,4 +21,12 @@
   border-radius: 10px; */
   display: flex;
   flex-direction: row;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.title-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
 }

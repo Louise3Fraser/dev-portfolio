@@ -6,18 +6,18 @@
   /* position: sticky;top: 0; background-color: white; */
 }
 
-
 .layout {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2vh;
-
+  margin-bottom: 10vh;
 }
+
 .main {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 80px;
   max-width: 700px;
 }
 
@@ -33,15 +33,16 @@
 }
 
 .container:after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100vh;
-  background: url('./images/texture.png');
+  background: url("./images/texture.png");
   background-size: 200px;
   mix-blend-mode: overlay;
   position: absolute;
   top: 0;
-  left: 0;background-attachment:scroll; 
+  left: 0;
+  background-attachment: scroll;
 }
 
 .blobs {
@@ -72,7 +73,6 @@
 .blob.b {
   top: 0;
   right: 0;
-  background-color: mix(#d86fd5, white, 50%);
   animation: circular 20s linear infinite;
 }
 
@@ -124,8 +124,25 @@
   }
 }
 
-.dots {
+.mode {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2vh;
+}
+
+.mode-relative {
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  margin: 2vh;
+}
+
+.nav-dots {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  margin: 2vh;
   display: flex;
-  flex-direction: row;
-  gap: 20px
+  flex-direction: column;
 }

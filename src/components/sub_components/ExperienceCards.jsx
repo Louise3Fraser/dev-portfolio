@@ -30,7 +30,7 @@ export default function ExperienceCards({ job }) {
       }}
     >
       <p
-        className="experience-date"
+        className="small"
         style={{
           margin: "0px",
           flex: screenSizeSm ? "1 0 30%" : "",
