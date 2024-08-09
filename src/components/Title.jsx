@@ -8,6 +8,7 @@ export default function Title() {
       <h4 className="h4-title">Louise Fraser</h4>
       <div className="socials-drawer">
         <div className="spinner-container">
+            hi
           <svg viewBox="0 0 100 100" className="spinner">
             <path
               id="text-path"
