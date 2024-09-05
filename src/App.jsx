@@ -1,23 +1,16 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./App.css";
-import {
-  ThemeProvider,
-  Button,
-  Drawer,
-  useMediaQuery,
-  useTheme,
-  Box,
-  AppBar,
-} from "@mui/material";
-import Experience from "./pages/Experience";
-import Projects from "./pages/Projects";
-import About from "./pages/About";
+import { useMediaQuery, useTheme } from "@mui/material";
+import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import About from "./sections/About";
 import Title from "./components/Title";
 import { motion } from "framer-motion";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
+import Art from "./sections/Art";
 function App() {
   const themeQuery = useTheme();
   const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
@@ -88,29 +81,7 @@ function App() {
 
   return (
     <div className="layout">
-      <div className="container">
-        <div className="blobs">
-          <div
-            className="blob a"
-            style={{
-              backgroundColor: mode ? "#86a3e0" : "#ff8a80",
-            }}
-          ></div>
-          <div
-            className="blob b"
-            style={{
-              backgroundColor: mode ? "#717fd3" : "#ffd385",
-            }}
-          ></div>
-          <div
-            className="blob c"
-            style={{
-              backgroundColor: mode ? "#7f7fd3" : "#ff80ab",
-            }}
-          ></div>
-        </div>
-      </div>
-      {screenSize ? (
+      {/* {screenSize ? (
         <div className="mode">
           <button
             onClick={() => setMode(!mode)}
@@ -127,20 +98,20 @@ function App() {
         </div>
       ) : (
         <div className="mode-relative">
-        <button
-          onClick={() => setMode(!mode)}
-          style={{ paddingLeft: "0px", padding: "0px" }}
-        >
-          <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
-            {mode ? (
-              <LightModeIcon sx={{ color: "#222021" }} fontSize="large" />
-            ) : (
-              <DarkModeIcon sx={{ color: "#222021" }} fontSize="large" />
-            )}
-          </motion.div>
-        </button>
-      </div>
-      )}
+          <button
+            onClick={() => setMode(!mode)}
+            style={{ paddingLeft: "0px", padding: "0px" }}
+          >
+            <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
+              {mode ? (
+                <LightModeIcon sx={{ color: "#222021" }} fontSize="large" />
+              ) : (
+                <DarkModeIcon sx={{ color: "#222021" }} fontSize="large" />
+              )}
+            </motion.div>
+          </button>
+        </div>
+      )} */}
       {screenSize ? (
         <div className="nav-dots">
           {renderDot(homeRef, "home")}
@@ -156,19 +127,45 @@ function App() {
         {renderMenuButton("Projects", projectsRef, "projects")}
       </div>
       <div className="line" />
-      <Title />
-      <div className="main">
-        <div ref={homeRef} id="home" className="home">
-          <About />
+      <Title mode={mode} />
+      {/* <div className="lower-page">
+        <div className="container-full">
+          <div className="blobs">
+            <div
+              className="blob a small"
+              style={{
+                backgroundColor: "#e1e1e5",
+              }}
+            ></div>
+            <div
+              className="blob b"
+              style={{
+                backgroundColor: "#e1e1e5",
+              }}
+            ></div>
+            <div
+              className="blob c"
+              style={{
+                backgroundColor: "#e1e1e5",
+              }}
+            ></div>
+          </div>
+        </div> */}
+        <div className="main">
+          <div ref={homeRef} id="home" className="home">
+            <About />
+          </div>
+          <div ref={experienceRef} id="experience" className="about">
+            <Experience />
+          </div>
+          <div ref={projectsRef} id="projects" className="projects">
+            <Projects />
+          </div>
+          {/* <Art /> */}
         </div>
-        <div ref={experienceRef} id="experience" className="about">
-          <Experience />
-        </div>
-        <div ref={projectsRef} id="projects" className="projects">
-          <Projects />
-        </div>
+        <p>-2024-</p>
       </div>
-    </div>
+    // </div>
   );
 }
 

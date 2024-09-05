@@ -1,0 +1,16 @@
+.art {
+  display: flex;
+  flex-direction: column;
+  gap: 15px
+}
+
+.rows {
+display: flex;
+  gap: 25px
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

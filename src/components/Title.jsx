@@ -1,18 +1,41 @@
 import React from "react";
 import "../pages-css/MainSections.css";
-import Socials from "./sub_components/Socials";
+import Socials from "./Socials";
 import { useTheme, useMediaQuery } from "@mui/material";
 
-export default function Title() {
-    const themeQuery = useTheme();
+// Currently not using mode
+export default function Title({ mode }) {
+  const themeQuery = useTheme();
   const screenSizeSm = useMediaQuery(themeQuery.breakpoints.up("sm"));
-
 
   return (
     <div className="title">
+      <div className="container">
+        <div className="blobs">
+          <div
+            className="blob a"
+            style={{
+              backgroundColor: "#ff8a80",
+            }}
+          ></div>
+          <div
+            className="blob b"
+            style={{
+              backgroundColor:  "#ffd385",
+            }}
+          ></div>
+          <div
+            className="blob c"
+            style={{
+              backgroundColor: "#ff80ab",
+            }}
+          ></div>
+        </div>
+      </div>
+
       <h4 className="h4-title">Louise Fraser</h4>
       <div className="socials-drawer">
-        { screenSizeSm ? (<><div className="spinner-container">
+        <div className="spinner-container">
           <svg viewBox="0 0 100 100" className="spinner">
             <path
               id="text-path"
@@ -20,14 +43,13 @@ export default function Title() {
               fill="none"
             />
             <text>
-              <textPath href="#text-path" >
+              <textPath href="#text-path" startOffset="50%" textAnchor="middle">
                 My socials • My socials • My socials •
               </textPath>
             </text>
           </svg>
-        </div> <div style={{ height: "20px" }} /> </>) : (<div/>)}
-        
-        
+        </div>
+        <div style={{ height: "20px" }} />
         <Socials />
       </div>
     </div>

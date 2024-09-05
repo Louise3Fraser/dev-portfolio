@@ -16,7 +16,7 @@ button {
 }
 
 html {
-  background-color: #e1d7cd;
+  background-color: #fefdfd;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -25,7 +25,7 @@ code {
 
 h4 {
   font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 18px;
@@ -36,26 +36,27 @@ h4 {
 
 .h4-title {
   font-family: "Scheherazade New", serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 50px;
   color: #222021;
 }
 
 .h4-sub {
   font-family: "Scheherazade New", serif;
-  font-weight: 700;
-  font-size: 30px;
-  color: #222021;
+  font-weight: 500;
+  font-size: 40px;
+  color: #1d1d35;
 }
 
 h5 {
   margin-bottom: 0px;
   margin-top: 0px;
-  font-family: "Lato", sans-serif;
+  font-family: "Scheherazade New", serif;
   font-size: 20px;
-  font-weight: 600;
-  color: #222021;
-  white-space: nowrap;
+  font-weight: 300;
+  line-height: 1.1;
+  overflow: visible;
+  display: flex;
 }
 
 h6 {
@@ -70,17 +71,46 @@ h6 {
 
 .body-main {
   font-family: "Lato", sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   color: #222021;
-  text-align: justify;
+  font-weight: 300;
 }
 
-.body-text {
+.job {
   font-family: "Lato", sans-serif;
   font-size: 18px;
   color: #222021;
   text-align: justify;
-  margin: 0px
+  font-weight: 700;
+  margin: 0px;
+  white-space: nowrap;
+}
+
+.highlight {
+  position: relative;
+  padding-left: 2px;
+  margin-left: -2px;
+  padding-top: 2px;
+  background-image: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=ffbdd8);
+  background-position: left center; 
+  background-repeat: no-repeat;
+  background-size: 0% 100%; 
+  height: 23px;
+  transition: background-size 1s ease-in-out, background-position 1s ease-in-out;
+}
+
+.highlight.visible {
+  background-size: 100% 100%; 
+  background-position: 0% 50%; 
+}
+
+/*descriptions*/
+.body-text {
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  color: #222021;
+  margin: 0px;
+  font-weight: 300;
 }
 
 .body-skill {
@@ -93,21 +123,26 @@ h6 {
 }
 
 .line {
-  border: .5px solid black;
+  border: 0.5px solid black;
   margin-top: 10px;
-  width: 90vw;
+  max-width: 270px;
+  width: 100%;
 }
 
 .line-fade-to-right {
-  border: .5px solid black;
-  max-width: 700px;
+  border: 0.5px solid black;
+  max-width: 100px;
+  margin-top: -20px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .small {
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #222021;
-  text-align: justify;
   margin: 0px;
+  display: flex;
+  white-space: nowrap;
+  font-style: italic;
 }
