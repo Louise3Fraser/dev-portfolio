@@ -5,6 +5,7 @@ import JavascriptIMG from "../images/javascript.png";
 import PythonIMG from "../images/python.png";
 import CIMG from "../images/c++.png";
 import { useTheme, useMediaQuery } from "@mui/material";
+import Header from "../components/Header";
 
 const drawerWidth = 700;
 export default function About() {
@@ -34,8 +35,7 @@ export default function About() {
 
   return (
     <div className="about">
-      <h4 className="h4-sub">About</h4>
-      <div className="line-fade-to-right" />
+      <Header section={"About"}/>
       <div
         className="about-divide"
         style={{ flexDirection: screenSizeSm ? "row" : "column" }}

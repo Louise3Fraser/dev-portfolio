@@ -59,6 +59,7 @@ export default function Socials() {
           <EmailIcon style={{ color: "black", cursor: "pointer" }} />
         </motion.button>
       )}
+      <div class="vertical-line" />
     </div>
   );
 }

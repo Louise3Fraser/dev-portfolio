@@ -1,5 +1,6 @@
 import React from "react";
 import ExperienceCards from "../components/ExperienceCards";
+import Header from "../components/Header";
 
 const hc1 = {
   date: "Summer 2023",
@@ -48,8 +49,7 @@ const abroad = {
 export default function Experience() {
   return (
     <div className="experience">
-      <h4 className="h4-sub">Experience</h4>
-      <div className="line-fade-to-right" />
+      <Header section={"Experience"}/>
       <ExperienceCards job={dores} />
       <ExperienceCards job={abroad} />
       <ExperienceCards job={hc1} />

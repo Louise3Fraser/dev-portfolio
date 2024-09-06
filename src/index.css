@@ -23,6 +23,12 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: "Megant";   /*Can be any text*/
+  src: local("Louise_font"),
+    url("./fonts/Megant.ttf") format("truetype");
+}
+
 h4 {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -35,14 +41,17 @@ h4 {
 }
 
 .h4-title {
-  font-family: "Scheherazade New", serif;
-  font-weight: 500;
-  font-size: 50px;
+  /* font-family: "PlayfairDisplay", serif; */
+  font-family: "Megant";
+  font-weight: 100;
+  font-size: 80px;
   color: #222021;
 }
 
 .h4-sub {
-  font-family: "Scheherazade New", serif;
+  /* font-family: "Scheherazade New", serif; */
+  font-family: "Megant";
+
   font-weight: 500;
   font-size: 40px;
   color: #1d1d35;
@@ -51,9 +60,9 @@ h4 {
 h5 {
   margin-bottom: 0px;
   margin-top: 0px;
-  font-family: "Scheherazade New", serif;
-  font-size: 20px;
-  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
   line-height: 1.1;
   overflow: visible;
   display: flex;
@@ -91,7 +100,7 @@ h6 {
   padding-left: 2px;
   margin-left: -2px;
   padding-top: 2px;
-  background-image: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=ffbdd8);
+  background-image: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=fcc25b);
   background-position: left center; 
   background-repeat: no-repeat;
   background-size: 0% 100%; 
@@ -120,21 +129,6 @@ h6 {
   margin: 0px;
   padding: 6px;
   cursor: default;
-}
-
-.line {
-  border: 0.5px solid black;
-  margin-top: 10px;
-  max-width: 270px;
-  width: 100%;
-}
-
-.line-fade-to-right {
-  border: 0.5px solid black;
-  max-width: 100px;
-  margin-top: -20px;
-  width: 100%;
-  margin-bottom: 20px;
 }
 
 .small {

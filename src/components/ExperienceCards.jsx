@@ -44,7 +44,7 @@ export default function ExperienceCards({ job }) {
           }}
         >
           <p className="body-text">{job.description}</p>
-          <div className="skills-list" style={{ flexDirection: "column" }}>
+          {/* <div className="skills-list" style={{ flexDirection: "column" }}>
             {job.skills.map((skill) => (
               <motion.div
                 key={skill}
@@ -63,7 +63,7 @@ export default function ExperienceCards({ job }) {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

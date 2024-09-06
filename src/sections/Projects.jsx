@@ -7,12 +7,12 @@ import carshare from "../images/carshare.png";
 import todo from "../images/todo.png";
 import mushroom from "../images/mushroom.png";
 import "../pages-css/Projects.css";
+import Header from "../components/Header";
 
 export default function Projects() {
   return (
     <div className="projects">
-      <h4 className="h4-sub">Projects</h4>
-      <div className="line-fade-to-right" />
+      <Header section={"Projects"} />
       <ProjectCards
         title={"CarShare"}
         image={carshare}

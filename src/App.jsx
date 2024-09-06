@@ -6,21 +6,16 @@ import Projects from "./sections/Projects";
 import About from "./sections/About";
 import Title from "./components/Title";
 import { motion } from "framer-motion";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
-import Art from "./sections/Art";
+
 function App() {
   const themeQuery = useTheme();
   const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
-
   const homeRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
-
   const [currentSection, setCurrentSection] = useState(null);
-  const [mode, setMode] = useState(true);
 
   useEffect(() => {
     const options = { root: null, rootMargin: "0px", threshold: 0.5 };
@@ -114,57 +109,39 @@ function App() {
       )} */}
       {screenSize ? (
         <div className="nav-dots">
-          {renderDot(homeRef, "home")}
+          {renderDot(homeRef, "about")}
           {renderDot(experienceRef, "experience")}
           {renderDot(projectsRef, "projects")}
         </div>
       ) : (
         <div />
       )}
-      <div className="navigation">
-        {renderMenuButton("About", homeRef, "home")}
-        {renderMenuButton("Experience", experienceRef, "experience")}
-        {renderMenuButton("Projects", projectsRef, "projects")}
-      </div>
-      <div className="line" />
-      <Title mode={mode} />
-      {/* <div className="lower-page">
-        <div className="container-full">
-          <div className="blobs">
-            <div
-              className="blob a small"
-              style={{
-                backgroundColor: "#e1e1e5",
-              }}
-            ></div>
-            <div
-              className="blob b"
-              style={{
-                backgroundColor: "#e1e1e5",
-              }}
-            ></div>
-            <div
-              className="blob c"
-              style={{
-                backgroundColor: "#e1e1e5",
-              }}
-            ></div>
+      <div className="landing">
+        <div className="navigation">
+          <h5 className="h4-title">Louise Fraser</h5>
+          <div className="menu-items">
+            {renderMenuButton("About", homeRef, "about")}
+            {renderMenuButton("Experience", experienceRef, "experience")}
+            {renderMenuButton("Projects", projectsRef, "projects")}
           </div>
-        </div> */}
-        <div className="main">
-          <div ref={homeRef} id="home" className="home">
-            <About />
-          </div>
-          <div ref={experienceRef} id="experience" className="about">
-            <Experience />
-          </div>
-          <div ref={projectsRef} id="projects" className="projects">
-            <Projects />
-          </div>
-          {/* <Art /> */}
         </div>
-        <p>-2024-</p>
+        <Title mode={(homeRef, experienceRef, projectsRef)} />
+
       </div>
+      <div className="main">
+        <div  id="about" ref={homeRef} className="about" >
+          <About />
+        </div>
+        <div id="experience" ref={experienceRef} className="experience">
+          <Experience  />
+        </div>
+        <div id="projects" ref={projectsRef} className="projects">
+          <Projects  />
+        </div>
+        {/* <Art /> */}
+      </div>
+      <p>-2024-</p>
+    </div>
     // </div>
   );
 }
