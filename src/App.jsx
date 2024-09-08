@@ -74,39 +74,17 @@ function App() {
     </button>
   );
 
+  window.addEventListener("scroll", function () {
+    const menu = document.querySelector(".menu-items");
+    if (window.scrollY > 50) {
+      menu.classList.add("shadow");
+    } else {
+      menu.classList.remove("shadow");
+    }
+  });
+
   return (
     <div className="layout">
-      {/* {screenSize ? (
-        <div className="mode">
-          <button
-            onClick={() => setMode(!mode)}
-            style={{ paddingLeft: "0px", padding: "0px" }}
-          >
-            <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
-              {mode ? (
-                <LightModeIcon sx={{ color: "#222021" }} fontSize="large" />
-              ) : (
-                <DarkModeIcon sx={{ color: "#222021" }} fontSize="large" />
-              )}
-            </motion.div>
-          </button>
-        </div>
-      ) : (
-        <div className="mode-relative">
-          <button
-            onClick={() => setMode(!mode)}
-            style={{ paddingLeft: "0px", padding: "0px" }}
-          >
-            <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
-              {mode ? (
-                <LightModeIcon sx={{ color: "#222021" }} fontSize="large" />
-              ) : (
-                <DarkModeIcon sx={{ color: "#222021" }} fontSize="large" />
-              )}
-            </motion.div>
-          </button>
-        </div>
-      )} */}
       {screenSize ? (
         <div className="nav-dots">
           {renderDot(homeRef, "about")}
@@ -118,7 +96,6 @@ function App() {
       )}
       <div className="landing">
         <div className="navigation">
-          <h5 className="h4-title">Louise Fraser</h5>
           <div className="menu-items">
             {renderMenuButton("About", homeRef, "about")}
             {renderMenuButton("Experience", experienceRef, "experience")}
@@ -126,23 +103,19 @@ function App() {
           </div>
         </div>
         <Title mode={(homeRef, experienceRef, projectsRef)} />
-
       </div>
       <div className="main">
-        <div  id="about" ref={homeRef} className="about" >
+        <div id="about" ref={homeRef} className="about">
           <About />
         </div>
         <div id="experience" ref={experienceRef} className="experience">
-          <Experience  />
+          <Experience />
         </div>
         <div id="projects" ref={projectsRef} className="projects">
-          <Projects  />
+          <Projects />
         </div>
-        {/* <Art /> */}
       </div>
-      <p>-2024-</p>
     </div>
-    // </div>
   );
 }
 
