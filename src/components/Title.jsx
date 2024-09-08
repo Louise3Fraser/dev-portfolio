@@ -12,7 +12,7 @@ export default function Title() {
       className="title"
       style={{ alignItems: isSmallScreen ? "center" : "flex-start" }}
     >
-      <div className="container">
+      {/* <div className="container">
         <div className="blobs">
           <div
             className="blob a"
@@ -42,7 +42,7 @@ export default function Title() {
             // }}
           ></div>
         </div>
-      </div>
+      </div> */}
       <h5 className="job fade-in fade-in-1" style={{ fontStyle: "italic" }}>
         Hi! My name is
       </h5>

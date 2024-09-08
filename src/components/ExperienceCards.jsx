@@ -38,21 +38,21 @@ export default function ExperienceCards({ job }) {
     >
       <div className="fade-in-section">
         <div className="experience-cards">
-          <h5
+          <p
+            className="small"
             style={{
               color: "#5b1136",
               flex: isSmallScreen ? "1 0 20%" : "",
               marginBottom: "10px",
             }}
           >
-            {job.title}
-          </h5>
-
+            {job.date}
+          </p>
           <div className="info">
             <div className="experience-card-heading">
               <p className="job">{job.place}</p>
               <p className="job">|</p>
-              <p className="small">{job.date}</p>
+              <p className="job">{job.title}</p>
               <motion.button
                 className="link"
                 whileHover={{ scale: 1.2 }}

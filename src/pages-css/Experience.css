@@ -21,7 +21,7 @@
 }
 .experience-cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   /* border-radius: 25px;
   background: #fcfcfc;
   padding: 30px; */

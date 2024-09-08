@@ -16,7 +16,7 @@ button {
 }
 
 html {
-  background-color: #f4f1f1;
+  background-color: white;
 }
 
 code {
@@ -78,7 +78,7 @@ h6 {
 
 .body-main {
   font-family: "SUSE", sans-serif;
-  font-size: 21px;
+  font-size: 18px;
   color: #5b1136;
   font-weight: 400;
   line-height: 160%;
@@ -86,10 +86,10 @@ h6 {
 
 .body-sub {
   font-family: "SUSE", sans-serif;
-  font-size: 19px;
+  font-size: 16px;
   color: #5b1136;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 130%;
 }
 
 .job {
