@@ -80,10 +80,10 @@
   left: 0;
   background-attachment: scroll;
 }
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .blob {
-    width: 45vh !important;
-    height: 45vh !important;
+    width: 55vh !important;
+    height: 55vh !important;
   }
 }
 
@@ -96,8 +96,8 @@
 }
 
 .blob {
-  width: 65vh;
-  height: 65vh;
+  width: 70vh;
+  height: 70vh;
   border-radius: 100%;
   position: absolute;
   background-color: #86a3e0;

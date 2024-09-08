@@ -22,9 +22,9 @@
 .experience-cards {
   display: flex;
   flex-direction: column;
-  /* border-radius: 25px;
+  border-radius: 25px;
   background: #fcfcfc;
-  padding: 30px; */
+  padding: 20px;
 }
 
 .experience-card-heading {

@@ -43,8 +43,8 @@ export default function Title() {
           ></div>
         </div>
       </div>
-      <h5 className="job fade-in fade-in-1" style={{ fontStyle: "italic" }}>
-        Hi! My name is
+      <h5 className="job fade-in fade-in-1" style={{  }}>
+        Nice to meet you. My name is
       </h5>
       {isSmallScreen ? (
         <h5 className="h4-title fade-in fade-in-2">Louise Fraser</h5>

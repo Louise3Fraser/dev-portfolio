@@ -43,14 +43,14 @@ h4 {
 .h4-title {
   font-family: "Megant";
   font-weight: 100;
-  font-size: 90px;
+  font-size: 65px;
   color: #440015;
 }
 
 .h4-sub {
   font-family: "Megant";
   font-weight: 500;
-  font-size: 50px;
+  font-size: 40px;
   color: #440015;
 }
 
@@ -78,18 +78,18 @@ h6 {
 
 .body-main {
   font-family: "SUSE", sans-serif;
-  font-size: 21px;
+  font-size: 20px;
   color: #5b1136;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 150%;
 }
 
 .body-sub {
   font-family: "SUSE", sans-serif;
-  font-size: 19px;
+  font-size: 18px;
   color: #5b1136;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 130%;
 }
 
 .job {
