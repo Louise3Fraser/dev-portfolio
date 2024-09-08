@@ -41,7 +41,7 @@ export default function About() {
             I am a current senior at Vanderbilt University double majoring in
             computer science and psychology. Coding and design are two things I
             love to challenge myself with. I am particularly interested in
-            exploring or full-stack development. I have a solid foundation in
+            exploring frontend or full-stack development. I have a solid foundation in
             JavaScript, React.js, and Python.
           </p>
           <p className="body-main">

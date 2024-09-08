@@ -17,7 +17,6 @@ button {
 
 html {
   background-color: #f4f1f1;
-  
 }
 
 code {
@@ -26,18 +25,17 @@ code {
 }
 
 @font-face {
-  font-family: "Megant";   /*Can be any text*/
-  src: local("Louise_font"),
-    url("./fonts/bright.otf") format("truetype");
+  font-family: "Megant";
+  src: local("Louise_font"), url("./fonts/bright.otf") format("truetype");
 }
 
 h4 {
-  font-family: "Lato", sans-serif;
+  font-family: "SUSE", sans-serif;
   font-weight: 400;
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 18px;
-  color: #562534;
+  color: #5b1136;
   margin-bottom: 0px;
   margin-top: 0px;
 }
@@ -46,23 +44,24 @@ h4 {
   font-family: "Megant";
   font-weight: 100;
   font-size: 90px;
-  color: #562534;
+  color: #440015;
 }
 
 .h4-sub {
   font-family: "Megant";
   font-weight: 500;
   font-size: 50px;
-  color: #562534;
+  color: #440015;
 }
 
 h5 {
   margin-bottom: 0px;
   margin-top: 0px;
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
+  font-family: "SUSE", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
   line-height: 1.1;
+  color: #440015;
   overflow: visible;
   display: flex;
 }
@@ -70,52 +69,52 @@ h5 {
 h6 {
   margin-bottom: 0px;
   margin-top: 0px;
-  font-family: "Lato", sans-serif;
+  font-family: "SUSE", sans-serif;
   font-size: 12px;
-  color: #562534;
+  color: #5b1136;
   font-weight: 500;
   white-space: nowrap;
 }
 
 .body-main {
-  font-family: "Lato", sans-serif;
+  font-family: "SUSE", sans-serif;
+  font-size: 21px;
+  color: #5b1136;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.body-sub {
+  font-family: "SUSE", sans-serif;
   font-size: 19px;
-  color: #562534;
-  font-weight: 300;
+  color: #5b1136;
+  font-weight: 400;
   line-height: 160%;
 }
 
 .job {
-  font-family: "Lato", sans-serif;
-  font-size: 18px;
-  color: #562534;
+  font-family: "SUSE", sans-serif;
+  font-size: 20px;
+  color: #5b1136;
   text-align: justify;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0px;
   white-space: nowrap;
 }
 
-.body-text {
-  font-family: "Lato", sans-serif;
-  font-size: 17px;
-  color: #562534;
-  margin: 0px;
-  font-weight: 300;
-}
-
 .body-skill {
-  font-family: "Lato", sans-serif;
+  font-family: "SUSE", sans-serif;
   font-size: 14px;
-  color: #e9e9e9; /* Make the original text transparent */
+  color: #e9e9e9;
   margin: 0px;
   padding: 6px;
   cursor: default;
 }
 
 .small {
-  font-family: "Lato", sans-serif;
+  font-family: "SUSE", sans-serif;
   font-size: 16px;
-  color: #562534;
+  color: #5b1136;
   margin: 0px;
   display: flex;
   white-space: nowrap;

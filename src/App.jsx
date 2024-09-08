@@ -63,10 +63,10 @@ function App() {
     >
       <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
         {currentSection === section ? (
-          <FiberManualRecordIcon sx={{ color: "#222021" }} fontSize="small" />
+          <FiberManualRecordIcon sx={{ color: "#5b1136" }} fontSize="small" />
         ) : (
           <FiberManualRecordOutlinedIcon
-            sx={{ color: "#222021" }}
+            sx={{ color: "#5b1136" }}
             fontSize="small"
           />
         )}
