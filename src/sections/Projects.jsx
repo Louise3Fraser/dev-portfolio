@@ -23,7 +23,7 @@ export default function Projects() {
         description={
           "Introducing Mushroom Mayhem, a Unity platform-oriented game."
         }
-        url="https://github.com/lisaliuu/Mushroom_Mayhem"
+        url="https://github.com/lisaliuu/Mushroom-Mayhem.git"
       />
     </div>
   );

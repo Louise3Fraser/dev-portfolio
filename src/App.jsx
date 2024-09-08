@@ -8,6 +8,7 @@ import Title from "./components/Title";
 import { motion } from "framer-motion";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 function App() {
   const themeQuery = useTheme();
@@ -63,10 +64,10 @@ function App() {
     >
       <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
         {currentSection === section ? (
-          <FiberManualRecordIcon sx={{ color: "#222021" }} fontSize="small" />
+          <FiberManualRecordIcon sx={{ color: "#562525" }} fontSize="small" />
         ) : (
           <FiberManualRecordOutlinedIcon
-            sx={{ color: "#222021" }}
+            sx={{ color: "#562525" }}
             fontSize="small"
           />
         )}
@@ -115,6 +116,7 @@ function App() {
           <Projects />
         </div>
       </div>
+      <KeyboardArrowUpIcon fontSize="large"/>
     </div>
   );
 }

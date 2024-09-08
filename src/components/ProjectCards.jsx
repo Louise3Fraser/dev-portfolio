@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { Box, useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery } from "@mui/material";
 import "../pages-css/Projects.css";
 import "../pages-css/Animations.css"
 import CallMadeIcon from "@mui/icons-material/CallMade";
@@ -28,6 +28,7 @@ export default function ProjectCards({ title, image, description, url }) {
       });
     };
   }, []);
+
   return (
     <div className="project-cards fade-in-section" style={{
       display: "flex",
@@ -41,7 +42,7 @@ export default function ProjectCards({ title, image, description, url }) {
           margin: "0px",
           flex: screenSizeSm ? "1 0 50%" : "",
           objectFit: "contain",
-          maxWidth: screenSizeSm ? "45%" : "60%",
+          maxWidth: screenSizeSm ? "45%" : "100%",
           borderRadius: "5px"
         }}
       />
@@ -55,7 +56,7 @@ export default function ProjectCards({ title, image, description, url }) {
       >
         <div className="title-desc">
           <h5>{title}</h5>
-          <p className="body-text">{description}</p>
+          <p className="body-sub">{description}</p>
         </div>
         <div
           style={{

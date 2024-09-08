@@ -40,7 +40,7 @@ export default function ExperienceCards({ job }) {
       <div style={{ padding: "30px" }}>
         <h5
           style={{
-            color: "#562534",
+            color: "#562525",
             flex: isSmallScreen ? "1 0 20%" : "",
             marginBottom: "10px"
           }}
@@ -60,13 +60,13 @@ export default function ExperienceCards({ job }) {
               onClick={() => window.open(job.url)}
             >
               <CallMissedOutgoingIcon
-                style={{ color: "black", cursor: "pointer" }}
+                style={{ color: "#562525", cursor: "pointer" }}
               />
             </motion.button>
           </div>
           <ul>
             {job.description.map((item) => (
-                  <li className="body-main">{item}</li>
+                  <li className="body-sub">{item}</li>
             ))}
        </ul>
         </div>
