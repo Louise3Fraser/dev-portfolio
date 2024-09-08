@@ -1,11 +1,17 @@
 import React from "react";
 import "../pages-css/MainSections.css";
-import "../pages-css/Animations.css"
+import "../pages-css/Animations.css";
 import Socials from "./Socials";
+import { useTheme, useMediaQuery } from "@mui/material";
 
 export default function Title() {
+  const isSmallScreen = useMediaQuery(useTheme().breakpoints.up("md"));
+
   return (
-    <div className="title">
+    <div
+      className="title"
+      style={{ alignItems: isSmallScreen ? "center" : "flex-start" }}
+    >
       <div className="container">
         <div className="blobs">
           <div
@@ -38,11 +44,15 @@ export default function Title() {
         </div>
       </div>
       <h5 className="job fade-in fade-in-1" style={{ fontStyle: "italic" }}>
-  Hi! My name is
-</h5>
-<h5 className="h4-title fade-in fade-in-2">Louise Fraser</h5>
+        Hi! My name is
+      </h5>
+      {isSmallScreen ? (
+        <h5 className="h4-title fade-in fade-in-2">Louise Fraser</h5>
+      ) : (
+        <h5 className="h4-title fade-in fade-in-2">Louise Fraser</h5>
+      )}
 
-<Socials className="fade-in fade-in-5" />
+      <Socials className="fade-in fade-in-5" />
     </div>
   );
 }

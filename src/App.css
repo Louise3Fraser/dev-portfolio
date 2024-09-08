@@ -39,21 +39,21 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-  background: rgba(252, 252, 252, 0.5); 
+  background: rgba(252, 252, 252, 0.5);
   padding: 15px;
   padding-left: 30px;
   padding-right: 30px;
   border-radius: 30px;
-  position: fixed; 
-  top: 20px; 
+  position: fixed;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  transition: box-shadow 0.3s ease-in-out; 
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .menu-items.shadow {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background: rgba(254, 253, 253, 1);
 }
 
@@ -62,7 +62,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
@@ -79,6 +79,12 @@
   top: 0;
   left: 0;
   background-attachment: scroll;
+}
+@media (max-width: 800px) {
+  .blob {
+    width: 45vh !important;
+    height: 45vh !important;
+  }
 }
 
 .blobs {
@@ -157,7 +163,6 @@
   }
 }
 
-
 .mode {
   position: fixed;
   bottom: 0;
@@ -188,7 +193,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .highlight {
@@ -200,4 +204,3 @@
   transform: translateX(0);
   opacity: 1;
 }
-

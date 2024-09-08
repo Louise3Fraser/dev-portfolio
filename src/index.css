@@ -35,7 +35,7 @@ h4 {
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 18px;
-  color: #562525;
+  color: #5b1136;
   margin-bottom: 0px;
   margin-top: 0px;
 }
@@ -44,14 +44,14 @@ h4 {
   font-family: "Megant";
   font-weight: 100;
   font-size: 90px;
-  color: #3f1717;
+  color: #440015;
 }
 
 .h4-sub {
   font-family: "Megant";
   font-weight: 500;
   font-size: 50px;
-  color: #3f1717;
+  color: #440015;
 }
 
 h5 {
@@ -61,7 +61,7 @@ h5 {
   font-size: 25px;
   font-weight: 700;
   line-height: 1.1;
-  color: #562525;
+  color: #440015;
   overflow: visible;
   display: flex;
 }
@@ -71,7 +71,7 @@ h6 {
   margin-top: 0px;
   font-family: "SUSE", sans-serif;
   font-size: 12px;
-  color: #562525;
+  color: #5b1136;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -79,7 +79,7 @@ h6 {
 .body-main {
   font-family: "SUSE", sans-serif;
   font-size: 21px;
-  color: #562525;
+  color: #5b1136;
   font-weight: 400;
   line-height: 160%;
 }
@@ -87,7 +87,7 @@ h6 {
 .body-sub {
   font-family: "SUSE", sans-serif;
   font-size: 19px;
-  color: #562525;
+  color: #5b1136;
   font-weight: 400;
   line-height: 160%;
 }
@@ -95,7 +95,7 @@ h6 {
 .job {
   font-family: "SUSE", sans-serif;
   font-size: 20px;
-  color: #562525;
+  color: #5b1136;
   text-align: justify;
   font-weight: 600;
   margin: 0px;
@@ -114,7 +114,7 @@ h6 {
 .small {
   font-family: "SUSE", sans-serif;
   font-size: 16px;
-  color: #562525;
+  color: #5b1136;
   margin: 0px;
   display: flex;
   white-space: nowrap;

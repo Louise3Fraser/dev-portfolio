@@ -21,56 +21,32 @@
 }
 .experience-cards {
   display: flex;
-  margin-bottom: 45px;
+  flex-direction: column;
   border-radius: 25px;
   background: #fcfcfc;
-  width: 70%;
-}
-
-.experience-cards-mobile {
-  display: flex;
-  margin-bottom: 45px;
-  border-radius: 25px;
-  background: #fcfcfc;
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
-}
-
-.experience-cards:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: slideUp 0.3s forwards;
-}
-.experience-cards-mobile:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: slideUp 0.3s forwards;
+  padding: 30px;
 }
 
 .experience-card-heading {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .cards {
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 
-.experience-cards:nth-child(odd) {
+.stagger:nth-child(odd) {
   align-self: flex-start;
 }
 
-.experience-cards:nth-child(even) {
-  align-self: flex-end; 
+.stagger:nth-child(even) {
+  align-self: flex-end;
 }
 
 ul {

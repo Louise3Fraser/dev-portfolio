@@ -1,7 +1,7 @@
 import React from "react";
 import ExperienceCards from "../components/ExperienceCards";
 import Header from "../components/Header";
-
+import "../pages-css/Animations.css"
 const hc1 = {
   date: "Summer 2023",
   title: "Software Engineer Intern",
