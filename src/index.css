@@ -16,36 +16,44 @@ button {
 }
 
 html {
-  background-color: #e1d7cd;
+  background-color: #f4f1f1;
+  
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+@font-face {
+  font-family: "Megant";   /*Can be any text*/
+  src: local("Louise_font"),
+    url("./fonts/bright.otf") format("truetype");
+}
+
 h4 {
   font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 18px;
-  color: #222021;
+  color: #562534;
   margin-bottom: 0px;
   margin-top: 0px;
 }
 
 .h4-title {
-  font-family: "Scheherazade New", serif;
-  font-weight: 700;
-  font-size: 50px;
-  color: #222021;
+  font-family: "Megant";
+  font-weight: 100;
+  font-size: 90px;
+  color: #562534;
 }
 
 .h4-sub {
-  font-family: "Scheherazade New", serif;
-  font-weight: 700;
-  font-size: 30px;
-  color: #222021;
+  font-family: "Megant";
+  font-weight: 500;
+  font-size: 50px;
+  color: #562534;
 }
 
 h5 {
@@ -53,9 +61,10 @@ h5 {
   margin-top: 0px;
   font-family: "Lato", sans-serif;
   font-size: 20px;
-  font-weight: 600;
-  color: #222021;
-  white-space: nowrap;
+  font-weight: 500;
+  line-height: 1.1;
+  overflow: visible;
+  display: flex;
 }
 
 h6 {
@@ -63,24 +72,35 @@ h6 {
   margin-top: 0px;
   font-family: "Lato", sans-serif;
   font-size: 12px;
-  color: #222021;
+  color: #562534;
   font-weight: 500;
   white-space: nowrap;
 }
 
 .body-main {
   font-family: "Lato", sans-serif;
+  font-size: 19px;
+  color: #562534;
+  font-weight: 300;
+  line-height: 160%;
+}
+
+.job {
+  font-family: "Lato", sans-serif;
   font-size: 18px;
-  color: #222021;
+  color: #562534;
   text-align: justify;
+  font-weight: 700;
+  margin: 0px;
+  white-space: nowrap;
 }
 
 .body-text {
   font-family: "Lato", sans-serif;
-  font-size: 18px;
-  color: #222021;
-  text-align: justify;
-  margin: 0px
+  font-size: 17px;
+  color: #562534;
+  margin: 0px;
+  font-weight: 300;
 }
 
 .body-skill {
@@ -92,22 +112,12 @@ h6 {
   cursor: default;
 }
 
-.line {
-  border: .5px solid black;
-  margin-top: 10px;
-  width: 90vw;
-}
-
-.line-fade-to-right {
-  border: .5px solid black;
-  max-width: 700px;
-  width: 100%;
-}
-
 .small {
   font-family: "Lato", sans-serif;
-  font-size: 14px;
-  color: #222021;
-  text-align: justify;
+  font-size: 16px;
+  color: #562534;
   margin: 0px;
+  display: flex;
+  white-space: nowrap;
+  font-style: italic;
 }

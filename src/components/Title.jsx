@@ -1,35 +1,48 @@
 import React from "react";
 import "../pages-css/MainSections.css";
-import Socials from "./sub_components/Socials";
-import { useTheme, useMediaQuery } from "@mui/material";
+import "../pages-css/Animations.css"
+import Socials from "./Socials";
 
 export default function Title() {
-    const themeQuery = useTheme();
-  const screenSizeSm = useMediaQuery(themeQuery.breakpoints.up("sm"));
-
-
   return (
     <div className="title">
-      <h4 className="h4-title">Louise Fraser</h4>
-      <div className="socials-drawer">
-        { screenSizeSm ? (<><div className="spinner-container">
-          <svg viewBox="0 0 100 100" className="spinner">
-            <path
-              id="text-path"
-              d="M 50, 50 m -30, 0 a 30,30 0 1,1 60,0 a 30,30 0 1,1 -60,0"
-              fill="none"
-            />
-            <text>
-              <textPath href="#text-path" >
-                My socials • My socials • My socials •
-              </textPath>
-            </text>
-          </svg>
-        </div> <div style={{ height: "20px" }} /> </>) : (<div/>)}
-        
-        
-        <Socials />
+      <div className="container">
+        <div className="blobs">
+          <div
+            className="blob a"
+            style={{
+              backgroundColor: "#ff8a80",
+            }}
+          ></div>
+          <div
+            className="blob b"
+            style={{
+              backgroundColor: "#ffd385",
+            }}
+          ></div>
+          <div
+            className="blob c"
+            style={{
+              backgroundColor: "#ff80ab",
+            }}
+          ></div>
+          <div
+            className="blob d"
+            style={{
+              backgroundColor: "#f478c8",
+            }}
+            // style={{
+            //   backgroundColor: "#ff80ab",
+            // }}
+          ></div>
+        </div>
       </div>
+      <h5 className="job fade-in fade-in-1" style={{ fontStyle: "italic" }}>
+  Hi! My name is
+</h5>
+<h5 className="h4-title fade-in fade-in-2">Louise Fraser</h5>
+
+<Socials className="fade-in fade-in-5" />
     </div>
   );
 }

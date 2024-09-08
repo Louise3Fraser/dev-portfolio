@@ -1,31 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../pages-css/About.css";
-import ReactIMG from "../images/react.png";
-import JavascriptIMG from "../images/javascript.png";
-import PythonIMG from "../images/python.png";
-import CIMG from "../images/c++.png";
+import "../pages-css/Animations.css"
 import { useTheme, useMediaQuery } from "@mui/material";
+import Header from "../components/Header";
 
-const drawerWidth = 700;
 export default function About() {
   const themeQuery = useTheme();
   const screenSizeSm = useMediaQuery(themeQuery.breakpoints.up("sm"));
+  
+  useEffect(() => {
+    const highlights = document.querySelectorAll(".fade-in-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    highlights.forEach((highlight) => {
+      observer.observe(highlight);
+    });
+
+    return () => {
+      highlights.forEach((highlight) => {
+        observer.unobserve(highlight);
+      });
+    };
+  }, []);
 
   return (
     <div className="about">
-      <h4 className="h4-sub">About</h4>
-      <div className="line-fade-to-right" />
+      <Header section={"About"} />
       <div
-        className="about-divide"
-        style={{ flexDirection: screenSizeSm ? "row" : "column" }}
+        className="about-divide fade-in-section"
+        style={{ flexDirection: screenSizeSm ? "column" : "column", gap: screenSizeSm ? "0px" : "0px" }}
       >
         <div className="about-content">
           <p className="body-main" style={{ marginTop: "0px" }}>
             I am a current senior at Vanderbilt University double majoring in
-            <b> computer science </b> and <b> psychology</b>. Coding and design
-            are two things I love to challenge myself with. I am particularly
-            interested in exploring <b> frontend</b> or
-            <b> full-stack</b> development. I have a solid foundation in
+            computer science and psychology. Coding and design are two things I
+            love to challenge myself with. I am particularly interested in
+            exploring or full-stack development. I have a solid foundation in
             JavaScript, React.js, and Python.
           </p>
           <p className="body-main">
@@ -40,21 +56,11 @@ export default function About() {
           className="about-skills"
           style={{ flexDirection: screenSizeSm ? "column" : "row" }}
         >
-          
           <p className="body-main" style={{ marginTop: "0px" }}>
             In my free time, I enjoy drawing, watching movies/tv, reading
             fantasy novels, playing videogames, going to the gym, and trying new
             cuisines.
           </p>
-          
-          {/* <img alt="project-img" src={ReactIMG} style={{ maxWidth: "40px" }} />
-          <img
-            alt="project-img"
-            src={JavascriptIMG}
-            style={{ maxWidth: "40px" }}
-          />
-          <img alt="project-img" src={PythonIMG} style={{ maxWidth: "40px" }} />
-          <img alt="project-img" src={CIMG} style={{ maxWidth: "40px" }} /> */}
         </div>
       </div>
     </div>

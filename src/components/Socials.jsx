@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "../../pages-css/MainSections.css";
+import React, { useState, useEffect } from "react";
+import "../pages-css/MainSections.css";
 import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -19,7 +19,7 @@ export default function Socials() {
         whileTap={{ scale: 0.9 }}
         onClick={() => window.open("https://github.com/Louise3Fraser")}
       >
-        <GitHubIcon style={{ color: "black", cursor: "pointer" }} />
+        <GitHubIcon className="fade-in fade-in-6" style={{ color: "562534", cursor: "pointer" }} />
       </motion.button>
       <motion.button
         whileHover={{
@@ -30,7 +30,7 @@ export default function Socials() {
           window.open("https://www.linkedin.com/in/louise-fraser-379b0b251/")
         }
       >
-        <LinkedInIcon style={{ color: "black", cursor: "pointer" }} />
+        <LinkedInIcon className="fade-in fade-in-7" style={{ color: "562534", cursor: "pointer" }} />
       </motion.button>
       {copied ? (
         <Tooltip title="Email Copied!" placement="top">
@@ -40,8 +40,8 @@ export default function Socials() {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <AssignmentTurnedInIcon
-              style={{ color: "black", cursor: "pointer" }}
+            <AssignmentTurnedInIcon 
+              style={{ color: "#562534", cursor: "pointer" }}
             />
           </motion.button>
         </Tooltip>
@@ -56,7 +56,7 @@ export default function Socials() {
             setCopied(true);
           }}
         >
-          <EmailIcon style={{ color: "black", cursor: "pointer" }} />
+          <EmailIcon className="fade-in fade-in-8" style={{ color: "562534", cursor: "pointer" }} />
         </motion.button>
       )}
     </div>
