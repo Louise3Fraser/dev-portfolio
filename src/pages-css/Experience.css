@@ -24,7 +24,7 @@
   flex-direction: column;
   border-radius: 25px;
   background: #fcfcfc;
-  padding: 30px;
+  padding: 25px;
 }
 
 .experience-card-heading {
@@ -41,13 +41,13 @@
   gap: 30px;
 }
 
-.stagger:nth-child(odd) {
+/* .stagger:nth-child(odd) {
   align-self: flex-start;
 }
 
 .stagger:nth-child(even) {
   align-self: flex-end;
-}
+} */
 
 ul {
   padding-left: 20px;

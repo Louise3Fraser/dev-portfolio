@@ -28,7 +28,7 @@ const lifeomic = {
   ],
   skills: ["Javascript", "React", "Typescript", "Python", "Cypress"],
   takeaways: "I learned",
-  url: "https://lifeomic.com/",
+  url: "https://www.linkedin.com/company/lifeomic-inc",
 };
 
 const dores = {

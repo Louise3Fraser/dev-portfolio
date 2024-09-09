@@ -33,7 +33,7 @@ export default function ExperienceCards({ job }) {
       className={"stagger"}
       style={{
         display: "flex",
-        width: isSmallScreen ? "70%" : "100%",
+        // width: isSmallScreen ? "70%" : "100%",
       }}
     >
       <div className="fade-in-section">
