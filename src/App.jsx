@@ -8,6 +8,7 @@ import Title from "./components/Title";
 import { motion } from "framer-motion";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
+import flower from "./images/logo_flower.png";
 
 function App() {
   const themeQuery = useTheme();
@@ -85,6 +86,7 @@ function App() {
 
   return (
     <div className="layout">
+     
       {screenSize ? (
         <div className="nav-dots">
           {renderDot(homeRef, "about")}
@@ -96,6 +98,17 @@ function App() {
       )}
       <div className="landing">
         <div className="navigation">
+          <img
+            alt="img"
+            src={flower}
+            className="nav-image"
+            style={{
+              margin: "0px",
+              objectFit: "contain",
+              borderRadius: "5px",
+              width: "70px",
+            }}
+          />
           <div className="menu-items">
             {renderMenuButton("About", homeRef, "about")}
             {renderMenuButton("Experience", experienceRef, "experience")}

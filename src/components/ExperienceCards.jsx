@@ -29,47 +29,40 @@ export default function ExperienceCards({ job }) {
   }, []);
 
   return (
-    <div
-      className={"stagger"}
-      style={{
-        display: "flex",
-        // width: isSmallScreen ? "70%" : "100%",
-      }}
-    >
-      <div className="fade-in-section">
-        <div className="experience-cards">
-          <p
-            className="small"
-            style={{
-              color: "#5b1136",
-              flex: isSmallScreen ? "1 0 20%" : "",
-              marginBottom: "10px",
-            }}
-          >
-            {job.date}
-          </p>
-          <div className="info">
-            <div className="experience-card-heading">
-              <p className="job">{job.place}</p>
-              <p className="job">|</p>
-              <p className="job">{job.title}</p>
-              <motion.button
-                className="link"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => window.open(job.url)}
-              >
-                <CallMissedOutgoingIcon
-                  style={{ color: "#5b1136", cursor: "pointer" }}
-                />
-              </motion.button>
-            </div>
-            <ul>
-              {job.description.map((item) => (
-                <li className="body-sub">{item}</li>
-              ))}
-            </ul>
+    <div className="fade-in-section">
+      <div className="experience-cards" style={{padding: "20px", flexDirection: isSmallScreen ? "row" :"column"}}>
+        <p
+          className="small"
+          style={{
+            color: "#5b1136",
+            flex: isSmallScreen ? "1 0 25%" : "",
+            marginBottom: "10px",
+            flexDirection: "column"
+          }}
+        >
+          {job.date}
+        </p>
+        <div className="info">
+          <div className="experience-card-heading">
+            <p className="job">{job.place}</p>
+            <p className="job">|</p>
+            <p className="job">{job.title}</p>
+            <motion.button
+              className="link"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => window.open(job.url)}
+            >
+              <CallMissedOutgoingIcon
+                style={{ color: "#5b1136", cursor: "pointer" }}
+              />
+            </motion.button>
           </div>
+          <ul>
+            {job.description.map((item) => (
+              <li className="body-sub">{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

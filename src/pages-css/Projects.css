@@ -6,13 +6,11 @@
 }
 
 .project-cards {
-  padding: 25px;
-  border-radius: 25px;
-  background: #fcfcfc;
   display: flex;
   flex-direction: row;
   gap: 30px;
   margin-bottom: 40px;
+  padding: 20px
 }
 
 .title-desc {

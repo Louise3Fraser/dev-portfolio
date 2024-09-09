@@ -41,14 +41,13 @@
   gap: 30px;
 }
 
-/* .stagger:nth-child(odd) {
-  align-self: flex-start;
-}
-
-.stagger:nth-child(even) {
-  align-self: flex-end;
-} */
-
 ul {
   padding-left: 20px;
+}
+
+li.body-sub {
+  list-style-type: none; /* Removes the default bullet */
+  padding-left: 45px;
+  background: url("../images/bullet.png") no-repeat left center;
+  background-size: 36px 36px; /* Adjust the size of the bullet image */
 }

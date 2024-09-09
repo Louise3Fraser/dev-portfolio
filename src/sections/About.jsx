@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 import "../pages-css/About.css";
-import "../pages-css/Animations.css"
+import "../pages-css/Animations.css";
 import { useTheme, useMediaQuery } from "@mui/material";
 import Header from "../components/Header";
-
+import nz from "../images/nz.JPG";
+import melb from "../images/melb.JPG";
+import taz from "../images/taz.jpg";
 export default function About() {
   const themeQuery = useTheme();
   const screenSizeSm = useMediaQuery(themeQuery.breakpoints.up("sm"));
-  
+
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
     const observer = new IntersectionObserver((entries) => {
@@ -31,18 +33,21 @@ export default function About() {
 
   return (
     <div className="about">
-      <Header section={"About"} />
+      {/* <Header section={"About"} /> */}
       <div
         className="about-divide fade-in-section"
-        style={{ flexDirection: screenSizeSm ? "column" : "column", gap: screenSizeSm ? "0px" : "0px" }}
+        style={{
+          flexDirection: screenSizeSm ? "column" : "column",
+          gap: screenSizeSm ? "0px" : "0px",
+        }}
       >
         <div className="about-content">
           <p className="body-main" style={{ marginTop: "0px" }}>
             I am a current senior at Vanderbilt University double majoring in
             computer science and psychology. Coding and design are two things I
             love to challenge myself with. I am particularly interested in
-            exploring frontend or full-stack development. I have a solid foundation in
-            JavaScript, React.js, and Python.
+            exploring frontend or full-stack development. I have a solid
+            foundation in JavaScript, React.js, and Python.
           </p>
           <p className="body-main">
             I have two years of internship experience where I worked as a
@@ -63,6 +68,44 @@ export default function About() {
           </p>
         </div>
       </div>
+      <img
+    alt="img"
+    src={nz}
+    className="nav-image"
+    style={{
+      margin: "0px",
+      objectFit: "contain",
+      borderRadius: "0px",
+      width: "100%",
+      marginTop: "40px",
+      marginLeft: "-400px"
+    }}
+  /><p className="small">My visit to New Zealand 2024.</p>
+  {/* <img
+    alt="img"
+    src={melb}
+    className="nav-image"
+    style={{
+      margin: "0px",
+      objectFit: "contain",
+      borderRadius: "0px",
+      width: "100%",
+      marginTop: "40px"
+    }}
+  /><p className="small">My visit to New Zealand 2024.</p> */}
+  <img
+  alt="img"
+  src={taz}
+  className="nav-image"
+  style={{
+    margin: "0px",
+    objectFit: "contain",
+    borderRadius: "0px",
+    width: "100%",
+    marginTop: "40px",
+    paddingLeft: "400px"
+  }}
+/><p className="small">My visit to New Zealand 2024.</p>
     </div>
   );
 }
