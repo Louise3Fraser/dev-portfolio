@@ -5,10 +5,6 @@
   align-items: flex-start;
 }
 
-.about-content {
-  flex: 1 1 50%;
-}
-
 .about-skills {
   display: flex;
   flex: 1 1 50%;
@@ -17,3 +13,14 @@
   justify-content: space-around;
 }
 
+.columns {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px
+}
+
+.about-content {
+  display: flex;
+  gap: 60px
+}

@@ -5,9 +5,16 @@ import "../pages-css/Animations.css";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import { motion } from "framer-motion";
 
-export default function ProjectCards({ title, image, description, url }) {
+export default function ProjectCards({
+  title,
+  src,
+  type,
+  description,
+  about,
+  url,
+}) {
   const theme = useTheme();
-  const screenSizeSm = useMediaQuery(theme.breakpoints.up("sm"));
+  const screenSizeSm = useMediaQuery(theme.breakpoints.up("md"));
 
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
@@ -39,18 +46,34 @@ export default function ProjectCards({ title, image, description, url }) {
           flexDirection: screenSizeSm ? "row" : "column",
         }}
       >
-        <img
-          alt="project-img"
-          src={image}
-          className="card-image"
-          style={{
-            margin: "0px",
-            flex: screenSizeSm ? "1 0 50%" : "",
-            objectFit: "contain",
-            maxWidth: screenSizeSm ? "45%" : "100%",
-            borderRadius: "5px",
-          }}
-        />
+        {type == "image" ? (
+          <img
+            alt="project-img"
+            src={src}
+            className="card-src"
+            style={{
+              margin: "0px",
+              flex: screenSizeSm ? "1 0 50%" : "",
+              objectFit: "contain",
+              maxWidth: screenSizeSm ? "45%" : "100%",
+            }}
+          />
+        ) : (
+          <video
+            src={src}
+            className="card-src"
+            autoPlay
+            loop
+            muted
+            style={{
+              margin: "0px",
+              flex: screenSizeSm ? "1 0 50%" : "",
+              objectFit: "contain",
+              maxWidth: screenSizeSm ? "45%" : "100%",
+            }}
+          />
+        )}
+
         <div
           style={{
             display: "flex",
@@ -60,8 +83,14 @@ export default function ProjectCards({ title, image, description, url }) {
           }}
         >
           <div className="title-desc">
-            <h5>{title}</h5>
-            <p className="body-sub">{description}</p>
+            <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+              <p className="job" style={{ fontStyle: "italic" }}>
+                {title}
+              </p>
+              <p className="job">|</p>
+              <p className="job">{about}</p>
+            </div>
+            <p className="body-main">{description}</p>
           </div>
           <div
             style={{

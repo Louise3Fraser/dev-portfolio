@@ -55,25 +55,20 @@
   animation-delay: 1.6s;
 }
 
-.project-cards:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: animateCard 0.3s forwards;
+/* .project-cards:hover {
+  background-color: #fcf7f7;
 }
 
 .project-cards:hover .card-image {
-  animation: none;
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
+  background-color: #fcf7f7;
 }
 
 .experience-cards:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: animateCard 0.3s forwards;
+  background-color: #fcf7f7;
 }
 .experience-cards-mobile:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: animateCard 0.3s forwards;
-}
+  background-color: #fcf7f7;
+} */
 
 @keyframes animateCard {
   0% {

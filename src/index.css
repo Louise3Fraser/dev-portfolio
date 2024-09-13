@@ -36,7 +36,7 @@ button {
 }
 
 html {
-  background-color: var(--background-color);
+  background-color: white;
 }
 
 code {
@@ -44,94 +44,142 @@ code {
     monospace;
 }
 
-@font-face {
-  font-family: "Megant";
-  src: local("Louise_font"), url("./fonts/bright.otf") format("truetype");
+:root {
+  --font-family: "Poppins", sans-serif;
+  --color-primary: black;
+  --color-secondary: #7F7F7F;
+  --color-light: #BEBEBE;
+  --color-skill: #e9e9e9;
+  --font-weight-regular: 400;
+  --font-weight-light: 100;
+  --font-weight-bold: 600;
+  --font-weight-medium: 500;
+  --font-size-small: 10px;
+  --font-size-base: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+  --font-size-h4-title: 35px;
+  --font-size-h4-sub: 30px;
+  --font-size-h5: 25px;
+  --font-size-body-skill: 14px;
+  --line-height-regular: 160%;
+  --line-height-sub: 130%;
 }
 
 h4 {
-  font-family: var(--font-main);
-  font-weight: var(--font-weight-normal);
-  margin: 0;
-  font-size: var(--font-size-sub);
-  color: var(--secondary-color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: var(--font-size-medium);
+  color: var(--color-primary);
 }
 
 .h4-title {
-  font-family: var(--font-custom);
-  font-weight: var(--font-weight-light);
-  font-size: var(--font-size-large);
-  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h4-title);
+  color: var(--color-primary);
 }
 
 .h4-sub {
-  font-family: var(--font-custom);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-medium);
-  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h4-sub);
+  color: var(--color-primary);
 }
 
 h5 {
-  margin: 0;
-  font-family: var(--font-main);
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-heavy);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
   line-height: 1.1;
-  color: var(--primary-color);
+  color: var(--color-secondary);
+  overflow: visible;
   display: flex;
   overflow: visible;
 }
 
 h6 {
-  margin: 0;
-  font-family: var(--font-main);
-  font-size: var(--font-size-tiny);
-  color: var(--secondary-color);
-  font-weight: var(--font-weight-bold);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
   white-space: nowrap;
 }
 
 .body-main {
-  font-family: var(--font-main);
-  font-size: var(--font-size-body);
-  color: var(--secondary-color);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-body);
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-regular);
+}
+.body-main-link {
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-regular);
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.body-main-link:hover {
+  color: var(--color-light)
 }
 
 .body-sub {
-  font-family: var(--font-main);
-  font-size: var(--font-size-sub);
-  color: var(--secondary-color);
-  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-sub);
 }
 
 .job {
-  font-family: var(--font-main);
-  font-size: var(--font-size-body);
-  color: var(--secondary-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size-large);
+  color: var(--color-primary);
   text-align: justify;
-  font-weight: var(--font-weight-extra-bold);
-  margin: 0;
+  font-weight: var(--font-weight-medium);
+  margin: 0px;
   white-space: nowrap;
 }
 
 .body-skill {
-  font-family: var(--font-main);
-  font-size: var(--font-size-caption);
-  color: var(--light-color);
-  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body-skill);
+  color: var(--color-skill);
+  margin: 0px;
   padding: 6px;
   cursor: default;
 }
 
 .small {
-  font-family: var(--font-main);
-  font-size: 16px;
-  color: var(--secondary-color);
-  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-secondary);
+  margin: 0px;
+  display: flex;
+  white-space: nowrap;
+}
+
+.small-link {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-secondary);
+  margin: 0px;
   display: flex;
   white-space: nowrap;
   font-style: italic;
+  text-decoration: underline;
+}
+
+.small-link:hover {
+  color: var(--color-light)
 }
