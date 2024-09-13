@@ -46,7 +46,7 @@ export default function ProjectCards({
           flexDirection: screenSizeSm ? "row" : "column",
         }}
       >
-        {type == "image" ? (
+        {type === "image" ? (
           <img
             alt="project-img"
             src={src}
