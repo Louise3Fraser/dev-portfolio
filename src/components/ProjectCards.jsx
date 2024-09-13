@@ -63,6 +63,7 @@ export default function ProjectCards({
             src={src}
             className="card-src"
             autoPlay
+            playsInline
             loop
             muted
             style={{

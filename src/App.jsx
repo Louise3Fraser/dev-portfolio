@@ -63,11 +63,14 @@ function App() {
     >
       <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
         {currentSection === section ? (
-          <FiberManualRecordIcon style={{color: "#7F7F7F"}} fontSize="small" />
+          <FiberManualRecordIcon
+            style={{ color: "#7F7F7F" }}
+            fontSize="small"
+          />
         ) : (
           <FiberManualRecordOutlinedIcon
             fontSize="small"
-            style={{color: "#7F7F7F"}} 
+            style={{ color: "#7F7F7F" }}
           />
         )}
       </motion.div>
@@ -101,17 +104,6 @@ function App() {
             {renderMenuButton("Experience", experienceRef, "experience")}
             {renderMenuButton("Projects", projectsRef, "projects")}
           </div>
-          {/* <img
-            alt="img"
-            src={flower}
-            className="nav-image"
-            style={{
-              margin: "0px",
-              objectFit: "contain",
-              borderRadius: "5px",
-              width: "45px",
-            }}
-          /> */}
         </div>
         <div className="line" />
 

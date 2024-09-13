@@ -38,7 +38,7 @@ export default function Projects() {
           "My first portfolio website I created!"
         }
         about={"Frontend Application"}
-        url="https://github.com/lisaliuu/Mushroom-Mayhem.git"
+        url="https://github.com/Louise3Fraser/dev-portfolio/tree/v1"
       />
     </div>
   );

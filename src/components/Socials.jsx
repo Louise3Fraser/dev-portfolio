@@ -21,7 +21,7 @@ export default function Socials() {
       >
         <GitHubIcon
           className="fade-in fade-in-4"
-          style={{ cursor: "pointer" }}
+          style={{ color: "black", cursor: "pointer" }}
         />
       </motion.button>
       <motion.button
@@ -35,7 +35,7 @@ export default function Socials() {
       >
         <LinkedInIcon
           className="fade-in fade-in-5"
-          style={{ cursor: "pointer" }}
+          style={{ color: "black", cursor: "pointer" }}
         />
       </motion.button>
       {copied ? (
@@ -46,7 +46,9 @@ export default function Socials() {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <AssignmentTurnedInIcon style={{ cursor: "pointer" }} />
+            <AssignmentTurnedInIcon
+              style={{ color: "black", cursor: "pointer" }}
+            />
           </motion.button>
         </Tooltip>
       ) : (
@@ -62,7 +64,7 @@ export default function Socials() {
         >
           <EmailIcon
             className="fade-in fade-in-6"
-            style={{ cursor: "pointer" }}
+            style={{ color: "black", cursor: "pointer" }}
           />
         </motion.button>
       )}
