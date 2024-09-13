@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/dev-portfolio/static/css/main.74019e5e.css",
-    "main.js": "/dev-portfolio/static/js/main.5e0d4c1b.js",
+    "main.css": "/dev-portfolio/static/css/main.5d87eef7.css",
+    "main.js": "/dev-portfolio/static/js/main.46c91f1e.js",
+    "static/media/v1.mp4": "/dev-portfolio/static/media/v1.bc8cb238202251381b60.mp4",
+    "static/media/water.JPG": "/dev-portfolio/static/media/water.1d4aa5cb48224c7edd92.JPG",
+    "static/media/waterSmall.JPG": "/dev-portfolio/static/media/waterSmall.fb162b2dcb871e9d41be.JPG",
     "static/media/mushroom.png": "/dev-portfolio/static/media/mushroom.d968f4654bce019185c0.png",
+    "static/media/resume.pdf": "/dev-portfolio/static/media/resume.93a84a78626b07a946a4.pdf",
     "static/media/carshare.png": "/dev-portfolio/static/media/carshare.7ce9d02e42ecf4898663.png",
-    "static/media/bright.otf": "/dev-portfolio/static/media/bright.113a81c49da35e70de7a.otf",
     "static/media/texture.png": "/dev-portfolio/static/media/texture.b03e030bf368aa855ed4.png",
     "index.html": "/dev-portfolio/index.html",
-    "main.74019e5e.css.map": "/dev-portfolio/static/css/main.74019e5e.css.map",
-    "main.5e0d4c1b.js.map": "/dev-portfolio/static/js/main.5e0d4c1b.js.map"
+    "main.5d87eef7.css.map": "/dev-portfolio/static/css/main.5d87eef7.css.map",
+    "main.46c91f1e.js.map": "/dev-portfolio/static/js/main.46c91f1e.js.map"
   },
   "entrypoints": [
-    "static/css/main.74019e5e.css",
-    "static/js/main.5e0d4c1b.js"
+    "static/css/main.5d87eef7.css",
+    "static/js/main.46c91f1e.js"
   ]
 }
