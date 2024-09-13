@@ -111,7 +111,7 @@ export default function ExperienceCards({ job }) {
               whileTap={{ scale: 0.9 }}
               onClick={() => window.open(job.url)}
             >
-              <CallMissedOutgoingIcon style={{ cursor: "pointer" }} />
+              <CallMissedOutgoingIcon style={{ color: "black", cursor: "pointer" }} />
             </motion.button>
           </div>
           <p className="body-main">{findBoldWords(job.description)}</p>

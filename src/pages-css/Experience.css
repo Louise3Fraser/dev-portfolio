@@ -42,21 +42,10 @@
 .experience-card-heading {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 10px;
   transition: margin-left 0.2s ease-in-out;
-}
-
-.experience-card-heading {
-  position: relative;
-  transition: margin-left 0.2s ease-in-out;
-  margin-left: 0; 
-}
-
-.experience-card-heading {
-  position: relative;
-  transition: margin-left 0.2s ease-in-out;
-  margin-left: 0; 
 }
 
 .experience-card-heading::before {
