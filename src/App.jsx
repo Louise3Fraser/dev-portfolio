@@ -8,7 +8,6 @@ import Title from "./components/Title";
 import { motion } from "framer-motion";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
-import flower from "./images/logo_flower.png";
 
 function App() {
   const themeQuery = useTheme();
@@ -64,11 +63,11 @@ function App() {
     >
       <motion.div className="animatable" whileHover={{ scale: 1.1 }}>
         {currentSection === section ? (
-          <FiberManualRecordIcon sx={{ color: "#5b1136" }} fontSize="small" />
+          <FiberManualRecordIcon style={{color: "#7F7F7F"}} fontSize="small" />
         ) : (
           <FiberManualRecordOutlinedIcon
-            sx={{ color: "#5b1136" }}
             fontSize="small"
+            style={{color: "#7F7F7F"}} 
           />
         )}
       </motion.div>
@@ -86,7 +85,6 @@ function App() {
 
   return (
     <div className="layout">
-     
       {screenSize ? (
         <div className="nav-dots">
           {renderDot(homeRef, "about")}
@@ -98,7 +96,12 @@ function App() {
       )}
       <div className="landing">
         <div className="navigation">
-          <img
+          <div className="menu-items">
+            {renderMenuButton("About", homeRef, "about")}
+            {renderMenuButton("Experience", experienceRef, "experience")}
+            {renderMenuButton("Projects", projectsRef, "projects")}
+          </div>
+          {/* <img
             alt="img"
             src={flower}
             className="nav-image"
@@ -106,15 +109,12 @@ function App() {
               margin: "0px",
               objectFit: "contain",
               borderRadius: "5px",
-              width: "70px",
+              width: "45px",
             }}
-          />
-          <div className="menu-items">
-            {renderMenuButton("About", homeRef, "about")}
-            {renderMenuButton("Experience", experienceRef, "experience")}
-            {renderMenuButton("Projects", projectsRef, "projects")}
-          </div>
+          /> */}
         </div>
+        <div className="line" />
+
         <Title mode={(homeRef, experienceRef, projectsRef)} />
       </div>
       <div className="main">

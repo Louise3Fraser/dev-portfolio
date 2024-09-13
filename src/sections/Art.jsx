@@ -1,15 +1,15 @@
-import iceland from "../images/example-work/iceland.jpg";
-import invusion1 from "../images/example-work/invusion-1.png";
-import invusion2 from "../images/example-work/invusion-2.png";
-import lambda from "../images/example-work/lambda.png";
-import studio from "../images/example-work/studio.png";
-import studioLogo from "../images/example-work/studio-logos.png";
-import studioDark from "../images/example-work/studio-dark.png";
-import pie from "../images/example-work/pie.png";
-import shape from "../images/example-work/shape.png";
-import vitality from "../images/example-work/vitality.png";
+import iceland from "../media/example-work/iceland.jpg";
+import invusion1 from "../media/example-work/invusion-1.png";
+import invusion2 from "../media/example-work/invusion-2.png";
+import lambda from "../media/example-work/lambda.png";
+import studio from "../media/example-work/studio.png";
+import studioLogo from "../media/example-work/studio-logos.png";
+import studioDark from "../media/example-work/studio-dark.png";
+import pie from "../media/example-work/pie.png";
+import shape from "../media/example-work/shape.png";
+import vitality from "../media/example-work/vitality.png";
 
-import marshmallow from "../images/example-work/marshmallow.png";
+import marshmallow from "../media/example-work/marshmallow.png";
 import { motion } from "framer-motion";
 import { Box, useTheme, useMediaQuery } from "@mui/material";
 import "../pages-css/Art.css";
@@ -17,7 +17,7 @@ const images = [iceland, invusion1, shape, vitality, invusion2, marshmallow, lam
 
 export default function Art() {
   const theme = useTheme();
-  const screenSizeSm = useMediaQuery(theme.breakpoints.up("sm"));
+  const screenSizeSm = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <div className="art">

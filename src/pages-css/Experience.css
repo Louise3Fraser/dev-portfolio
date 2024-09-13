@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-top: -3px
 }
 .experience-cards {
   display: flex;
@@ -48,6 +49,57 @@ ul {
 li.body-sub {
   list-style-type: none; /* Removes the default bullet */
   padding-left: 45px;
-  background: url("../images/bullet.png") no-repeat left center;
+  background: url("../media/bullet.png") no-repeat left center;
   background-size: 36px 36px; /* Adjust the size of the bullet image */
+}
+
+.fade-in-words {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.expanded {
+  opacity: 0;
+}
+
+.collapsed {
+  opacity: 1;
+}
+
+.experience-card-heading {
+  position: relative;
+  transition: margin-left 0.2s ease-in-out;
+}
+
+.experience-card-heading {
+  position: relative;
+  transition: margin-left 0.2s ease-in-out;
+  margin-left: 0; /* Default margin */
+}
+
+.experience-card-heading {
+  position: relative;
+  transition: margin-left 0.2s ease-in-out;
+  margin-left: 0; /* Default margin */
+}
+
+.experience-card-heading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -30px; /* Adjust this value to set the gap */
+  width: 0;
+  height: 1px; /* Adjust thickness as needed */
+  background-color: black; /* Adjust color as needed */
+  transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+  transform: translateY(-50%);
+}
+
+.experience-card-heading.extend {
+  margin-left: 30px;
+}
+
+.experience-card-heading.extend::before {
+  width: 20px;
+  left: -30px; /* This keeps the line with the gap from the text */
 }

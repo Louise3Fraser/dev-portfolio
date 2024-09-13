@@ -55,7 +55,7 @@
   animation-delay: 1.6s;
 }
 
-.project-cards:hover {
+/* .project-cards:hover {
   background-color: #fcf7f7;
 }
 
@@ -68,7 +68,7 @@
 }
 .experience-cards-mobile:hover {
   background-color: #fcf7f7;
-}
+} */
 
 @keyframes animateCard {
   0% {

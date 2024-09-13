@@ -27,6 +27,7 @@ export default function Header({ section }) {
   return (
     <div className="section-header">
       <h4 className="h4-sub fade-in-section">{section}.</h4>
+      <div className="line fade-in-section"/>
     </div>
   );
 }

@@ -19,7 +19,10 @@ export default function Socials() {
         whileTap={{ scale: 0.9 }}
         onClick={() => window.open("https://github.com/Louise3Fraser")}
       >
-        <GitHubIcon className="fade-in fade-in-4" style={{ color: "5b1136", cursor: "pointer" }} />
+        <GitHubIcon
+          className="fade-in fade-in-4"
+          style={{ cursor: "pointer" }}
+        />
       </motion.button>
       <motion.button
         whileHover={{
@@ -30,7 +33,10 @@ export default function Socials() {
           window.open("https://www.linkedin.com/in/louise-fraser-379b0b251/")
         }
       >
-        <LinkedInIcon className="fade-in fade-in-5" style={{ color: "5b1136", cursor: "pointer" }} />
+        <LinkedInIcon
+          className="fade-in fade-in-5"
+          style={{ cursor: "pointer" }}
+        />
       </motion.button>
       {copied ? (
         <Tooltip title="Email Copied!" placement="top">
@@ -40,9 +46,7 @@ export default function Socials() {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <AssignmentTurnedInIcon 
-              style={{ color: "#5b1136", cursor: "pointer" }}
-            />
+            <AssignmentTurnedInIcon style={{ cursor: "pointer" }} />
           </motion.button>
         </Tooltip>
       ) : (
@@ -56,7 +60,10 @@ export default function Socials() {
             setCopied(true);
           }}
         >
-          <EmailIcon className="fade-in fade-in-6" style={{ color: "5b1136", cursor: "pointer" }} />
+          <EmailIcon
+            className="fade-in fade-in-6"
+            style={{ cursor: "pointer" }}
+          />
         </motion.button>
       )}
     </div>
