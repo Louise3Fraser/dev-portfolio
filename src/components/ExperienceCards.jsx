@@ -100,7 +100,7 @@ export default function ExperienceCards({ job }) {
           <div
             className={`experience-card-heading ${isHovered ? "extend" : ""}`}
           >
-            <p className="job" style={{ fontWeight: "600" }}>
+            <p className="job" style={{ fontStyle: "italic" }}>
               {job.place}
             </p>
             <p className="job">|</p>
