@@ -22,7 +22,7 @@ const lifeomic = {
   description: "Worked on developing applets and translating code using React, JavaScript, TypeScript, and Python. Contributed to LifeOmic’s platform, which has 5 million mobile app downloads and over 300,000 monthly active users. Created and tested features for physician search and information retrieval.",
   skills: ["Javascript", "React", "Typescript", "Python", "Cypress"],
   takeaways: "I learned",
-  url: "https://lifeomic.com/",
+  url: "https://www.linkedin.com/company/lifeomic-inc",
 };
 
 const dores = {
