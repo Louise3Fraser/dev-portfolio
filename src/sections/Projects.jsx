@@ -15,9 +15,9 @@ export default function Projects() {
         src={carshare}
         type={"image"}
         description={
-          "Designed to reduce car trips and gas usage by providing an efficient and organized way for people to share a car. App utilizes calendar React.js, API, MySQL database, and both frontend and backend development"
+          "Designed to reduce car trips and gas usage by providing an efficient and organized way for people to share a car."
         }
-        about={"Full-stack Application"}
+        about={"Full-stack App, UX Case Study"}
         url="https://github.com/Louise3Fraser/car-share"
       />
       <ProjectCards

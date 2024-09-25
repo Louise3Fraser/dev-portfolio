@@ -55,7 +55,7 @@ export default function ProjectCards({
               margin: "0px",
               flex: screenSizeSm ? "1 0 50%" : "",
               objectFit: "contain",
-              maxWidth: screenSizeSm ? "45%" : "100%",
+              maxWidth: screenSizeSm ? "55%" : "100%",
             }}
           />
         ) : (
@@ -70,7 +70,7 @@ export default function ProjectCards({
               margin: "0px",
               flex: screenSizeSm ? "1 0 50%" : "",
               objectFit: "contain",
-              maxWidth: screenSizeSm ? "45%" : "100%",
+              maxWidth: screenSizeSm ? "55%" : "100%",
             }}
           />
         )}
@@ -79,16 +79,16 @@ export default function ProjectCards({
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "10px",
             alignItems: "flex-start",
           }}
         >
           <div className="title-desc">
-            <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "0px" }}
+            >
               <p className="job" style={{ fontStyle: "italic" }}>
                 {title}
               </p>
-              <p className="job">|</p>
               <p className="job">{about}</p>
             </div>
             <p className="body-main">{description}</p>

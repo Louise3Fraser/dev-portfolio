@@ -145,10 +145,8 @@ h6 {
   font-family: var(--font-family);
   font-size: var(--font-size-large);
   color: var(--color-primary);
-  text-align: justify;
   font-weight: var(--font-weight-medium);
   margin: 0px;
-  white-space: nowrap;
 }
 
 .body-skill {
