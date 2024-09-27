@@ -37,6 +37,7 @@ button {
 
 html {
   background-color: white;
+  /* #FFFDF9 */
 }
 
 code {
@@ -46,6 +47,7 @@ code {
 
 :root {
   --font-family: "Poppins", sans-serif;
+  --font-family-header: "Shippori Mincho", serif;
   --color-primary: black;
   --color-secondary: #7F7F7F;
   --color-light: #BEBEBE;
@@ -58,35 +60,37 @@ code {
   --font-size-base: 14px;
   --font-size-medium: 16px;
   --font-size-large: 18px;
-  --font-size-h4-title: 35px;
-  --font-size-h4-sub: 30px;
+  --font-size-header: 35px;
+  --font-size-header-sub: 25px;
   --font-size-h5: 25px;
   --font-size-body-skill: 14px;
   --line-height-regular: 160%;
   --line-height-sub: 130%;
 }
 
-h4 {
+.navigation {
   font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
   margin-bottom: 0px;
   margin-top: 0px;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-large);
   color: var(--color-primary);
 }
 
-.h4-title {
-  font-family: var(--font-family);
+.header-large {
+  font-family: var(--font-family-header);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h4-title);
+  font-size: var(--font-size-header);
   color: var(--color-primary);
+  margin: 0px
 }
 
-.h4-sub {
-  font-family: var(--font-family);
+.header-sub {
+  font-family: var(--font-family-header);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-h4-sub);
+  font-size: var(--font-size-header-sub);
   color: var(--color-primary);
+  margin: 0px
 }
 
 h5 {
@@ -118,6 +122,7 @@ h6 {
   color: var(--color-secondary);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-regular);
+  margin: 0px;
 }
 .body-main-link {
   font-family: var(--font-family);

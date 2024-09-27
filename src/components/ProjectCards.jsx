@@ -4,18 +4,13 @@ import "../pages-css/Projects.css";
 import "../pages-css/Animations.css";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
-export default function ProjectCards({
-  title,
-  src,
-  type,
-  description,
-  about,
-  url,
-}) {
+export default function ProjectCards({ title, src, color, about, path }) {
   const theme = useTheme();
   const screenSizeSm = useMediaQuery(theme.breakpoints.up("md"));
 
+  const navigate = useNavigate();
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
     const observer = new IntersectionObserver((entries) => {
@@ -43,38 +38,35 @@ export default function ProjectCards({
         className="project-cards"
         style={{
           display: "flex",
-          flexDirection: screenSizeSm ? "row" : "column",
+          flexDirection: "column",
         }}
       >
-        {type === "image" ? (
-          <img
+        <div
+          onClick={() => navigate(path)}
+          style={{
+            backgroundColor: color,
+            borderRadius: "10px",
+            overflow: "hidden",
+            margin: "0px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "400px",
+          }}
+        >
+          <motion.img
             alt="project-img"
             src={src}
             className="card-src"
             style={{
-              margin: "0px",
-              flex: screenSizeSm ? "1 0 50%" : "",
+              maxWidth: "100%",
+              maxHeight: "100%",
               objectFit: "contain",
-              maxWidth: screenSizeSm ? "55%" : "100%",
             }}
+            whileHover={{ scale: 1.1 }} // Scale the image on hover
+            transition={{ duration: 0.3 }} // Optional: smooth transition
           />
-        ) : (
-          <video
-            src={src}
-            className="card-src"
-            autoPlay
-            playsInline
-            loop
-            muted
-            style={{
-              margin: "0px",
-              flex: screenSizeSm ? "1 0 50%" : "",
-              objectFit: "contain",
-              maxWidth: screenSizeSm ? "55%" : "100%",
-            }}
-          />
-        )}
-
+        </div>
         <div
           style={{
             display: "flex",
@@ -82,37 +74,11 @@ export default function ProjectCards({
             alignItems: "flex-start",
           }}
         >
-          <div className="title-desc">
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "0px" }}
-            >
-              <p className="job" style={{ fontStyle: "italic" }}>
-                {title}
-              </p>
-              <p className="job">{about}</p>
-            </div>
-            <p className="body-main">{description}</p>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-            }}
-          >
-            <p className="small">Learn more on my Github</p>
-            <motion.button
-              whileHover={{
-                scale: 1.2,
-              }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => window.open(url)}
-            >
-              <CallMadeIcon
-                fontSize="small"
-                style={{ color: "black", cursor: "pointer" }}
-              />
-            </motion.button>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
+            <p className="job" style={{ fontStyle: "italic" }}>
+              {title}
+            </p>
+            <p className="job">{about}</p>
           </div>
         </div>
       </div>

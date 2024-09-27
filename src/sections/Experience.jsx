@@ -1,6 +1,5 @@
 import React from "react";
 import ExperienceCards from "../components/ExperienceCards";
-import Header from "../components/Header";
 import "../pages-css/Animations.css"
 
 const hc1 = {
@@ -58,7 +57,6 @@ const abroad = {
 export default function Experience() {
   return (
     <div className="experience">
-      <Header section={"Experience"}/>
       <div className="cards">
         <ExperienceCards job={dores} />
         <ExperienceCards job={abroad} />

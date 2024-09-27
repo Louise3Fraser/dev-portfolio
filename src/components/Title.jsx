@@ -1,5 +1,4 @@
 import React from "react";
-import "../pages-css/MainSections.css";
 import "../pages-css/Animations.css";
 import Socials from "./Socials";
 import { useTheme, useMediaQuery } from "@mui/material";

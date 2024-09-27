@@ -1,3 +1,11 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  margin-left: 17vw;
+  margin-right: 17vw;
+}
+
 .about-divide {
   display: flex;
   flex-direction: row;
@@ -20,7 +28,8 @@
   gap: 40px
 }
 
-.about-content {
+.main {
   display: flex;
-  gap: 60px
+  flex-direction: column;
+  gap: 100px;
 }

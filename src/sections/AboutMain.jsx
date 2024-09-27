@@ -5,6 +5,7 @@ import { useTheme, useMediaQuery } from "@mui/material";
 import Column from "../components/Column";
 import water from "../media/water.JPG";
 import waterSmall from "../media/waterSmall.JPG";
+import Socials from "../components/Socials";
 
 const education = {
   title: "Education",
@@ -36,7 +37,14 @@ const otherSkills = {
 
 const interests = {
   title: "Interests",
-  items: ["Cooking", "Hiking", "Drawing", "Gym", "Reading fantasy novels", "Trying new cuisines!"],
+  items: [
+    "Cooking",
+    "Hiking",
+    "Drawing",
+    "Gym",
+    "Reading fantasy novels",
+    "Trying new cuisines!",
+  ],
 };
 
 export default function About() {
@@ -65,15 +73,48 @@ export default function About() {
   }, []);
 
   return (
-    <div className="about">
-      {/* <Header section={"About"} /> */}
-
+    <div className="about-main">
       <div
-        className="about-content"
         style={{
+          display: "flex",
           flexDirection: screenSizeSm ? "row" : "column",
+          gap: "60px",
         }}
       >
+        <div className="about-description">
+          <h4 className="header-large">About me</h4>
+          <Socials/>
+          <p className="body-main fade-in-section">
+            Coding and design are two things I love to challenge myself with. I
+            am particularly interested in front-end development as well as UX/UI
+            design. I have a solid foundation in JavaScript, React.js, and
+            Python.
+          </p>
+          <p className="body-main fade-in-section">
+            <i
+              className="em em-handshake"
+              role="presentation"
+              aria-label="HANDSHAKE"
+            ></i>
+            Technology + Design
+          </p>
+          <p className="body-main fade-in-section">
+            <i
+              className="em em-brain"
+              role="presentation"
+              aria-label="BRAIN"
+            ></i>
+            Psychology
+          </p>
+          <p className="body-main fade-in-section">
+            <i
+              className="em em-handshake"
+              role="presentation"
+              aria-label="HANDSHAKE"
+            ></i>
+            Technology + Design
+          </p>
+        </div>
         <div
           style={{
             display: "flex",
@@ -95,6 +136,7 @@ export default function About() {
                 margin: "0px",
                 objectFit: "contain",
                 maxWidth: "100%",
+                borderRadius: "10px",
               }}
             />
           ) : (
@@ -106,27 +148,11 @@ export default function About() {
                 margin: "0px",
                 objectFit: "contain",
                 maxWidth: "100%",
+                borderRadius: "10px",
               }}
             />
           )}
           {/* <p className="small">New Zealand '24</p> */}
-        </div>
-        <div className="about-description">
-          <p
-            className="body-main fade-in-section"
-            style={{ marginTop: "-5px" }}
-          >
-            I am a current <span style={{fontWeight:"600"}}>senior</span> at Vanderbilt double majoring in computer
-            science and psychology. <span style={{fontWeight:"600"}}>Coding</span> and <span style={{fontWeight:"600"}}>design</span> are two things I love to
-            challenge myself with.
-          </p>
-          <p className="body-main fade-in-section">
-            I have <span style={{fontWeight:"600"}}>two</span> years of internship experience where I worked as a
-            software engineer intern under the <span style={{fontWeight:"600"}}>mentorship</span> of experienced
-            professionals. During this time, I developed and deployed an app and
-            created applets, gaining expertise in React, JavaScript, Typescript,
-            Python, and AWS.
-          </p>
         </div>
       </div>
 

@@ -1,0 +1,14 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-left: 17vw;
+    margin-right: 17vw;
+}
+
+.headers {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}

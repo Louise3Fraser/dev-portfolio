@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "../pages-css/MainSections.css";
 import "../pages-css/Animations.css";
 import { motion } from "framer-motion";
 

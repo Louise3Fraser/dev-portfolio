@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Drawer, Box } from "@mui/material";
 import { motion } from "framer-motion";
-import "../pages-css/MainSections.css";
 import Socials from "./sub_components/Socials";
 
 export default function Sidebar({
