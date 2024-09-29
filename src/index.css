@@ -1,26 +1,3 @@
-:root {
-  --primary-color: #440015;
-  --secondary-color: #5b1136;
-  --light-color: #e9e9e9;
-  --background-color: #f4f1f1;
-  --font-main: "SUSE", sans-serif;
-  --font-custom: "Megant", sans-serif;
-  --font-size-large: 65px;
-  --font-size-medium: 40px;
-  --font-size-small: 25px;
-  --font-size-body: 20px;
-  --font-size-sub: 18px;
-  --font-size-caption: 14px;
-  --font-size-tiny: 12px;
-  --line-height-body: 150%;
-  --line-height-sub: 130%;
-  --font-weight-light: 100;
-  --font-weight-normal: 400;
-  --font-weight-bold: 500;
-  --font-weight-extra-bold: 600;
-  --font-weight-heavy: 700;
-}
-
 body {
   margin: 0;
   font-family: var(--font-main), sans-serif;
@@ -36,7 +13,7 @@ button {
 }
 
 html {
-  background-color: white;
+  background-color: #FFFDF9;
   /* #FFFDF9 */
 }
 
@@ -58,8 +35,9 @@ code {
   --font-weight-medium: 500;
   --font-size-small: 10px;
   --font-size-base: 14px;
-  --font-size-medium: 16px;
+  --font-size-medium: 17px;
   --font-size-large: 18px;
+  --font-size-sub-head: 30px;
   --font-size-header: 35px;
   --font-size-header-sub: 25px;
   --font-size-h5: 25px;
@@ -93,6 +71,13 @@ code {
   margin: 0px
 }
 
+.header-bold {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sub-head);
+  color: var(--color-primary);
+  margin: 0px
+}
 h5 {
   margin-bottom: 0px;
   margin-top: 0px;
@@ -124,6 +109,15 @@ h6 {
   line-height: var(--line-height-regular);
   margin: 0px;
 }
+
+.body-main-black {
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-regular);
+  margin: 0px;
+}
 .body-main-link {
   font-family: var(--font-family);
   font-size: var(--font-size-medium);
@@ -135,7 +129,8 @@ h6 {
 }
 
 .body-main-link:hover {
-  color: var(--color-light)
+  color: var(--color-light);
+  cursor: pointer
 }
 
 .body-sub {
@@ -152,6 +147,7 @@ h6 {
   color: var(--color-primary);
   font-weight: var(--font-weight-medium);
   margin: 0px;
+  margin-bottom: 8px;
 }
 
 .body-skill {

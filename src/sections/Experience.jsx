@@ -1,5 +1,5 @@
 import React from "react";
-import ExperienceCards from "../components/ExperienceCards";
+import ExperienceCards from "../components/cards/ExperienceCards";
 import "../pages-css/Animations.css"
 
 const hc1 = {

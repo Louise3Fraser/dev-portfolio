@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../pages-css/About.css";
 import "../pages-css/Animations.css";
 import { useTheme, useMediaQuery } from "@mui/material";
-import Column from "../components/Column";
+import Column from "../components/organization/Column";
 import water from "../media/water.JPG";
 import waterSmall from "../media/waterSmall.JPG";
 import Socials from "../components/Socials";
@@ -82,40 +82,50 @@ export default function About() {
         }}
       >
         <div className="about-description">
-          <h4 className="header-large">About me</h4>
-          <Socials/>
-          <p className="body-main fade-in-section">
-            Coding and design are two things I love to challenge myself with. I
-            am particularly interested in front-end development as well as UX/UI
-            design. I have a solid foundation in JavaScript, React.js, and
-            Python.
-          </p>
-          <p className="body-main fade-in-section">
-            <i
-              className="em em-handshake"
-              role="presentation"
-              aria-label="HANDSHAKE"
-            ></i>
-            Technology + Design
-          </p>
-          <p className="body-main fade-in-section">
-            <i
-              className="em em-brain"
-              role="presentation"
-              aria-label="BRAIN"
-            ></i>
-            Psychology
-          </p>
-          <p className="body-main fade-in-section">
-            <i
-              className="em em-handshake"
-              role="presentation"
-              aria-label="HANDSHAKE"
-            ></i>
-            Technology + Design
-          </p>
+          <div style={{display:"flex", flexDirection: "column", gap: "20px", flex: "1 0 10%"}}>
+            <p className="header-bold">Nice to meet you.</p>
+            {/* <Socials /> */}
+            <p
+              style={{
+                maxWidth: screenSizeSm ? "50%" : "100%",
+                paddingBottom: "20px",
+              }}
+              className="body-main fade-in-section"
+            >
+              Coding and design are two things I love to challenge myself with.
+              I am particularly interested in front-end development as well as
+              UX/UI design. I have a solid foundation in JavaScript, React.js,
+              and Python.
+            </p>
+          </div>
+          <div>
+            <p className="body-main fade-in-section">
+              <i
+                className="em em-handshake"
+                role="presentation"
+                aria-label="HANDSHAKE"
+              ></i>
+              Technology + Design
+            </p>
+            <p className="body-main fade-in-section">
+              <i
+                className="em em-brain"
+                role="presentation"
+                aria-label="BRAIN"
+              ></i>
+              Psychology
+            </p>
+            <p className="body-main fade-in-section">
+              <i
+                className="em em-handshake"
+                role="presentation"
+                aria-label="HANDSHAKE"
+              ></i>
+              Technology + Design
+            </p>
+          </div>
         </div>
-        <div
+        {/* <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -136,7 +146,6 @@ export default function About() {
                 margin: "0px",
                 objectFit: "contain",
                 maxWidth: "100%",
-                borderRadius: "10px",
               }}
             />
           ) : (
@@ -152,8 +161,7 @@ export default function About() {
               }}
             />
           )}
-          {/* <p className="small">New Zealand '24</p> */}
-        </div>
+        </div> */}
       </div>
 
       <div

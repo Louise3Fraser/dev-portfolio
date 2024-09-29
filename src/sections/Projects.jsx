@@ -1,9 +1,12 @@
 import React from "react";
-import ProjectCards from "../components/ProjectCards";
-import carshare from "../media/carshare.png";
-import mushroom from "../media/mushroom.png";
+import ProjectCards from "../components/cards/ProjectCards";
+import carshare from "../media/carshare/carshare.png";
+import mushroom from "../media/mushroom/mushroomCover.png";
+import sarratt from "../media/sarratt/sarrattCover.png";
+
 import "../pages-css/Projects.css";
-import v1 from "../media/v1.mp4";
+import v1Big from "../media/versions/v1Cover.png"
+import v2Big from "../media/versions/v2Cover.png"
 
 export default function Projects() {
   return (
@@ -12,23 +15,27 @@ export default function Projects() {
         <ProjectCards
           title={"CarShare"}
           src={carshare}
-          color={"#f6e7c9"}
-          about={"Fullstack Application"}
           path={"/carshare"}
         />
         <ProjectCards
           title={"Mushroom Mayhem"}
           src={mushroom}
-          color={"#cdecf9"}
-          about={"Unity Game"}
           path={"/mushroom-mayhem"}
+        />
+         <ProjectCards
+          title={"Sarratt Art Studios"}
+          src={sarratt}
+          path={"/sarratt-art-studios"}
         />
         <ProjectCards
           title={"V1 Portfolio"}
-          src={v1}
-          type={"video"}
-          about={"Frontend Application"}
+          src={v1Big}
           path={"/v1-portfolio"}
+        />
+        <ProjectCards
+          title={"V2 Portfolio"}
+          src={v2Big}
+          path={"/v2-portfolio"}
         />
       </div>
     </div>

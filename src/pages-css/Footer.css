@@ -1,4 +1,14 @@
 .footer {
-    margin-bottom: 5vh;
-    margin-top: 20px
+    margin-bottom: 8vh;
+    margin-top: 15vh
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 3em;
+    
+    padding: 0;
 }

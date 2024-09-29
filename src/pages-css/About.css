@@ -1,9 +1,15 @@
 .about {
   display: flex;
   flex-direction: column;
-  margin-top: 5vh;
-  margin-left: 17vw;
-  margin-right: 17vw;
+  align-items: center;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  margin-left: 13vw;
+  margin-right: 13vw;
 }
 
 .about-divide {
@@ -31,5 +37,19 @@
 .main {
   display: flex;
   flex-direction: column;
+  gap: 100px;  
+}
+
+.main-about {
+  display: flex;
+  flex-direction: column;
   gap: 100px;
+  margin-top: 100px;
+  max-width: 800px;
+  
+}
+
+.about-description {
+  display: flex;
+  flex-direction: row;
 }
