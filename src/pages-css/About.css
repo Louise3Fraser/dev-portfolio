@@ -7,9 +7,9 @@
 .about-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
-  margin-left: 13vw;
-  margin-right: 13vw;
+  margin-top: 30px;
+  margin-left: 19vw;
+  margin-right: 19vw;
 }
 
 .about-divide {
@@ -28,28 +28,21 @@
 }
 
 .columns {
-  margin-top: 80px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   gap: 40px
 }
 
-.main {
+.main-about {
   display: flex;
   flex-direction: column;
   gap: 100px;  
 }
 
-.main-about {
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
-  margin-top: 100px;
-  max-width: 800px;
-  
-}
-
 .about-description {
   display: flex;
   flex-direction: row;
+  gap: 50px;
 }

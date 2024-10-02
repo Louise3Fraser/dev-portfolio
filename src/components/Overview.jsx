@@ -4,7 +4,25 @@ import "../pages-css/Projects.css";
 import "../pages-css/Animations.css";
 import { useNavigate } from "react-router-dom";
 
-export default function Overview({ overview, goals, problem }) {
+{
+  /* <div>
+            <p className="job">Github</p>
+            <p className="body-main-link" onClick={() => window.open({ url })}>
+              View on my Github!
+            </p>
+          </div> */
+}
+export default function Overview({
+  overview,
+  goals,
+  problem,
+  tasks,
+  dates,
+  url,
+  team,
+  project,
+  roles,
+}) {
   const theme = useTheme();
   const screenSizeSm = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -30,32 +48,93 @@ export default function Overview({ overview, goals, problem }) {
   }, []);
 
   return (
-    <div className="overview">
-      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-        <div className="descriptions">
-          <h4 className="header-bold" style={{ flex: "1 0 34%" }}>
-            Overview
-          </h4>
-          <p className="body-main">{overview}</p>
+    <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: screenSizeSm ? "row" : "column",
+          gap: "30px",
+          justifyContent: "space-between",
+        }}
+      >
+        <div>
+          <p className="job">Role</p>
+          {roles.map((role) => {
+            return <p className="body-main">{role}</p>;
+          })}
         </div>
+       
 
-        <div className="descriptions">
-          <h4 className="header-bold" style={{ flex: "1 0 34%" }}>
-            Goals
-          </h4>
-          <p className="body-main">{goals}</p>
+        <div>
+          <p className="job">Project</p>
+          <p className="body-main">{project}</p>
         </div>
-        {problem ? (
-          <div className="descriptions">
-            <h4 className="header-bold" style={{ flex: "1 0 34%" }}>
-              Problem
-            </h4>
-            <p className="body-main">{problem}</p>
+        {team ? (
+          <div>
+            <p className="job">Team</p>
+            <p className="body-main">{team}</p>
           </div>
         ) : (
           <></>
         )}
+        <div>
+          <p className="job">Time</p>
+          <p className="body-main">{dates}</p>
+        </div>
+        <div>
+          <p className="job">Skills</p>
+          {tasks.map((task) => {
+            return <p className="body-main">{task}</p>;
+          })}
+        </div>
       </div>
+      <div className="overview" style={{ flexDirection: "column" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100%",
+            gap: "30px",
+          }}
+        >
+          <h4
+            className="job"
+            style={{
+              color: "#EA5F27",
+              fontWeight: "600",
+              fontSize: "14px",
+              marginBottom: "10px",
+            }}
+          >
+            OVERVIEW
+          </h4>
+
+          <div className="descriptions">
+            <h4 className="header-bold-small" style={{ flex: "1 0 30%" }}>
+              Background
+            </h4>
+            <p className="body-main overview-p">{overview}</p>
+          </div>
+
+          <div className="descriptions">
+            <h4 className="header-bold-small" style={{ flex: "1 0 30%" }}>
+              Goals
+            </h4>
+            <p className="body-main overview-p">{goals}</p>
+          </div>
+          {problem ? (
+            <div className="descriptions">
+              <h4 className="header-bold-small" style={{ flex: "1 0 30%" }}>
+                Problem
+              </h4>
+              <p className="body-main overview-p">{problem}</p>
+            </div>
+          ) : (
+            <></>
+          )}
+        </div>
+      </div>{" "}
+      <hr style={{ width: "12vw" }} />
     </div>
   );
 }

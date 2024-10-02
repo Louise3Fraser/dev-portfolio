@@ -6,7 +6,7 @@ import ProjectHeading from "../../components/ProjectHeading";
 import carshare from "../../media/carshare/carshareSolo.png";
 import Overview from "../../components/Overview";
 import Callouts from "../../components/cards/Callouts";
-import steps from "../../media/Steps.png"
+import steps from "../../media/Steps.png";
 export default function CarShare() {
   const themeQuery = useTheme();
   const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
@@ -45,12 +45,9 @@ export default function CarShare() {
           subTitle={
             "Organizing the sharing of a car while optimizing gas usage and making payments fair"
           }
-          tasks={["Unity", "C#", "Design", "Illustrator, Procreate"]}
-          dates={"Sep. 2022 - July 2023"}
           img={carshare}
           type={"img"}
-        //   projectType={"Personal Project"}
-
+          //   projectType={"Personal Project"}
         />
       </div>
       <Overview
@@ -60,9 +57,15 @@ export default function CarShare() {
         goals={
           "The goals with CarShare were twofold.  1) Web development: The actual coding of the app. 2) UX/UI design and research"
         }
-        problem={"Many students make frequent trips to similar destinations, such as campuses, social events, or part-time jobs, but without an efficient system for car-sharing, they end up driving alone, leading to higher fuel consumption and more vehicles on the road."}
+        problem={
+          "Many students make frequent trips to similar destinations, such as campuses, social events, or part-time jobs, but without an efficient system for car-sharing, they end up driving alone, leading to higher fuel consumption and more vehicles on the road."
+        }
+        tasks={["React.js", "MySQL", "Figma", "Illustrator"]}
+        dates={"Sep. 2022 - July 2023"}
+        roles={["Software Engineer", "UX/UI Designer"]}
+        project={"Personal Project"}
       />
-      <img
+      {/* <img
           alt="img"
           src={steps}
           className="fade-in-section"
@@ -73,12 +76,12 @@ export default function CarShare() {
             display:"flex",
             alignSelf: "center"
           }}
-        />
+        /> */}
       <Callouts
         items={[
           "Compromising with busy conflicting schedules and sharing gas.",
           "Scheduling conflicts!",
-          "The biggest problem is definitely tracking gas usage."
+          "The biggest problem is definitely tracking gas usage.",
         ]}
       />
       <Footer />

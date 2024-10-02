@@ -21,10 +21,18 @@ import vandy from "../media/example-work/vandy.png";
 import portrait2 from "../media/example-work/portrait2.png";
 import cafe from "../media/example-work/cafe.png";
 import anchorLogo from "../media/example-work/anchor-logo.png";
+import art1 from "../media/example-work/art-1.JPG";
+import art2 from "../media/example-work/art-2.JPG";
+import art3 from "../media/example-work/art-3.JPG";
+import art4 from "../media/example-work/art-4.png";
+import marloly from "../media/example-work/marloly.jpg";
+import mushroom2 from "../media/example-work/mushrrom-2.png";
+import lisa from "../media/example-work/lisa.png";
 
 export default function Art() {
   const themeQuery = useTheme();
   const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
+
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
     const observer = new IntersectionObserver((entries) => {
@@ -50,36 +58,27 @@ export default function Art() {
     <div className="art-wrapper">
       <Navigation />
       <div
-        style={{ marginTop: "100px", marginLeft: "10vw", marginRight: "10vw" }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+        }}
       >
-        <p className="header-bold">Selected Art</p>
+        <p className="header-bold-large">Selected Art</p>
 
         <p
           style={{
-            maxWidth: screenSize ? "50%" : "100%",
-            paddingBottom: "20px",
-            paddingTop: "10px",
-
-          }}
-          className="body-main"
-        >
-          A lot of my artwork comes from my graphic design job at 'Dores Design!
-          (formerly called "Ace Design").
-        </p>
-        <p
-          style={{
-            maxWidth: screenSize ? "50%" : "100%",
             paddingBottom: "40px",
+            paddingTop: "20px",
           }}
           className="body-main"
         >
-          I enjoy experimenting with bright colors and interesting shapes.
-          <i
-            class="em em-lower_left_paintbrush"
-            aria-role="presentation"
-            aria-label=""
-          ></i>
+          Here's a small collection of some art I've made throughout the years.
+          A lot of my artwork comes from my graphic design job at 'Dores Design!
+          (formerly called "Ace Design"). I enjoy experimenting with bright
+          colors and interesting shapes.
         </p>
+
         <div className="masonry-grid">
           <div className="masonry-column">
             <img
@@ -94,9 +93,22 @@ export default function Art() {
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
+
+            <img
+              alt="img"
+              src={art1}
+              className="nav-image fade-in-section"
+              style={{ margin: "0px" }}
+            />
             <img
               alt="img"
               src={shape}
+              className="nav-image fade-in-section"
+              style={{ margin: "0px" }}
+            />
+            <img
+              alt="img"
+              src={mushroom2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
@@ -106,12 +118,19 @@ export default function Art() {
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
+             <img
+              alt="img"
+              src={art4}
+              className="nav-image fade-in-section"
+              style={{ margin: "0px" }}
+            />
             <img
               alt="img"
               src={anchorLogo}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
+           
           </div>
 
           <div className="masonry-column">
@@ -135,10 +154,22 @@ export default function Art() {
             />
             <img
               alt="img"
+              src={art3}
+              className="nav-image fade-in-section"
+              style={{ margin: "0px" }}
+            />
+            <img
+              alt="img"
               src={invusion2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
-            />{" "}
+            />
+            <img
+              alt="img"
+              src={lisa}
+              className="nav-image fade-in-section"
+              style={{ margin: "0px" }}
+            />
             <img
               alt="img"
               src={asce}
@@ -156,10 +187,23 @@ export default function Art() {
           <div className="masonry-column">
             <img
               alt="img"
+              src={design}
+              className="nav-image fade-in-section"
+              style={{ margin: "0px" }}
+            />
+            <img
+              alt="img"
+              src={portrait}
+              className="nav-image fade-in-section"
+              style={{ margin: "0px" }}
+            />
+            <img
+              alt="img"
               src={vitality}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
+
             <img
               alt="img"
               src={ace}
@@ -168,13 +212,7 @@ export default function Art() {
             />
             <img
               alt="img"
-              src={design}
-              className="nav-image fade-in-section"
-              style={{ margin: "0px" }}
-            />
-            <img
-              alt="img"
-              src={portrait}
+              src={art2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />

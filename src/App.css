@@ -3,13 +3,6 @@
   justify-content: center;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 90px;
-  max-width: 725px;
-}
-
 .mode {
   position: fixed;
   bottom: 0;
@@ -40,7 +33,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   height: 43vh;
-  max-width: 725px
+  max-width: 730px
 }
 
 .highlight {

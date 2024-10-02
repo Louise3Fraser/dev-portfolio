@@ -1,15 +1,17 @@
 .home {
     display: flex;
     flex-direction: column;
-    margin-top: 10vh;
-    margin-left: 13vw;
-    margin-right: 13vw;
+    margin-top: 30px;
+    margin-left: 19vw;
+    margin-right: 19vw;
 }
 
 .headers {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 150px;
-    margin-bottom: 200px;
+    margin-top: 140px;
+    margin-bottom: 180px;
+    gap:10px;
+    text-align: center;
 }

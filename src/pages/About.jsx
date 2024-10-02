@@ -17,7 +17,6 @@ export default function About() {
       <div className="about">
         <div className="main-about">
           <AboutMain />
-          <Experience />
         </div>
       </div>
       <Footer />

@@ -1,13 +1,13 @@
 .masonry-grid {
   display: flex;
-  gap: 25px;
+  gap:30px;
 }
 
 .masonry-column {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
 }
 
 .nav-image {
@@ -19,9 +19,9 @@
 .art-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
-  margin-left: 13vw;
-  margin-right: 13vw;
+  margin-top: 30px;
+  margin-left: 19vw;
+  margin-right: 19vw;
 }
 
 @media (max-width: 800px) {
@@ -33,3 +33,4 @@
     flex: none; /* Ensure columns stack and don't try to share space */
   }
 }
+

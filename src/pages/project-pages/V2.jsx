@@ -12,9 +12,9 @@ export default function V1() {
   const themeQuery = useTheme();
   const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
 
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
@@ -44,10 +44,9 @@ export default function V1() {
         <ProjectHeading
           title={"V2 Portfolio"}
           subTitle={"My second website"}
-          tasks={["React.js", "JavaScript", "HTML/CSS", "Adobe Suite", "git"]}
-          dates={"Feb. 2024"}
-          img={v2Vid}
-          type={"vid"}
+          img={v2Mockup}
+          type={"img"}
+          bool={"yes"}
         />
       </div>
       <Overview
@@ -57,18 +56,37 @@ export default function V1() {
         goals={
           "To create a more sleek and modern portfolio. To gain more practice with web design/development, particularly through the use of React.js. "
         }
+        tasks={["React.js", "JavaScript", "HTML/CSS", "Adobe Suite", "git"]}
+        dates={"Feb. 2024"}
+        roles={["Frontend Developer"]}
+        project={"Personal Project"}
       />
-      <img
-        alt="img"
-        src={v2Mockup}
-        className="fade-in-section"
+      <h4
+        className="job"
+        style={{
+          color: "#EA5F27",
+          fontWeight: "600",
+          fontSize: "14px",
+          marginBottom: "40px",
+        }}
+      >
+        DEMO
+      </h4>
+      <video
+        src={v2Vid}
+        className="card-src"
+        autoPlay
+        playsInline
+        loop
+        muted
         style={{
           margin: "0px",
           objectFit: "contain",
           maxWidth: "100%",
-          marginBottom: "-320px"
+          boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
         }}
       />
+
       <Footer />
     </div>
   );

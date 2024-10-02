@@ -13,7 +13,7 @@ button {
 }
 
 html {
-  background-color: #FFFDF9;
+  background-color: #fffdfa;
   /* #FFFDF9 */
 }
 
@@ -22,8 +22,28 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: 'General';
+  src: url('./fonts/GeneralSans-Variable.ttf') format('truetype');
+  font-style: normal;
+}
+
+.header-largest {
+  font-family: 'General', sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  margin: 0px;
+}
+
+.name {
+  font-family: 'General', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0px;
+}
+
 :root {
-  --font-family: "Poppins", sans-serif;
+  --font-family: 'General', sans-serif;
   --font-family-header: "Shippori Mincho", serif;
   --color-primary: black;
   --color-secondary: #7F7F7F;
@@ -33,14 +53,14 @@ code {
   --font-weight-light: 100;
   --font-weight-bold: 600;
   --font-weight-medium: 500;
-  --font-size-small: 10px;
+  --font-size-small: 13px;
   --font-size-base: 14px;
   --font-size-medium: 17px;
   --font-size-large: 18px;
   --font-size-sub-head: 30px;
   --font-size-header: 35px;
-  --font-size-header-sub: 25px;
-  --font-size-h5: 25px;
+  --font-size-header-sub: 22px;
+  --font-size-h5: 30px;
   --font-size-body-skill: 14px;
   --line-height-regular: 160%;
   --line-height-sub: 130%;
@@ -71,13 +91,22 @@ code {
   margin: 0px
 }
 
-.header-bold {
-  font-family: var(--font-family);
+.header-bold-large {
+  font-family: 'General', sans-serif;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-sub-head);
   color: var(--color-primary);
   margin: 0px
 }
+
+.header-bold-small {
+  font-family: 'General', sans-serif;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-header-sub);
+  color: var(--color-primary);
+  margin: 0px
+}
+
 h5 {
   margin-bottom: 0px;
   margin-top: 0px;
@@ -110,6 +139,15 @@ h6 {
   margin: 0px;
 }
 
+.body-main-small {
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-regular);
+  margin: 0px;
+}
+
 .body-main-black {
   font-family: var(--font-family);
   font-size: var(--font-size-medium);
@@ -120,17 +158,12 @@ h6 {
 }
 .body-main-link {
   font-family: var(--font-family);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-base);
   color: var(--color-secondary);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-regular);
   font-style: italic;
-  text-decoration: underline;
-}
-
-.body-main-link:hover {
-  color: var(--color-light);
-  cursor: pointer
+  margin: 0px;
 }
 
 .body-sub {
@@ -142,8 +175,17 @@ h6 {
 }
 
 .job {
-  font-family: var(--font-family);
+  font-family: 'General', sans-serif;
   font-size: var(--font-size-large);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  margin: 0px;
+  margin-bottom: 8px;
+}
+
+.job-small {
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
   color: var(--color-primary);
   font-weight: var(--font-weight-medium);
   margin: 0px;

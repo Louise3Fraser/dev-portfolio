@@ -25,14 +25,14 @@ export default function Column({ column }) {
   }, []);
 
   return (
-    <div style={{ maxWidth: "25%", display: "flex", flexDirection: "column", gap: "5px"  }}>
-      <p className="job fade-in-section">{column.title}</p>
+    <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "5px"  }}>
+      <p className="job">{column.title}</p>
       {column.items.map((item, index) => {
         return (
           <motion.div key={index} className="animatable" whileHover={{ scale: 1.1 }}>
             <p
               style={{ margin: "0px", cursor: "default" }}
-              className="body-main fade-in-section"
+              className="body-main"
             >
               {item}
             </p>
