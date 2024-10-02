@@ -20,9 +20,9 @@
 .project {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
-  margin-left: 19vw;
-  margin-right: 19vw;
+  margin-top: 40px;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .main {
@@ -83,17 +83,16 @@
 }
 
 .full-width-section {
-  width: 100vw;
   background-color: #f2efe9;
   padding: 40px 0;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
-  margin-left: -19vw;
   position: relative;
-  height: 400px;
+  height: 600px;
   overflow: hidden;
+  border-radius: 20px;
 }
 
 /* Image container adjustments */
@@ -183,8 +182,8 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-left: 13vw;
-  margin-right: 13vw;
+  margin-left: 23vw;
+  margin-right: 23vw;
 }
 
 @media (max-width: 900px) {

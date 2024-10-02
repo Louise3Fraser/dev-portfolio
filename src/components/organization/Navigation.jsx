@@ -80,7 +80,8 @@ export default function Navigation() {
           {renderMenuButton("About", "/about")}
         </div>
       </div>
-      <hr style={{ width: "100vw", marginTop: "30px", marginLeft: "-19vw" }} />
+      <div style={{height:"30px"}}/>
+      {/* <hr style={{ width: "100vw", marginTop: "30px", marginLeft: "-19vw" }} /> */}
     </div>
   );
 }

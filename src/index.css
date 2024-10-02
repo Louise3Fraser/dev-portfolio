@@ -13,7 +13,7 @@ button {
 }
 
 html {
-  background-color: #fffdfa;
+  background-color: white;
   /* #FFFDF9 */
 }
 
@@ -53,14 +53,14 @@ code {
   --font-weight-light: 100;
   --font-weight-bold: 600;
   --font-weight-medium: 500;
-  --font-size-small: 13px;
-  --font-size-base: 14px;
-  --font-size-medium: 17px;
-  --font-size-large: 18px;
-  --font-size-sub-head: 30px;
-  --font-size-header: 35px;
-  --font-size-header-sub: 22px;
-  --font-size-h5: 30px;
+  --font-size-small: 15px;
+  --font-size-base: 16px;
+  --font-size-medium: 19px;
+  --font-size-large: 20px;
+  --font-size-sub-head: 42px;
+  --font-size-header: 42px;
+  --font-size-header-sub: 32px;
+  --font-size-h5: 32px;
   --font-size-body-skill: 14px;
   --line-height-regular: 160%;
   --line-height-sub: 130%;

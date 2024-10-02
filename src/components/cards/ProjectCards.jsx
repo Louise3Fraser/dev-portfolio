@@ -33,7 +33,8 @@ export default function ProjectCards({ title, src, subtext, path }) {
 
   return (
     <div className="fade-in-section">
-      <div className="project-card-container">
+      <div className="project-card-container" style={{            borderRadius:"20px"
+}}>
         <motion.div
           onClick={() => navigate(path)}
           className="project-card"

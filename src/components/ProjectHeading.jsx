@@ -8,7 +8,7 @@ export default function ProjectHeading({ title, subTitle, img, type, bool }) {
 
   return (
     <div className="project-heading">
-      <div>
+      <div style={{display:"flex", flexDirection:"column", alignItems:"center", paddingTop: "80px"}}>
         <h4 className="header-bold-large">{title}</h4>
         <h4
           className="body-main"

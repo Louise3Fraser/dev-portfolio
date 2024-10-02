@@ -48,7 +48,7 @@ export default function Overview({
   }, []);
 
   return (
-    <div>
+    <div style={{marginLeft:"10vw", marginRight:"10vw"}}>
       <div
         style={{
           display: "flex",
