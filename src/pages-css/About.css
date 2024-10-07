@@ -1,3 +1,17 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  margin-left: 14vw;
+  margin-right: 14vw;
+}
+
 .about-divide {
   display: flex;
   flex-direction: row;
@@ -14,13 +28,21 @@
 }
 
 .columns {
-  margin-top: 80px;
+  margin-top: 55px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   gap: 40px
 }
 
-.about-content {
+.main-about {
   display: flex;
-  gap: 60px
+  flex-direction: column;
+  gap: 100px;  
+}
+
+.about-description {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }

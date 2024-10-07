@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../pages-css/MainSections.css";
 import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -11,7 +10,7 @@ export default function Socials() {
   const [copied, setCopied] = useState(false);
 
   return (
-    <div className="socials">
+    <div className="socials" style={{display:"flex", flexDirection:"row", gap: "20px", marginTop:"12px"}}>
       <motion.button
         whileHover={{
           scale: 1.2,
@@ -20,7 +19,6 @@ export default function Socials() {
         onClick={() => window.open("https://github.com/Louise3Fraser")}
       >
         <GitHubIcon
-          className="fade-in fade-in-4"
           style={{ color: "black", cursor: "pointer" }}
         />
       </motion.button>
@@ -34,7 +32,6 @@ export default function Socials() {
         }
       >
         <LinkedInIcon
-          className="fade-in fade-in-5"
           style={{ color: "black", cursor: "pointer" }}
         />
       </motion.button>
@@ -63,7 +60,6 @@ export default function Socials() {
           }}
         >
           <EmailIcon
-            className="fade-in fade-in-6"
             style={{ color: "black", cursor: "pointer" }}
           />
         </motion.button>

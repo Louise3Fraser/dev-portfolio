@@ -1,26 +1,3 @@
-:root {
-  --primary-color: #440015;
-  --secondary-color: #5b1136;
-  --light-color: #e9e9e9;
-  --background-color: #f4f1f1;
-  --font-main: "SUSE", sans-serif;
-  --font-custom: "Megant", sans-serif;
-  --font-size-large: 65px;
-  --font-size-medium: 40px;
-  --font-size-small: 25px;
-  --font-size-body: 20px;
-  --font-size-sub: 18px;
-  --font-size-caption: 14px;
-  --font-size-tiny: 12px;
-  --line-height-body: 150%;
-  --line-height-sub: 130%;
-  --font-weight-light: 100;
-  --font-weight-normal: 400;
-  --font-weight-bold: 500;
-  --font-weight-extra-bold: 600;
-  --font-weight-heavy: 700;
-}
-
 body {
   margin: 0;
   font-family: var(--font-main), sans-serif;
@@ -36,7 +13,8 @@ button {
 }
 
 html {
-  background-color: white;
+  background-color: #FFFDF9;
+  /* #FFFDF9 */
 }
 
 code {
@@ -44,49 +22,92 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: 'General';
+  src: url('./fonts/GeneralSans-Variable.ttf') format('truetype');
+  font-style: normal;
+}
+
+.header-largest {
+  font-family: 'General', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  margin: 0px;
+  line-height: 55px;
+  color: #12144c;
+}
+
+.name {
+  font-family: 'General', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0px;
+}
+
 :root {
-  --font-family: "Poppins", sans-serif;
+  --font-family: 'General', sans-serif;
+  --font-family-header: "Shippori Mincho", serif;
   --color-primary: black;
-  --color-secondary: #7F7F7F;
+  --color-secondary: #828282;
   --color-light: #BEBEBE;
   --color-skill: #e9e9e9;
   --font-weight-regular: 400;
   --font-weight-light: 100;
   --font-weight-bold: 600;
   --font-weight-medium: 500;
-  --font-size-small: 10px;
-  --font-size-base: 14px;
-  --font-size-medium: 16px;
-  --font-size-large: 18px;
-  --font-size-h4-title: 35px;
-  --font-size-h4-sub: 30px;
-  --font-size-h5: 25px;
+  --font-size-small: 15px;
+  --font-size-base: 16px;
+  --font-size-medium: 19px;
+  --font-size-large: 20px;
+  --font-size-sub-head: 32px;
+  --font-size-header: 37px;
+  --font-size-header-sub: 24px;
+  --font-size-h5: 30px;
   --font-size-body-skill: 14px;
   --line-height-regular: 160%;
   --line-height-sub: 130%;
 }
 
-h4 {
+.navigation {
   font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
   margin-bottom: 0px;
   margin-top: 0px;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-large);
   color: var(--color-primary);
 }
 
-.h4-title {
-  font-family: var(--font-family);
+.header-large {
+  font-family: var(--font-family-header);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h4-title);
+  font-size: var(--font-size-header);
   color: var(--color-primary);
+  margin: 0px
 }
 
-.h4-sub {
-  font-family: var(--font-family);
+.header-sub {
+  font-family: var(--font-family-header);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-h4-sub);
+  font-size: var(--font-size-header-sub);
   color: var(--color-primary);
+  margin: 0px
+}
+
+.header-bold-large {
+  font-family: 'General', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  margin: 0px;
+  line-height: 55px;
+  color: #12144c;
+}
+
+.header-bold-small {
+  font-family: 'General', sans-serif;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-header-sub);
+  color: var(--color-primary);
+  margin: 0px
 }
 
 h5 {
@@ -118,19 +139,48 @@ h6 {
   color: var(--color-secondary);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-regular);
+  margin: 0px;
 }
-.body-main-link {
+
+li {
   font-family: var(--font-family);
   font-size: var(--font-size-medium);
   color: var(--color-secondary);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-regular);
-  font-style: italic;
-  text-decoration: underline;
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
-.body-main-link:hover {
-  color: var(--color-light)
+.body-main-small {
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-regular);
+  margin: 0px;
+}
+
+.body-main-black {
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-regular);
+  margin: 0px;
+}
+.body-main-link {
+  font-family: var(--font-family);
+  font-size: 13px;
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-regular);
+  font-style: italic;
+  margin: 0px;
 }
 
 .body-sub {
@@ -142,13 +192,21 @@ h6 {
 }
 
 .job {
-  font-family: var(--font-family);
+  font-family: 'General', sans-serif;
   font-size: var(--font-size-large);
   color: var(--color-primary);
-  text-align: justify;
   font-weight: var(--font-weight-medium);
   margin: 0px;
-  white-space: nowrap;
+  margin-bottom: 8px;
+}
+
+.job-small {
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  margin: 0px;
+  margin-bottom: 8px;
 }
 
 .body-skill {
@@ -171,13 +229,13 @@ h6 {
 
 .small-link {
   font-family: var(--font-family);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-medium);
   color: var(--color-secondary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-regular);
   margin: 0px;
-  display: flex;
-  white-space: nowrap;
-  font-style: italic;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .small-link:hover {
