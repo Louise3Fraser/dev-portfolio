@@ -5,7 +5,7 @@ import CallMadeIcon from "@mui/icons-material/CallMade";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-export default function ProjectCards({ title, src, subtext, path }) {
+export default function ProjectCards({ title, src, subtext, path, desc }) {
   const theme = useTheme();
   const screenSizeSm = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -46,6 +46,7 @@ export default function ProjectCards({ title, src, subtext, path }) {
           <div className="overlay">
             <h3 className="overlay-title job">{title}</h3>
             <p className="overlay-subtext body-main">{subtext}</p>
+            <p className="overlay-subtext body-main">{desc}</p>
           </div>
         </motion.div>
       </div>

@@ -2,16 +2,9 @@ import React, { useEffect } from "react";
 import { useTheme, useMediaQuery } from "@mui/material";
 import "../pages-css/Projects.css";
 import "../pages-css/Animations.css";
-import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
-{
-  /* <div>
-            <p className="job">Github</p>
-            <p className="body-main-link" onClick={() => window.open({ url })}>
-              View on my Github!
-            </p>
-          </div> */
-}
 export default function Overview({
   overview,
   goals,
@@ -63,7 +56,6 @@ export default function Overview({
             return <p className="body-main">{role}</p>;
           })}
         </div>
-       
 
         <div>
           <p className="job">Project</p>
@@ -87,6 +79,30 @@ export default function Overview({
             return <p className="body-main">{task}</p>;
           })}
         </div>
+
+        {url ? (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+            }}
+          >
+            <p className="body-main">Github</p>
+            <motion.button
+              whileHover={{
+                scale: 1.2,
+              }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => window.open(url)}
+            >
+              <ArrowOutwardIcon style={{ color: "black", cursor: "pointer" }} />
+            </motion.button>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
       <div className="overview" style={{ flexDirection: "column" }}>
         <div
@@ -120,8 +136,11 @@ export default function Overview({
             <h4 className="header-bold-small" style={{ flex: "1 0 30%" }}>
               Goals
             </h4>
-            <p className="body-main overview-p">{goals}</p>
+            {goals.map((p) => {
+              return <p className="body-main overview-p">{p}</p>;
+            })}
           </div>
+
           {problem ? (
             <div className="descriptions">
               <h4 className="header-bold-small" style={{ flex: "1 0 30%" }}>

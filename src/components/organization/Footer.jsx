@@ -25,11 +25,19 @@ export default function Footer() {
   return (
     <div className="footer">
       <hr />
-      <p className="body-main">2024</p>
-      <p className="body-main">
-        Coded from scratch{" "}
-        <i class="em em-star2" role="presentation" aria-label=""></i>
-      </p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <p className="body-main">@2024</p>
+        <p className="body-main">
+          Coded from scratch by me
+          <i class="em em-star2" role="presentation" aria-label=""></i>
+        </p>
+      </div>
     </div>
   );
 }

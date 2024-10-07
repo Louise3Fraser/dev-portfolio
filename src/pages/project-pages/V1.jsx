@@ -1,16 +1,12 @@
 import React, { useEffect } from "react";
-import { useMediaQuery, useTheme } from "@mui/material";
 import Navigation from "../../components/organization/Navigation";
 import Footer from "../../components/organization/Footer";
 import ProjectHeading from "../../components/ProjectHeading";
-import v1 from "../../media/versions/v1-big.png";
 import Overview from "../../components/Overview";
 import v1Vid from "../../media/versions/v1.mp4";
 import v1Mockup from "../../media/versions/v1-mockup.png";
-export default function V1() {
-  const themeQuery = useTheme();
-  const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
 
+export default function V1() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -53,25 +49,29 @@ export default function V1() {
           "This is my first portfolio website I created that highlights my education, previous work experience, and personal projects. The design is 'bouncy', colorful, and fun."
         }
         goals={
-          "To create a fun and vibrant portfolio that reflects my personality. To gain practice with web design/development, particularly through the use of React.js. "
+          ["To create a fun and vibrant portfolio that reflects my personality. To gain practice with web design/development, particularly through the use of React.js."]
         }
         tasks={["React.js", "JavaScript", "HTML/CSS", "Adobe Suite", "git"]}
         dates={"Nov. 2023"}
         roles={["Frontend Developer"]}
         project={"Personal Project"}
-      />
+        url={"https://github.com/Louise3Fraser/dev-portfolio/tree/v1"}
 
-      <h4
-        className="job"
-        style={{
-          color: "#EA5F27",
-          fontWeight: "600",
-          fontSize: "14px",
-          marginBottom: "40px",
-        }}
-      >
-        DEMO
-      </h4>
+      />
+      <div className="project-main">
+        <h4
+          className="job"
+          style={{
+            color: "#EA5F27",
+            fontWeight: "600",
+            fontSize: "14px",
+            marginBottom: "40px",
+          }}
+        >
+          DEMO
+        </h4>
+      </div>
+
       <video
         src={v1Vid}
         className="card-src"

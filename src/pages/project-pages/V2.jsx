@@ -1,17 +1,12 @@
 import React, { useEffect } from "react";
-import { useMediaQuery, useTheme } from "@mui/material";
 import Navigation from "../../components/organization/Navigation";
 import Footer from "../../components/organization/Footer";
 import ProjectHeading from "../../components/ProjectHeading";
-import v1 from "../../media/versions/v1-big.png";
 import Overview from "../../components/Overview";
 import v2Vid from "../../media/versions/v2.mp4";
 import v2Mockup from "../../media/versions/v2-mockup.png";
 
 export default function V1() {
-  const themeQuery = useTheme();
-  const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -54,24 +49,28 @@ export default function V1() {
           "This is my second portfolio website I created that highlights my education, previous work experience, and personal projects."
         }
         goals={
-          "To create a more sleek and modern portfolio. To gain more practice with web design/development, particularly through the use of React.js. "
+          ["To create a more sleek and modern portfolio. To gain more practice with web design/development, particularly through the use of React.js."]
         }
         tasks={["React.js", "JavaScript", "HTML/CSS", "Adobe Suite", "git"]}
         dates={"Feb. 2024"}
         roles={["Frontend Developer"]}
         project={"Personal Project"}
+        url={"https://github.com/Louise3Fraser/dev-portfolio/tree/v1"}
+
       />
-      <h4
-        className="job"
-        style={{
-          color: "#EA5F27",
-          fontWeight: "600",
-          fontSize: "14px",
-          marginBottom: "40px",
-        }}
-      >
-        DEMO
-      </h4>
+     <div className="project-main">
+        <h4
+          className="job"
+          style={{
+            color: "#EA5F27",
+            fontWeight: "600",
+            fontSize: "14px",
+            marginBottom: "40px",
+          }}
+        >
+          DEMO
+        </h4>
+      </div>
       <video
         src={v2Vid}
         className="card-src"

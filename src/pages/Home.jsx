@@ -5,23 +5,21 @@ import "../pages-css/Home.css";
 import Projects from "../sections/Projects";
 import star from "../media/star.png";
 import Socials from "../components/Socials";
+import Upcoming from "../sections/Upcoming";
 
 function Home() {
   return (
     <div className="home">
       <Navigation />
       <div className="headers">
-        <h4 className="header-largest emoji-text">Hey, I'm Louise Fraser</h4>
-        <h4
-          className="header-bold-small emoji-text"
-          style={{ maxWidth: "500px" }}
-        >
-          Senior student at Vanderbilt University, aspiring designer and coder.
-        </h4>
-        <h4 className="job">Find me here:</h4>
-        <Socials />
+
+        <p  className="header-largest">Hi, I'm Louise Fraser. </p>
+        <p  className="header-largest">Senior student at Vanderbilt, aspiring designer and coder. </p>
+
+        {/* <Socials /> */}
       </div>
       <Projects />
+      <Upcoming/>
       <Footer />
     </div>
   );

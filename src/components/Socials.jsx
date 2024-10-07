@@ -10,7 +10,7 @@ export default function Socials() {
   const [copied, setCopied] = useState(false);
 
   return (
-    <div className="socials" style={{display:"flex", flexDirection:"row", gap: "20px"}}>
+    <div className="socials" style={{display:"flex", flexDirection:"row", gap: "20px", marginTop:"12px"}}>
       <motion.button
         whileHover={{
           scale: 1.2,

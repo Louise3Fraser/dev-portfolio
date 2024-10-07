@@ -61,7 +61,7 @@ export default function Art() {
         style={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
+          alignItems: "center",
         }}
       >
         <p className="header-bold-large">Selected Art</p>
@@ -70,6 +70,7 @@ export default function Art() {
           style={{
             paddingBottom: "40px",
             paddingTop: "20px",
+            maxWidth:  "100%"
           }}
           className="body-main"
         >
@@ -203,19 +204,19 @@ export default function Art() {
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-
+ <img
+              alt="img"
+              src={art2}
+              className="nav-image fade-in-section"
+              style={{ margin: "0px" }}
+            />
             <img
               alt="img"
               src={ace}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img
-              alt="img"
-              src={art2}
-              className="nav-image fade-in-section"
-              style={{ margin: "0px" }}
-            />
+           
             <img
               alt="img"
               src={vitalityPoster}

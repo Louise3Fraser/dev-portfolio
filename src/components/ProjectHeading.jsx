@@ -2,17 +2,32 @@ import React from "react";
 import { useMediaQuery, useTheme } from "@mui/material";
 import "../pages-css/Projects.css";
 
-export default function ProjectHeading({ title, subTitle, img, type, bool }) {
+export default function ProjectHeading({
+  title,
+  subTitle,
+  img,
+  type,
+  bool,
+}) {
   const themeQuery = useTheme();
   const screenSize = useMediaQuery(themeQuery.breakpoints.up("lg"));
 
   return (
     <div className="project-heading">
-      <div>
-        <h4 className="header-bold-large">{title}</h4>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h4 className="header-largest">{title}</h4>
         <h4
           className="body-main"
-          style={{ maxWidth: "100%", marginBottom: "30px" }}
+          style={{
+            maxWidth: screenSize ? "50%" : "100%",
+            marginBottom: "30px",
+          }}
         >
           {subTitle}
         </h4>

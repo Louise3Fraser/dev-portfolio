@@ -35,7 +35,7 @@ export default function Navigation() {
             className="navigation"
             style={{
               fontWeight: isActive ? "600" : "400",
-              color: isActive ? "#EA5F27" : "black",
+              color: isActive ? "#12144c" : "black",
             }}
           >
             {label}
@@ -80,7 +80,8 @@ export default function Navigation() {
           {renderMenuButton("About", "/about")}
         </div>
       </div>
-      <hr style={{ width: "100vw", marginTop: "30px", marginLeft: "-19vw" }} />
+      <div style={{height: "100px"}}/>
+      {/* <hr style={{ width: "100vw", marginTop: "30px", marginLeft: "-14vw" }} /> */}
     </div>
   );
 }

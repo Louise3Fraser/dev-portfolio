@@ -4,17 +4,35 @@ import "../pages-css/Animations.css";
 import "../pages-css/Art.css";
 import { useTheme, useMediaQuery } from "@mui/material";
 import Column from "../components/organization/Column";
-import water from "../media/water.JPG";
-import nz from "../media/nz.png";
 import taz from "../media/taz.jpg";
-import ta from "../media/ta.JPG";
-import melb from "../media/melb.JPG";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { motion } from "framer-motion";
+import resume from "../docs/resume.pdf"
 
 const jobs = [
   ["'Dores Design • Graphic Designer", "2021 - Current"],
   ["University of Melbourne • CASA Student", "Spring/Summer 2024"],
   ["hc1 • Software Engineer Intern", "Summer 2023"],
   ["LifeOmic • Computer Science Intern", "Summer 2022"],
+];
+
+const connect = [
+  [
+    ["Resume"],
+    [resume],
+    [<ArrowOutwardIcon style={{ color: "black", cursor: "pointer" }} />],
+  ],
+  [
+    ["Github"],
+    ["https://github.com/Louise3Fraser"],
+    [<ArrowOutwardIcon style={{ color: "black", cursor: "pointer" }} />],
+  ],
+  [
+    ["LinkedIn"],
+    ["https://www.linkedin.com/in/louise-fraser-379b0b251/"],
+    [<ArrowOutwardIcon style={{ color: "black", cursor: "pointer" }} />],
+  ],
+  [["Email"], ["mailto:louise.b.fraser@vanderbilt.edu"], [<ArrowOutwardIcon style={{ color: "black", cursor: "pointer" }} />]],
 ];
 
 const education = {
@@ -30,11 +48,11 @@ const techSkills = {
   items: [
     "JavaScript",
     "React.Js",
+    "Figma",
     "Python",
     "HTML/CSS",
     "Adobe Creative Suite",
     "Graphic design",
-    "Figma",
     "Unity",
     "MySQL",
     "C++",
@@ -59,7 +77,7 @@ const interests = {
 
 export default function About() {
   const themeQuery = useTheme();
-  const screenSizeSm = useMediaQuery(themeQuery.breakpoints.up("md"));
+  const screenSizeSm = useMediaQuery(themeQuery.breakpoints.up("lg"));
 
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
@@ -84,84 +102,68 @@ export default function About() {
 
   return (
     <div className="about-main">
-      <div>
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          gap: "20px",
+          flexDirection: screenSizeSm ? "row" : "column",
+          gap: screenSizeSm ? "50px" : "30px",
         }}
       >
-        <p className="header-bold-large">Nice to meet you!</p>
-
-        <p
+        <div
           style={{
-            maxWidth: "100%",
+            display: "flex",
+            flexDirection: "column",
+            maxWidth: screenSizeSm ? "45%" : "100%",
           }}
-          className="body-main "
         >
-          I'm Louise, and I have a passion for design and technology. I grew up
-          sketching and painting on anything I could find. In more recent years,
-          I've been a graphic designer at 'Dores Design, a student-run part of
-          Vanderbilt's administration.
-        </p>
-        <p
+          <img
+            alt="img"
+            src={taz}
+            className="nav-image"
+            style={{
+              flex: "1",
+              margin: "0px",
+            }}
+          />
+          <p className="body-main-link">
+            My friends and I in Tasmania! (I'm the tall one:))
+          </p>
+        </div>
+        <div
           style={{
-            maxWidth: "100%",
-            paddingBottom: "20px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "20px",
+            flex: "1",
           }}
-          className="body-main "
         >
-          I've had two years of internship experience where I worked as a
-          software engineer intern under the mentorship of experienced
-          professionals. I hope to combine my interest in design and technology
-          in my future roles, as well as my background in psychology.
-        </p>
+          <p className="header-bold-large">Nice to meet you!</p>
 
-        {/* <p className="header-bold-small">Find me:</p> */}
-        {/* <p className="header-bold-small">Combining tech and art</p>
-        <div>
           <p
-            style={{ display: "flex", gap: "20px" }}
-            className="body-main fade-in-section"
+            style={{
+              maxWidth: "100%",
+            }}
+            className="body-main "
           >
-            <i
-              className="em em-brain"
-              role="presentation"
-              aria-label="BRAIN"
-            ></i>
-            Psychology Major
+            I'm Louise, and I have a passion for design and technology. I grew
+            up sketching and painting on anything I could find. In more recent
+            years, I've been a graphic designer at 'Dores Design, a student-run
+            part of Vanderbilt's administration.
           </p>
           <p
-            style={{ display: "flex", gap: "20px" }}
-            className="body-main fade-in-section"
+            style={{
+              maxWidth: "100%",
+              paddingBottom: "20px",
+            }}
+            className="body-main "
           >
-            <i
-              class="em em-computer"
-              aria-role="presentation"
-              aria-label="PERSONAL COMPUTER"
-            ></i>
-            Computer Science Major
+            I've had two years of internship experience where I worked as a
+            software engineer intern under the mentorship of experienced
+            professionals. I hope to combine my interest in design and
+            technology in my future roles, as well as my background in
+            psychology.
           </p>
-        </div>{" "}
-        <p
-          style={{
-            maxWidth: "100%",
-            paddingBottom: "20px",
-          }}
-          className="body-main fade-in-section"
-        >
-          Coding and design are two things I love to challenge myself with. I am
-          particularly interested in front-end development as well as UX/UI
-          design.
-        </p> */}
-      </div>
-      {/* <img
-                alt="img"
-                src={taz}
-                className="nav-image fade-in-section"
-                style={{ margin: "0px" }}
-              /> */}
+        </div>
       </div>
       <div
         className="columns"
@@ -176,9 +178,10 @@ export default function About() {
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: screenSizeSm ? "row" : "column",
           marginTop: "20px",
           justifyContent: "space-between",
+          gap: screenSizeSm ? "0px" : "40px",
         }}
       >
         <p className="header-bold-small">Experience</p>
@@ -190,6 +193,7 @@ export default function About() {
                   display: "flex",
                   flexDirection: "column",
                   marginBottom: "10px",
+                  width: "380px",
                 }}
               >
                 <div className="job" style={{ margin: "0px" }}>
@@ -205,52 +209,38 @@ export default function About() {
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          gap: "20px",
+          flexDirection: screenSizeSm ? "row" : "column",
           marginTop: "20px",
+          justifyContent: "space-between",
+          gap: screenSizeSm ? "0px" : "40px",
         }}
       >
-        <p className="header-bold-small">Some places I've visited:)</p>
-        <div
-          style={{
-            position: "relative",
-            maxHeight: "550px",
-            overflow: "hidden",
-          }}
-        >
-          <div className="masonry-grid">
-            <div className="masonry-column">
-              <img
-                alt="img"
-                src={ta}
-                className="nav-image fade-in-section"
-                style={{ margin: "0px" }}
-              />
-              <img
-                alt="img"
-                src={melb}
-                className="nav-image fade-in-section"
-                style={{ margin: "0px" }}
-              />
-            </div>
-
-            <div className="masonry-column">
-              <img
-                alt="img"
-                src={nz}
-                className="nav-image fade-in-section"
-                style={{ margin: "0px" }}
-              />
-            </div>
-            <div className="masonry-column">
-              <img
-                alt="img"
-                src={taz}
-                className="nav-image fade-in-section"
-                style={{ margin: "0px" }}
-              />
-            </div>
-          </div>
+        <p className="header-bold-small">Connect</p>
+        <div>
+          {connect.map((connection) => {
+            return (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "flex-start",
+                  justifyContent: "flex-start",
+                  width: "380px",
+                }}
+              >
+                <p className="body-main">{connection[0]}</p>
+                <motion.button
+                  whileHover={{
+                    scale: 1.2,
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => window.open(connection[1])}
+                >
+                  {connection[2]}
+                </motion.button>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

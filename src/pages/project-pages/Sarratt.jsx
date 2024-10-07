@@ -12,9 +12,9 @@ import brushes from "../../media/sarratt/sarratt-brushes.png";
 import Description from "../../components/organization/Description";
 
 export default function Sarratt() {
-  //   useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
@@ -53,7 +53,7 @@ export default function Sarratt() {
         overview={
           "Sarratt Art Studios is an on-campus Vanderbilt organization offering a variety of non-credit art classes, such as pottery, jewelry making, and painting. They requested a logo redesign through 'Dores Design and I was assigned as the designer for this project."
         }
-        goals={`The clients goal was to acheive something "more timeless" than the previous logo that had been in place since the founding of the studio in the 1970s. The overall goal was to create a more modern, colorful, and fresh logo.`}
+        goals={[`The clients goal was to acheive something "more timeless" than the previous logo that had been in place since the founding of the studio in the 1970s. The overall goal was to create a more modern, colorful, and fresh logo.`]}
         problems={"sjfa"}
         tasks={["Illustrator", "Graphic Design"]}
         dates={"Sep. 2022 - July 2023"}
@@ -76,6 +76,7 @@ export default function Sarratt() {
           desc={[
             "The previous design had been in use since the 1970s. While it served its purpose for many years, the design was rather outdated and lacked color. A new design would be able to better represent their mission of providing a welcoming and engaging space for artists of all levels.",
           ]}
+          yes={true}
           images={[old]}
         />
         <Description
@@ -112,7 +113,6 @@ export default function Sarratt() {
           images={[newLogo]}
         />
         <hr style={{ width: "12vw" }} />
-
         <h4
           className="job"
           style={{

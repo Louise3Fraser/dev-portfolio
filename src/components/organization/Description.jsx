@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../../pages-css/Projects.css";
 import { useTheme, useMediaQuery } from "@mui/material";
 
-export default function Description({ title, desc, images }) {
+export default function Description({ title, desc, images, yes }) {
   const theme = useTheme();
   const screenSizeSm = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -12,7 +12,7 @@ export default function Description({ title, desc, images }) {
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
+          flexDirection: yes ? "row" : "column",
           gap: images[0] ? "20px" : "0px",
           justifyContent: "space-between",
         }}
@@ -24,6 +24,7 @@ export default function Description({ title, desc, images }) {
             flexDirection: "column",
             gap: "20px",
             alignItems: "flex-start",
+            flex: yes ? "1" : ""
           }}
         >
           {desc.map((p) => {

@@ -20,9 +20,9 @@
 .project {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
-  margin-left: 19vw;
-  margin-right: 19vw;
+  margin-top: 60px;
+  margin-left: 14vw;
+  margin-right: 14vw;
 }
 
 .main {
@@ -63,6 +63,7 @@
 .project-heading {
   display: flex;
   flex-direction: column;
+  margin-top:0px
 }
 @media (max-width: 1100px) {
   .project-heading {
@@ -83,15 +84,15 @@
 }
 
 .full-width-section {
-  width: 100vw;
   background-color: #f2efe9;
-  padding: 40px 0;
+  width: 100vw;
+  padding: 20px 0;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
-  margin-left: -19vw;
   position: relative;
+  margin-left:-14vw;
   height: 400px;
   overflow: hidden;
 }
@@ -173,10 +174,10 @@
 
 .overlay-subtext {
   color: #fff;
-  text-align: center;
   opacity: 1;
   font-size: 12px;
   transition: opacity 0.3s ease;
+  max-width: 240px;
 }
 
 .project-main {
@@ -192,4 +193,25 @@
     margin-left: 0vw;
     margin-right: 0vw;
   }
+}
+
+
+.quote {
+  display: flex;
+  background-color: #f2efe9;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  height: 80px;
+}
+
+.upcoming {
+  margin-top: 100px
+}
+
+.button {
+  background-color: #12144c;
+  padding: 2px 10px;
+  border-radius: 5px;
 }

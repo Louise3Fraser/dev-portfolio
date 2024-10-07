@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import { useMediaQuery, useTheme } from "@mui/material";
 import Navigation from "../../components/organization/Navigation";
-import mushroomCover from "../../media/mushroom/mushroomCover.png";
 import "../../pages-css/Animations.css";
 import "../../pages-css/Projects.css";
-import allAssets from "../../media/mushroom/all-assets.png";
 import scenery from "../../media/mushroom/backgrounds.png";
 import sprites from "../../media/mushroom/enemies.png";
 
@@ -13,6 +11,7 @@ import Footer from "../../components/organization/Footer";
 import Overview from "../../components/Overview";
 import Colors from "../../media/mushroom/colors.png";
 import redBall from "../../media/mushroom/red-ball.png";
+import mushroomScreen from "../../media/mushroom/mushroomScreen.png";
 
 import vid from "../../media/mushroom/mushroom.mp4";
 import Description from "../../components/organization/Description";
@@ -21,9 +20,9 @@ export default function Mushroom() {
   const themeQuery = useTheme();
   const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     // const bodyMainElements = document.querySelectorAll(".body-main");
@@ -68,7 +67,7 @@ export default function Mushroom() {
         <ProjectHeading
           title={"Mushroom Mayhem"}
           subTitle={"A Unity platform game"}
-          img={mushroomCover}
+          img={mushroomScreen}
           type={"img"}
         />
       </div>
@@ -76,9 +75,9 @@ export default function Mushroom() {
         overview={
           "Mushroom Mayhem is a platform game created on Unity Game Engine. The player controls a tiny mushroom character and must navigate obstacles–spikes and enemies alike–to complete various levels amongst a cozy forest."
         }
-        goals={
-          "The goal with Mushroom Mayhem was to learn more about Unity and game development in general. In addition to writing code, the project allowed for creativity in the form of asset/sprite creation and level design."
-        }
+        goals={[
+          "The goal with Mushroom Mayhem was to learn more about Unity and game development in general. In addition to writing code, the project allowed for creativity in the form of asset/sprite creation and level design.",
+        ]}
         team={"Lisa Liu"}
         url={"https://github.com/lisaliuu/Mushroom-Mayhem"}
         tasks={["Unity", "C#", "Design", "Illustrator", "Procreate"]}
@@ -140,15 +139,17 @@ export default function Mushroom() {
           images={[scenery]}
         />
         <Description
-          title={"Sprites"}
+          title={"Sprites/Design"}
           desc={[
-            `A classic platform game has platforms, various enemies/obstacles,
-              and interesting scenery. To achieve this aspect of scenery, we
-              implemented a the parallax effect on the background.`,
+            `Sprites included the playable mushroom and the enemies. Enemies included the
+          enemy mushrooms, spike monsters, water, and wooden spikes.`,
           ]}
-          images={[sprites]}
+          images={[]}
         />
+      </div>
+      <img alt="img" src={sprites} />
 
+      <div className="project-main">
         <hr style={{ width: "12vw" }} />
 
         <h4
