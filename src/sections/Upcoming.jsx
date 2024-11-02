@@ -1,13 +1,6 @@
 import React from "react";
 import ProjectCards from "../components/cards/ProjectCards";
-import carshare from "../media/carshare/carshare.png";
-import mushroom from "../media/mushroom/mushroomCover.png";
-import sarratt from "../media/sarratt/sarrattCover.png";
-
 import "../pages-css/Projects.css";
-import v1Big from "../media/versions/v1Cover.png";
-import v2Big from "../media/versions/v2Cover.png";
-import moti from "../media/moti/motiCover.png";
 import itell from "../media/itell/itellCover.png";
 
 export default function Upcoming() {

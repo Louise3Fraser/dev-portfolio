@@ -80,7 +80,7 @@ export default function CarShare() {
         </h4>
         <Description title={"To be updated"} desc={[`...`]} images={[]} />
       </div>
-      {/* <img
+      {/* <img loading="eager"
           alt="img"
           src={steps}
           className="fade-in-section"

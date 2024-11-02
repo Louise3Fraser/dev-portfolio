@@ -18,9 +18,9 @@ export default function Moti() {
   const themeQuery = useTheme();
   const screenSizeLg = useMediaQuery(themeQuery.breakpoints.up("lg"));
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <div className="project">
@@ -36,10 +36,12 @@ export default function Moti() {
       <Overview
         overview={`Moti is a meditation app designed to cultivate 
             mindfulness and motivation through guided meditations and progress tracking.`}
-        goals={[`The primary goal of Moti is to create an engaging and simple 
+        goals={[
+          `The primary goal of Moti is to create an engaging and simple 
             app that encourages individuals to develop mindfulness 
             habits. By providing motivation tools, such as daily reminders and emotion/streak tracking,
-            Moti aims to make daily meditation a reachable goal. `]}
+            Moti aims to make daily meditation a reachable goal. `,
+        ]}
         problem={`Many individuals struggle to maintain consistency with daily meditation. 
             Factors such as busy schedules, lacking motivation, and not seeing results 
             right away can hinder a person’s ability to develop their own mindfulness routine. `}
@@ -103,8 +105,8 @@ export default function Moti() {
           </div>
         </div>
         <p className="body-main">
-          I interviewed 10 people in total. Here are some examples of some of my
-          interviewees:
+          I interviewed 13 people in total, ages ranging from 16-52 years old.
+          Here are some examples of some of my interviewees:
         </p>
         <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
           <li>
@@ -191,6 +193,7 @@ export default function Moti() {
         />
       </div>
       <img
+        loading="eager"
         alt="img"
         src={table}
         className="nav-image"
@@ -380,6 +383,7 @@ export default function Moti() {
         />
       </div>
       <img
+        loading="eager"
         alt="img"
         src={wireframe}
         className="nav-image"
@@ -395,7 +399,9 @@ export default function Moti() {
             sense of peace and positivity.`,
             `Notably, a lot of the apps I examined had darker
             color palettes. For example, Headspace and Calm had bluish blacks and dark purples.
-            This is likely to `,
+            This is likely to create a nighttime feel or relaxing ambience. I decided to go with
+            what my interviewees requested, though future considerations could include a nighttime
+            mode as an option. `,
           ]}
           images={[brand]}
         />
@@ -410,6 +416,7 @@ export default function Moti() {
         />
       </div>
       <img
+        loading="eager"
         alt="img"
         src={motiAll}
         className="nav-image"

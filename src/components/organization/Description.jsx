@@ -42,7 +42,7 @@ export default function Description({ title, desc, images, yes }) {
         >
           {images.map((img) => {
             return (
-              <img
+              <img loading="eager"
                 alt="img"
                 src={img}
                 style={{

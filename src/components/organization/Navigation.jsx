@@ -55,7 +55,7 @@ export default function Navigation() {
           gap: screenSizeSm ? "0px" : "20px"
         }}
       >
-         <img
+         <img loading="eager"
             alt="img"
             src={logo}
             

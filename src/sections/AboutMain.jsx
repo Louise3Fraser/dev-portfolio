@@ -116,7 +116,7 @@ export default function About() {
             maxWidth: screenSizeSm ? "45%" : "100%",
           }}
         >
-          <img
+          <img loading="eager"
             alt="img"
             src={taz}
             className="nav-image"

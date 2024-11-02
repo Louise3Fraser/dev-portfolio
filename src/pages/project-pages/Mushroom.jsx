@@ -118,7 +118,7 @@ export default function Mushroom() {
         >
           <div style={{ flex: "1" }}>
             <p className="job">Colors</p>
-            <img alt="img" src={Colors} style={{ maxWidth: "80%" }} />
+            <img loading="eager" alt="img" src={Colors} style={{ maxWidth: "80%" }} />
           </div>
           <div style={{ flex: "1" }}>
             <p className="job">Game Adjectives</p>
@@ -147,7 +147,7 @@ export default function Mushroom() {
           images={[]}
         />
       </div>
-      <img alt="img" src={sprites} />
+      <img loading="eager" alt="img" src={sprites} />
 
       <div className="project-main">
         <hr style={{ width: "12vw" }} />

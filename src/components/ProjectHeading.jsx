@@ -34,7 +34,7 @@ export default function ProjectHeading({
       </div>
       <div className="full-width-section">
         {type === "img" ? (
-          <img
+          <img loading="eager"
             alt="img"
             src={img}
             style={{

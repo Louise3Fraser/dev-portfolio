@@ -38,7 +38,7 @@ export default function ProjectCards({ title, src, subtext, path, desc }) {
           onClick={() => navigate(path)}
           className="project-card"
         >
-          <img
+          <img loading="eager"
             alt={title}
             src={src}
             className="card-src"
