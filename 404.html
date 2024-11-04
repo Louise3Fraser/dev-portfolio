@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+    <script>
+      const validRoutes = [
+        "/",
+        "/art",
+        "/about",
+        "/carshare",
+        "/moti",
+        "/mushroom-mayhem",
+        "/sarratt-art-studios",
+        "/v1-portfolio",
+        "/v2-portfolio",
+        "/itell",
+      ];
+
+      const currentPath = window.location.pathname.replace(
+        "/dev-portfolio",
+        ""
+      );
+
+      if (validRoutes.includes(currentPath)) {
+        window.location.replace("/dev-portfolio/");
+      } else {
+        document.addEventListener("DOMContentLoaded", () => {
+          document.body.innerHTML = `
+                    <h1>404 - Page Not Found</h1>
+                    <p>The page you requested doesn't exist.</p>
+                    <a href="/dev-portfolio/">Go back to Home</a>
+                `;
+        });
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
