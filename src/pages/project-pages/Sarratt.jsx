@@ -50,9 +50,9 @@ export default function Sarratt() {
       </div>
       <Overview
         roles={["Graphic Designer"]}
-        overview={
+        overview={[
           "Sarratt Art Studios is an on-campus Vanderbilt organization offering a variety of non-credit art classes, such as pottery, jewelry making, and painting. They requested a logo redesign through 'Dores Design and I was assigned as the designer for this project."
-        }
+        ]}
         goals={[`The clients goal was to acheive something "more timeless" than the previous logo that had been in place since the founding of the studio in the 1970s. The overall goal was to create a more modern, colorful, and fresh logo.`]}
         problems={"sjfa"}
         tasks={["Illustrator", "Graphic Design"]}

@@ -1,15 +1,11 @@
 import React, { useEffect } from "react";
-import { useTheme, useMediaQuery } from "@mui/material";
 import "../../pages-css/Projects.css";
-import CallMadeIcon from "@mui/icons-material/CallMade";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 export default function ProjectCards({ title, src, subtext, path, desc }) {
-  const theme = useTheme();
-  const screenSizeSm = useMediaQuery(theme.breakpoints.up("md"));
-
   const navigate = useNavigate();
+  
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
     const observer = new IntersectionObserver((entries) => {

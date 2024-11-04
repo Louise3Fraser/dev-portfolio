@@ -72,9 +72,9 @@ export default function Mushroom() {
         />
       </div>
       <Overview
-        overview={
-          "Mushroom Mayhem is a platform game created on Unity Game Engine. The player controls a tiny mushroom character and must navigate obstacles–spikes and enemies alike–to complete various levels amongst a cozy forest."
-        }
+        overview={[
+          "Mushroom Mayhem is a platform game created on Unity Game Engine. The player controls a tiny mushroom character and must navigate obstacles–spikes and enemies alike–to complete various levels amongst a cozy forest.",
+        ]}
         goals={[
           "The goal with Mushroom Mayhem was to learn more about Unity and game development in general. In addition to writing code, the project allowed for creativity in the form of asset/sprite creation and level design.",
         ]}
@@ -118,7 +118,12 @@ export default function Mushroom() {
         >
           <div style={{ flex: "1" }}>
             <p className="job">Colors</p>
-            <img loading="eager" alt="img" src={Colors} style={{ maxWidth: "80%" }} />
+            <img
+              loading="eager"
+              alt="img"
+              src={Colors}
+              style={{ maxWidth: "80%" }}
+            />
           </div>
           <div style={{ flex: "1" }}>
             <p className="job">Game Adjectives</p>

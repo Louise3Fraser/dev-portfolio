@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCards from "../components/cards/ProjectCards";
 import "../pages-css/Projects.css";
-import itell from "../media/itell/itellCover.png";
+import itell from "../media/itell/itellCoverBlurred.png";
 
 export default function Upcoming() {
   return (

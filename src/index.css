@@ -37,6 +37,15 @@ code {
   color: #12144c;
 }
 
+.header-subtitle {
+  font-family: 'General', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin: 0px;
+  line-height: 55px;
+  color: #12144c;
+}
+
 .name {
   font-family: 'General', sans-serif;
   font-weight: bold;

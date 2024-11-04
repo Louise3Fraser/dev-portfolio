@@ -1,6 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../pages-css/Art.css";
-import { useMediaQuery, useTheme } from "@mui/material";
 import Navigation from "../components/organization/Navigation";
 import Footer from "../components/organization/Footer";
 import iceland from "../media/example-work/iceland.jpg";
@@ -25,14 +24,10 @@ import art1 from "../media/example-work/art-1.JPG";
 import art2 from "../media/example-work/art-2.JPG";
 import art3 from "../media/example-work/art-3.JPG";
 import art4 from "../media/example-work/art-4.png";
-import marloly from "../media/example-work/marloly.jpg";
 import mushroom2 from "../media/example-work/mushrrom-2.png";
 import lisa from "../media/example-work/lisa.png";
 
 export default function Art() {
-  const themeQuery = useTheme();
-  const screenSize = useMediaQuery(themeQuery.breakpoints.up("md"));
-
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
     const observer = new IntersectionObserver((entries) => {
@@ -64,7 +59,7 @@ export default function Art() {
           alignItems: "center",
         }}
       >
-        <p className="header-bold-large">Selected Art</p>
+        <p className="header-bold-large fade-in-section">Selected Art</p>
 
         <p
           style={{
@@ -72,7 +67,7 @@ export default function Art() {
             paddingTop: "20px",
             maxWidth: "100%",
           }}
-          className="body-main"
+          className="body-main fade-in-section"
         >
           Here's a small collection of some art I've made throughout the years.
           A lot of my artwork comes from my graphic design job at 'Dores Design!
@@ -82,50 +77,58 @@ export default function Art() {
 
         <div className="masonry-grid">
           <div className="masonry-column">
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={iceland}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={sail}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
 
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={art1}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={shape}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={mushroom2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={stickers}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={art4}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={anchorLogo}
               className="nav-image fade-in-section"
@@ -134,49 +137,57 @@ export default function Art() {
           </div>
 
           <div className="masonry-column">
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={marshmallow}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={lambda}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={invusion1}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={art3}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={invusion2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={lisa}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={asce}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={cafe}
               className="nav-image fade-in-section"
@@ -185,50 +196,58 @@ export default function Art() {
           </div>
 
           <div className="masonry-column">
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={design}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={portrait}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={vitality}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={art2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={ace}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
 
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={vitalityPoster}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={portrait2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
-            <img loading="eager"
+            <img
+              loading="eager"
               alt="img"
               src={vandy}
               className="nav-image fade-in-section"

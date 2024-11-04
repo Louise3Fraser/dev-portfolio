@@ -18,9 +18,9 @@ export default function Moti() {
   const themeQuery = useTheme();
   const screenSizeLg = useMediaQuery(themeQuery.breakpoints.up("lg"));
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="project">
@@ -28,14 +28,14 @@ export default function Moti() {
       <div className="main">
         <ProjectHeading
           title={"Moti"}
-          subTitle={"UX/UI Case Study"}
+          subTitle={"Product Design, Branding, UX"}
           img={motiCoverEmpty}
           type={"img"}
         />
       </div>
       <Overview
-        overview={`Moti is a meditation app designed to cultivate 
-            mindfulness and motivation through guided meditations and progress tracking.`}
+        overview={[`Moti is a meditation app designed to cultivate 
+            mindfulness and motivation through guided meditations and progress tracking.`]}
         goals={[
           `The primary goal of Moti is to create an engaging and simple 
             app that encourages individuals to develop mindfulness 
@@ -106,7 +106,7 @@ export default function Moti() {
         </div>
         <p className="body-main">
           I interviewed 13 people in total, ages ranging from 16-52 years old.
-          Here are some examples of some of my interviewees:
+          Some stats from five of my interviewees:
         </p>
         <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
           <li>

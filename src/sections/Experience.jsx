@@ -42,18 +42,6 @@ const abroad = {
   url: "https://casa.education/melbourne",
 };
 
-// description: (
-//   <>
-//     Design <span className="bold">posters</span>,{" "}
-//     <span className="bold">banners</span>,{" "}
-//     <span className="bold">fliers</span>, <span className="bold">logos</span>,{" "}
-//     <span className="bold">graphics</span>, etc. for 200+ Vanderbilt Student
-//     Organizations. Manage ongoing requests for graphic design projects
-//     throughout the year. Conduct creative development{" "}
-//     <span className="bold">meetings</span> with Vanderbilt affiliated clients
-//     and administration.
-//   </>
-// ),
 export default function Experience() {
   return (
     <div className="experience">

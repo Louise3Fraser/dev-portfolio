@@ -8,6 +8,7 @@ export default function ProjectHeading({
   img,
   type,
   bool,
+  progress,
 }) {
   const themeQuery = useTheme();
   const screenSize = useMediaQuery(themeQuery.breakpoints.up("lg"));
@@ -30,11 +31,20 @@ export default function ProjectHeading({
           }}
         >
           {subTitle}
+
+          {progress ? (
+            <span style={{ color: "#EA5F27", fontWeight: "500" }}>
+              {"  "}*In progress
+            </span>
+          ) : (
+            <></>
+          )}
         </h4>
       </div>
       <div className="full-width-section">
         {type === "img" ? (
-          <img loading="eager"
+          <img
+            loading="eager"
             alt="img"
             src={img}
             style={{

@@ -47,9 +47,9 @@ export default function CarShare() {
         />
       </div>
       <Overview
-        overview={
+        overview={[
           "CarShare is a full-stack React app developed by me. The functionality of the app, while still in progress, is designed to reduce car trips and gas usage by providing an efficient and organized way for people to share a car. The app utilizes calendar React.js, API, MySQL database, and both frontend and backend development."
-        }
+        ]}
         goals={[
           "The focus and subsequent goals with CarShare are twofold:",
           `1) Web development: The actual coding of the app. To become more accustomed with coding in

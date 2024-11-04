@@ -7,7 +7,7 @@ import Column from "../components/organization/Column";
 import taz from "../media/taz.jpg";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { motion } from "framer-motion";
-import resume from "../docs/resume.pdf"
+import resume from "../docs/resume.pdf";
 
 const jobs = [
   ["'Dores Design • Graphic Designer", "2021 - Current"],
@@ -32,7 +32,11 @@ const connect = [
     ["https://www.linkedin.com/in/louise-fraser-379b0b251/"],
     [<ArrowOutwardIcon style={{ color: "black", cursor: "pointer" }} />],
   ],
-  [["Email"], ["mailto:louise.b.fraser@vanderbilt.edu"], [<ArrowOutwardIcon style={{ color: "black", cursor: "pointer" }} />]],
+  [
+    ["Email"],
+    ["mailto:louise.b.fraser@vanderbilt.edu"],
+    [<ArrowOutwardIcon style={{ color: "black", cursor: "pointer" }} />],
+  ],
 ];
 
 const education = {
@@ -101,7 +105,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="about-main">
+    <div className="about-main ">
       <div
         style={{
           display: "flex",
@@ -116,16 +120,17 @@ export default function About() {
             maxWidth: screenSizeSm ? "45%" : "100%",
           }}
         >
-          <img loading="eager"
+          <img
+            loading="eager"
             alt="img"
             src={taz}
-            className="nav-image"
+            className="nav-image fade-in-section"
             style={{
               flex: "1",
               margin: "0px",
             }}
           />
-          <p className="body-main-link">
+          <p className="body-main-link fade-in-section">
             My friends and I in Tasmania! (I'm the tall one:))
           </p>
         </div>
@@ -137,13 +142,13 @@ export default function About() {
             flex: "1",
           }}
         >
-          <p className="header-bold-large">Nice to meet you!</p>
+          <p className="header-bold-large fade-in-section">Nice to meet you!</p>
 
           <p
             style={{
               maxWidth: "100%",
             }}
-            className="body-main "
+            className="body-main fade-in-section"
           >
             I'm Louise, and I have a passion for design and technology. I grew
             up sketching and painting on anything I could find. In more recent
@@ -155,7 +160,7 @@ export default function About() {
               maxWidth: "100%",
               paddingBottom: "20px",
             }}
-            className="body-main "
+            className="body-main fade-in-section"
           >
             I've had two years of internship experience where I worked as a
             software engineer intern under the mentorship of experienced
@@ -166,7 +171,7 @@ export default function About() {
         </div>
       </div>
       <div
-        className="columns"
+        className="columns fade-in-section"
         style={{ flexDirection: screenSizeSm ? "row" : "column" }}
       >
         <Column column={education} />
@@ -184,7 +189,7 @@ export default function About() {
           gap: screenSizeSm ? "0px" : "40px",
         }}
       >
-        <p className="header-bold-small">Experience</p>
+        <p className="header-bold-small fade-in-section">Experience</p>
         <div>
           {jobs.map((job) => {
             return (
@@ -195,6 +200,7 @@ export default function About() {
                   marginBottom: "10px",
                   width: "380px",
                 }}
+                className="fade-in-section"
               >
                 <div className="job" style={{ margin: "0px" }}>
                   {job[0]}
@@ -215,7 +221,7 @@ export default function About() {
           gap: screenSizeSm ? "0px" : "40px",
         }}
       >
-        <p className="header-bold-small">Connect</p>
+        <p className="header-bold-small fade-in-section">Connect</p>
         <div>
           {connect.map((connection) => {
             return (
@@ -227,6 +233,7 @@ export default function About() {
                   justifyContent: "flex-start",
                   width: "380px",
                 }}
+                className="fade-in-section"
               >
                 <p className="body-main">{connection[0]}</p>
                 <motion.button

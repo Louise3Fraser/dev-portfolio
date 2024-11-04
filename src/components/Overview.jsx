@@ -15,6 +15,8 @@ export default function Overview({
   team,
   project,
   roles,
+  client,
+  clientURL,
 }) {
   const theme = useTheme();
   const screenSizeSm = useMediaQuery(theme.breakpoints.up("md"));
@@ -56,11 +58,35 @@ export default function Overview({
             return <p className="body-main">{role}</p>;
           })}
         </div>
-
-        <div>
-          <p className="job">Project</p>
-          <p className="body-main">{project}</p>
-        </div>
+        {client ? (
+          <div>
+            <p className="job">Client</p>
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <p className="body-main">{client}</p>
+              <motion.button
+                whileHover={{
+                  scale: 1.2,
+                }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => window.open(clientURL)}
+              >
+                <ArrowOutwardIcon
+                  style={{ color: "black", cursor: "pointer" }}
+                />
+              </motion.button>
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
+        {project ? (
+          <div>
+            <p className="job">Project</p>
+            <p className="body-main">{project}</p>
+          </div>
+        ) : (
+          <></>
+        )}
         {team ? (
           <div>
             <p className="job">Team</p>
@@ -129,7 +155,9 @@ export default function Overview({
             <h4 className="header-bold-small" style={{ flex: "1 0 30%" }}>
               Background
             </h4>
-            <p className="body-main overview-p">{overview}</p>
+            {overview.map((p) => {
+              return <p className="body-main overview-p">{p}</p>;
+            })}
           </div>
 
           <div className="descriptions">

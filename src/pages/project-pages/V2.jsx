@@ -45,20 +45,19 @@ export default function V1() {
         />
       </div>
       <Overview
-        overview={
-          "This is my second portfolio website I created that highlights my education, previous work experience, and personal projects."
-        }
-        goals={
-          ["To create a more sleek and modern portfolio. To gain more practice with web design/development, particularly through the use of React.js."]
-        }
+        overview={[
+          "This is my second portfolio website I created that highlights my education, previous work experience, and personal projects.",
+        ]}
+        goals={[
+          "To create a more sleek and modern portfolio. To gain more practice with web design/development, particularly through the use of React.js.",
+        ]}
         tasks={["React.js", "JavaScript", "HTML/CSS", "Adobe Suite", "git"]}
         dates={"Feb. 2024"}
         roles={["Frontend Developer"]}
         project={"Personal Project"}
         url={"https://github.com/Louise3Fraser/dev-portfolio/tree/v1"}
-
       />
-     <div className="project-main">
+      <div className="project-main">
         <h4
           className="job"
           style={{
