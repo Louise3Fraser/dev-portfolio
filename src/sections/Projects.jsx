@@ -13,13 +13,7 @@ export default function Projects() {
   return (
     <div className="projects">
       <div className="project-grid">
-        <ProjectCards
-          title={"Moti"}
-          src={moti}
-          path={"/moti"}
-          subtext={"product design, branding, ux"}
-        />
-        <ProjectCards
+      <ProjectCards
           title={"iTELL"}
           src={itell}
           path={"/itell"}
@@ -30,10 +24,10 @@ export default function Projects() {
         />
 
         <ProjectCards
-          title={"CarShare"}
-          src={carshare}
-          path={"/carshare"}
-          subtext={"web design, full-stack engineering"}
+          title={"Moti"}
+          src={moti}
+          path={"/moti"}
+          subtext={"product design, branding, ux"}
         />
         <ProjectCards
           title={"Sarratt Art Studios"}
@@ -41,6 +35,13 @@ export default function Projects() {
           path={"/sarratt-art-studios"}
           subtext={"graphic design, logo, branding"}
         />
+        <ProjectCards
+          title={"CarShare"}
+          src={carshare}
+          path={"/carshare"}
+          subtext={"web design, full-stack engineering"}
+        />
+       
         <ProjectCards
           title={"Mushroom Mayhem"}
           src={mushroom}

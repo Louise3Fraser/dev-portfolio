@@ -47,7 +47,6 @@ export default function Itell() {
           img={itell}
           type={"img"}
           bool={"yes"}
-          progress={true}
         />
       </div>
       <Overview
