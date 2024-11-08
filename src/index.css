@@ -86,6 +86,10 @@ code {
   color: var(--color-primary);
 }
 
+.large {
+  margin-left: -7vw;
+  margin-right: -7vw;
+}
 .header-large {
   font-family: var(--font-family-header);
   font-weight: var(--font-weight-bold);

@@ -46,7 +46,7 @@ export default function Navigation() {
   };
 
   return (
-    <div>
+    <div style={{marginBottom: "100px"}}>
       <div
         className="navigation"
         style={{
@@ -55,7 +55,7 @@ export default function Navigation() {
           gap: screenSizeSm ? "0px" : "20px"
         }}
       >
-         <img loading="eager"
+         <img loading="lazy"
             alt="img"
             src={logo}
             
@@ -67,21 +67,12 @@ export default function Navigation() {
               cursor: "pointer"
             }}
           />
-        {/* <h4
-          className="name"
-          onClick={() => navigate("/")}
-          style={{ cursor: "pointer" }}
-        >
-          Louise Fraser
-        </h4> */}
         <div className="menu-items">
           {renderMenuButton("Work", "/")}
           {renderMenuButton("Art", "/art")}
           {renderMenuButton("About", "/about")}
         </div>
       </div>
-      <div style={{height: "100px"}}/>
-      {/* <hr style={{ width: "100vw", marginTop: "30px", marginLeft: "-14vw" }} /> */}
     </div>
   );
 }

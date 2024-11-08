@@ -61,7 +61,7 @@ export default function V1() {
         <h4
           className="job"
           style={{
-            color: "#EA5F27",
+            color: "#6264D3",
             fontWeight: "600",
             fontSize: "14px",
             marginBottom: "40px",

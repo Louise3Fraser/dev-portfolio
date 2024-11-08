@@ -19,9 +19,11 @@ function Home() {
           ></i>
         </p>
         <p className="header-largest">
-          Upcoming graduate at Vanderbilt University,{" "} aspiring designer and coder. </p>
-
-        {/* <Socials /> */}
+          Upcoming graduate at Vanderbilt University,
+        </p>
+        <p className="header-largest">aspiring designer and
+          coder.{" "}
+        </p>
       </div>
       <Projects />
       {/* <Upcoming/> */}

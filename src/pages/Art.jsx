@@ -78,14 +78,14 @@ export default function Art() {
         <div className="masonry-grid">
           <div className="masonry-column">
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={iceland}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={sail}
               className="nav-image fade-in-section"
@@ -93,42 +93,42 @@ export default function Art() {
             />
 
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={art1}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={shape}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={mushroom2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={stickers}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={art4}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={anchorLogo}
               className="nav-image fade-in-section"
@@ -138,56 +138,56 @@ export default function Art() {
 
           <div className="masonry-column">
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={marshmallow}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={lambda}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={invusion1}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={art3}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={invusion2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={lisa}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={asce}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={cafe}
               className="nav-image fade-in-section"
@@ -197,35 +197,35 @@ export default function Art() {
 
           <div className="masonry-column">
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={design}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={portrait}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={vitality}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={art2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={ace}
               className="nav-image fade-in-section"
@@ -233,21 +233,21 @@ export default function Art() {
             />
 
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={vitalityPoster}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={portrait2}
               className="nav-image fade-in-section"
               style={{ margin: "0px" }}
             />
             <img
-              loading="eager"
+              loading="lazy"
               alt="img"
               src={vandy}
               className="nav-image fade-in-section"

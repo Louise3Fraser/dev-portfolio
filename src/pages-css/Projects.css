@@ -36,6 +36,7 @@
   align-items: flex-start;
   gap: 20px;
   margin-bottom: 20px;
+
 }
 @media (max-width: 900px) {
   .descriptions {

@@ -193,7 +193,7 @@ export default function Moti() {
         />
       </div>
       <img
-        loading="eager"
+        loading="lazy"
         alt="img"
         src={table}
         className="nav-image"
@@ -383,7 +383,7 @@ export default function Moti() {
         />
       </div>
       <img
-        loading="eager"
+        loading="lazy"
         alt="img"
         src={wireframe}
         className="nav-image"
@@ -416,7 +416,7 @@ export default function Moti() {
         />
       </div>
       <img
-        loading="eager"
+        loading="lazy"
         alt="img"
         src={motiAll}
         className="nav-image"

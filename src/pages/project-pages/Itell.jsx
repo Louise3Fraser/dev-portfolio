@@ -10,11 +10,12 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import proposal from "../../docs/designProposal.pdf";
 import notion from "../../media/itell/notion.png";
 import feedback from "../../media/itell/feedback.png";
+import change from "../../media/itell/change.png";
 
 export default function Itell() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
@@ -87,7 +88,6 @@ export default function Itell() {
             color: "#EA5F27",
             fontWeight: "600",
             fontSize: "14px",
-            marginBottom: "40px",
           }}
         >
           PROPOSAL
@@ -125,7 +125,7 @@ export default function Itell() {
           <li>etc.</li>
         </ul>
 
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div style={{ display: "flex", flexDirection: "row", paddingBottom: "20px" }}>
           <p className="body-main">Download full proposal here!</p>
           <motion.button
             whileHover={{
@@ -144,6 +144,15 @@ export default function Itell() {
           ]}
           images={[]}
         />
+      </div>
+      <img
+        loading="lazy"
+        alt="img"
+        src={change}
+        className="nav-image"
+        style={{ maxWidth: "100%" }}
+      />
+      <div className="project-main">
         <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
           <li>
             Textbook interface refresh: line width, contrast, sizing and
@@ -156,15 +165,17 @@ export default function Itell() {
           <li>Color scheme and logo update</li>
           <li>Various minor changes</li>
         </ul>
+        <div style={{height: "30px"}}/>
+      </div>
         <hr style={{ width: "12vw" }} />
 
+      <div className="project-main">
         <h4
           className="job"
           style={{
             color: "#EA5F27",
             fontWeight: "600",
             fontSize: "14px",
-            marginBottom: "40px",
           }}
         >
           ORGANIZATION
@@ -185,10 +196,9 @@ export default function Itell() {
             in order to gather feedback from the LEAR lab. More detailed explanations of 
             the changes are included in the design proposal.`,
           ]}
-          images={[feedback]}
+          images={[]}
         />
-                <p className="job">To be updated...</p>
-
+        <p className="job">Project to be completed December 10th!</p>
       </div>
 
       <Footer />

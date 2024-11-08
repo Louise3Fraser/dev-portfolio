@@ -3,7 +3,7 @@ import ProjectCards from "../components/cards/ProjectCards";
 import carshare from "../media/carshare/carshare.png";
 import mushroom from "../media/mushroom/mushroomCover.png";
 import sarratt from "../media/sarratt/sarrattCover.png";
-import itell from "../media/itell/itellCoverS.png";
+import itell from "../media/itell/itellCoverS2.png";
 import "../pages-css/Projects.css";
 import v1Big from "../media/versions/v1Cover.png";
 import v2Big from "../media/versions/v2Cover.png";

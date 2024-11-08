@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function ProjectCards({ title, src, subtext, path, desc }) {
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
     const observer = new IntersectionObserver((entries) => {
@@ -34,7 +34,7 @@ export default function ProjectCards({ title, src, subtext, path, desc }) {
           onClick={() => navigate(path)}
           className="project-card"
         >
-          <img loading="eager"
+          <img loading="lazy"
             alt={title}
             src={src}
             className="card-src"

@@ -33,7 +33,7 @@ export default function ProjectHeading({
           {subTitle}
 
           {progress ? (
-            <span style={{ color: "#EA5F27", fontWeight: "500" }}>
+            <span style={{ color: "#6264D3", fontWeight: "500" }}>
               {"  "}*In progress
             </span>
           ) : (
@@ -44,12 +44,11 @@ export default function ProjectHeading({
       <div className="full-width-section">
         {type === "img" ? (
           <img
-            loading="eager"
+            loading="lazy"
             alt="img"
             src={img}
             style={{
               margin: "0px",
-              width: "50%",
               objectFit: "contain",
               borderRadius: "10px",
               marginBottom: bool ? "-280px" : "0px",

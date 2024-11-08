@@ -71,7 +71,7 @@ export default function CarShare() {
         <h4
           className="job"
           style={{
-            color: "#EA5F27",
+            color: "#6264D3",
             fontWeight: "600",
             fontSize: "14px",
           }}
@@ -80,7 +80,7 @@ export default function CarShare() {
         </h4>
         <Description title={"To be updated"} desc={[`...`]} images={[]} />
       </div>
-      {/* <img loading="eager"
+      {/* <img loading="lazy"
           alt="img"
           src={steps}
           className="fade-in-section"

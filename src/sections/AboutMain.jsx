@@ -121,7 +121,7 @@ export default function About() {
           }}
         >
           <img
-            loading="eager"
+            loading="lazy"
             alt="img"
             src={taz}
             className="nav-image fade-in-section"
