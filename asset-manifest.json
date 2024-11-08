@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dev-portfolio/static/css/main.eacf34a1.css",
-    "main.js": "/dev-portfolio/static/js/main.fd7bd879.js",
+    "main.css": "/dev-portfolio/static/css/main.b491db17.css",
+    "main.js": "/dev-portfolio/static/js/main.0fd231ea.js",
     "static/media/mushroom.mp4": "/dev-portfolio/static/media/mushroom.206f60e8757f64bd4ac9.mp4",
     "static/media/Table.png": "/dev-portfolio/static/media/Table.843e101c98b09475ef57.png",
     "static/media/v1.mp4": "/dev-portfolio/static/media/v1.bc8cb238202251381b60.mp4",
@@ -19,6 +19,7 @@
     "static/media/asce.png": "/dev-portfolio/static/media/asce.f00f5812b0d37f71d199.png",
     "static/media/invusion-2.png": "/dev-portfolio/static/media/invusion-2.43fc338c30f0af5d88c2.png",
     "static/media/marshmallow.png": "/dev-portfolio/static/media/marshmallow.d49408e620ac49830dcd.png",
+    "static/media/change.png": "/dev-portfolio/static/media/change.d997d8965c0ffef51835.png",
     "static/media/invusion-1.png": "/dev-portfolio/static/media/invusion-1.a7d0d40354b0719a1f6e.png",
     "static/media/v1Cover.png": "/dev-portfolio/static/media/v1Cover.2c1fae3a404d5554c3bc.png",
     "static/media/iceland.jpg": "/dev-portfolio/static/media/iceland.c03bdac329397ff98789.jpg",
@@ -41,7 +42,7 @@
     "static/media/sarratt-brushes.png": "/dev-portfolio/static/media/sarratt-brushes.b6e967d943fc6aacbe14.png",
     "static/media/sketches.png": "/dev-portfolio/static/media/sketches.c6bced5b8c06c7afe9da.png",
     "static/media/vitality.png": "/dev-portfolio/static/media/vitality.eab4b31c3a07dd76bb68.png",
-    "static/media/itellCoverS.png": "/dev-portfolio/static/media/itellCoverS.a484e1b8b09a07226a36.png",
+    "static/media/itellCoverS2.png": "/dev-portfolio/static/media/itellCoverS2.a484e1b8b09a07226a36.png",
     "static/media/sarratt.png": "/dev-portfolio/static/media/sarratt.3b271108923bf59bef92.png",
     "static/media/motiCoverEmpty.png": "/dev-portfolio/static/media/motiCoverEmpty.986090da6bf3a0104b30.png",
     "static/media/notion.png": "/dev-portfolio/static/media/notion.a7000999aa17659fa102.png",
@@ -64,11 +65,11 @@
     "static/media/flow.png": "/dev-portfolio/static/media/flow.5657ff5686e887c171c9.png",
     "static/media/oldLogo.jpg": "/dev-portfolio/static/media/oldLogo.491fbcb8ecb70c8e4c88.jpg",
     "index.html": "/dev-portfolio/index.html",
-    "main.eacf34a1.css.map": "/dev-portfolio/static/css/main.eacf34a1.css.map",
-    "main.fd7bd879.js.map": "/dev-portfolio/static/js/main.fd7bd879.js.map"
+    "main.b491db17.css.map": "/dev-portfolio/static/css/main.b491db17.css.map",
+    "main.0fd231ea.js.map": "/dev-portfolio/static/js/main.0fd231ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.eacf34a1.css",
-    "static/js/main.fd7bd879.js"
+    "static/css/main.b491db17.css",
+    "static/js/main.0fd231ea.js"
   ]
 }
