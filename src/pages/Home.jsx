@@ -21,8 +21,7 @@ function Home() {
         <p className="header-largest">
           Upcoming graduate at Vanderbilt University,
         </p>
-        <p className="header-largest">aspiring designer and
-          coder.{" "}
+        <p className="header-largest">aspiring product designer.{" "}
         </p>
       </div>
       <Projects />

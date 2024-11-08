@@ -34,7 +34,7 @@ export default function Footer() {
       >
         <p className="body-main">@2024</p>
         <p className="body-main">
-          Coded from scratch by me
+          Coded from scratch
           <i className="em em-star2" role="presentation" aria-label=""></i>
         </p>
       </div>

@@ -13,9 +13,9 @@ import feedback from "../../media/itell/feedback.png";
 import change from "../../media/itell/change.png";
 
 export default function Itell() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
