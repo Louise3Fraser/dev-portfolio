@@ -5,7 +5,7 @@ import Footer from "../../components/organization/Footer";
 import ProjectHeading from "../../components/ProjectHeading";
 import Overview from "../../components/Overview";
 import Description from "../../components/organization/Description";
-import motiCoverEmpty from "../../media/moti/motiCoverEmpty.png";
+import motiCoverEmpty from "../../media/moti/motiCoverMain.png";
 import motiAll from "../../media/moti/mockup-final.png";
 import table from "../../media/moti/Table.png";
 import brand from "../../media/moti/brand.png";
@@ -13,14 +13,23 @@ import low from "../../media/moti/low.png";
 import map from "../../media/moti/map.png";
 import flow from "../../media/moti/flow.png";
 import wireframe from "../../media/moti/wireframe.png";
+import noti from "../../media/moti/notifications.png";
+import stars from "../../media/moti/stars.png";
+import zoom from "../../media/moti/zoom.png";
+
+import searchVid from "../../media/moti/search.mp4";
+import Side from "../../components/organization/Side";
+import SideImage from "../../components/organization/SideImage";
+import Question from "../../components/organization/Question";
+import VideoOverlay from "../../components/organization/VideoOverlay";
 
 export default function Moti() {
   const themeQuery = useTheme();
   const screenSizeLg = useMediaQuery(themeQuery.breakpoints.up("lg"));
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <div className="project">
@@ -31,213 +40,322 @@ export default function Moti() {
           subTitle={"Product Design, Branding, UX"}
           img={motiCoverEmpty}
           type={"img"}
+          yes={true}
         />
       </div>
+
       <Overview
-        overview={[`Moti is a meditation app designed to cultivate 
-            mindfulness and motivation through guided meditations and progress tracking.`]}
-        goals={[
-          `The primary goal of Moti is to create an engaging and simple 
-            app that encourages individuals to develop mindfulness 
-            habits. By providing motivation tools, such as daily reminders and emotion/streak tracking,
-            Moti aims to make daily meditation a reachable goal. `,
-        ]}
         problem={`Many individuals struggle to maintain consistency with daily meditation. 
             Factors such as busy schedules, lacking motivation, and not seeing results 
             right away can hinder a person’s ability to develop their own mindfulness routine. `}
-        tasks={[
-          "Low/high fidelity mockups",
-          "Affinity mapping",
-          "Conducting interviews",
-          "Competetive analysis",
-          "Site mapping",
-          "Graphic design",
-        ]}
+        tasks={["Product Design", "Branding", "UX"]}
         dates={"Aug. 2024"}
         roles={["UX/UI Designer"]}
         project={"Personal Project"}
       />
+
+      {/* overview---------------------------- */}
+
+      <h4
+        className="job"
+        style={{
+          color: "#EA5F27",
+          fontWeight: "600",
+          fontSize: "14px",
+          marginBottom: "40px",
+        }}
+      >
+        OVERVIEW
+      </h4>
       <div className="project-main">
+        <Side
+          title={"Brief"}
+          // subtitle={"An app to cultivate mindfulness and motivation."}
+          desc={[
+            <>
+              Moti is a meditation app designed to cultivate mindfulness and
+              motivation through guided meditations and progress tracking. I
+              completed this project over the course of a month and gained
+            </>,
+          ]}
+          bottom={true}
+        />
+        <Side
+          title={"Problem"}
+          // subtitle={"Consistency is hard."}
+          desc={[
+            <>
+              Amid the mental health crisis our world faces,{" "}
+              <strong>meditation</strong> has repeatedly proven to be an
+              invaluable tool for taking steps in the right direction.
+            </>,
+            <>
+              However, many individuals struggle to maintain consistency with
+              daily meditation. Factors such as <strong>busy schedules</strong>,{" "}
+              lacking <strong>motivation</strong>, and not seeing{" "}
+              <strong>results</strong> right away can hinder a person’s ability
+              to develop their own mindfulness routine.
+            </>,
+          ]}
+        />
+        <Question
+          content={
+            <div
+              className="header-question"
+              style={{
+                textAlign: "start",
+                marginTop: "30px",
+                fontSize: "22px",
+              }}
+            >
+              How can I create an app that fosters consistent mediation
+              practice?
+            </div>
+          }
+        />
+        <Side
+          title={"Goals"}
+          // subtitle={"Consistency is hard."}
+          desc={[
+            <>
+              The primary goal of Moti is to create an engaging and simple app
+              that encourages individuals to develop mindfulness habits. By
+              providing motivation tools, such as daily reminders and
+              emotion/streak tracking, Moti aims to make daily meditation a
+              reachable goal.
+            </>,
+            <SideImage
+              content={ <img
+                loading="lazy"
+                alt="img"
+                src={noti}
+                className="nav-image"
+                style={{ maxWidth: "100%", marginBottom: "100px" }}
+              />}
+              list={[
+                "Notification system",
+                "Streak tracking",
+                "Emotion tracking",
+              ]}
+            
+            />,
+          ]}
+        />
+
+        {/* research---------------------------- */}
+        {/* <VideoOverlay video={searchVid} /> */}
         <h4
           className="job"
           style={{
             color: "#EA5F27",
             fontWeight: "600",
             fontSize: "14px",
+            marginBottom: "40px",
           }}
         >
           RESEARCH
         </h4>
-        <Description
+        <Side
           title={"Interviews"}
           desc={[
-            `To gain insights into the needs and preferences of potential users, interviews
-            were conducted with friends, family, and peers. Here are some highlights from these discussions:`,
+            <>
+              To gain insights into the needs and preferences of potential
+              users, interviews were conducted with friends, family, and peers.
+              Here are some highlights from these discussions:
+            </>,
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "20px" }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0px",
+                }}
+              >
+                <p className="body-main quote">
+                  "It's hard for me to stay consistent with meditation. I either
+                  forget or eventually lose motivation."
+                </p>
+                <p className="body-main quote">
+                  "I think meditation would be helpful but I just haven't done
+                  it yet."
+                </p>
+              </div>
+              <p className="body-main">
+                I interviewed 13 people in total, ages ranging from 16-52 years
+                old. Some stats from five of my interviewees:
+              </p>
+              <ul
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "10px",
+                }}
+              >
+                <li>
+                  <span style={{ textDecoration: "" }}>Greer:</span> 21yo
+                  college student, pre-med track
+                </li>
+                <li>
+                  <span style={{ textDecoration: "" }}>Beckett:</span> 16yo high
+                  school student, athlete
+                </li>
+                <li>
+                  <span style={{ textDecoration: "" }}>Mary:</span> 21yo college
+                  student, cs track
+                </li>
+                <li>
+                  <span style={{ textDecoration: "" }}>Grace:</span> 26yo nurse
+                  in training
+                </li>
+                <li>
+                  <span style={{ textDecoration: "" }}>Stephen:</span> 43yo
+                  doctor
+                </li>
+              </ul>
+            </div>,
+            <img
+              loading="lazy"
+              alt="img"
+              src={zoom}
+              className="nav-image"
+              style={{ maxWidth: "100%", marginBottom: "100px" }}
+            />,
           ]}
-          images={[]}
+          bottom={true}
         />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: screenSizeLg ? "row" : "column",
-            gap: screenSizeLg ? "20px" : "0px",
-          }}
-        >
-          <div style={{ flex: "1" }}>
-            <p className="body-main quote">
-              "I've never meditated before. I would be interested but feel like
-              I'm currently too busy."
-            </p>
-            <p className="body-main quote">
-              "I've 'informally' meditated with breathing and just being
-              mindful."
-            </p>
-          </div>
-          <div style={{ flex: "1" }}>
-            <p className="body-main quote">
-              "It's hard for me to stay consistent with meditation. I either
-              forget or eventually lose motivation."
-            </p>
-            <p className="body-main quote">
-              "I think meditation would be helpful but I just haven't done it
-              yet."
-            </p>
-          </div>
-        </div>
-        <p className="body-main">
-          I interviewed 13 people in total, ages ranging from 16-52 years old.
-          Some stats from five of my interviewees:
-        </p>
-        <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          <li>
-            <span style={{ textDecoration: "" }}>Greer:</span> 21yo college
-            student, pre-med track
-          </li>
-          <li>
-            <span style={{ textDecoration: "" }}>Beckett:</span> 16yo high
-            school student, athlete
-          </li>
-          <li>
-            <span style={{ textDecoration: "" }}>Mary:</span> 21yo college
-            student, cs track
-          </li>
-          <li>
-            <span style={{ textDecoration: "" }}>Grace:</span> 26yo nurse in
-            training
-          </li>
-          <li>
-            <span style={{ textDecoration: "" }}>Stephen:</span> 43yo doctor
-          </li>
-        </ul>
-        <Description
+        <img
+          loading="lazy"
+          alt="img"
+          src={map}
+          className="nav-image"
+          style={{ maxWidth: "100%", marginBottom: "100px" }}
+        />
+        <Side
           title={"Affinity Mapping"}
           desc={[
             `Using interviews from five of the people, I created an Affinity Map in Figma
              in order to organize our discussions into the most common categories and subsequentially 
              highlight the most important issues to address.`,
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <p className="job">Key Findings</p>
+              <ul
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "10px",
+                }}
+              >
+                <li>
+                  <span style={{ textDecoration: "underline" }}>
+                    Lack of Confidence:
+                  </span>{" "}
+                  There is a general lack of knowledge and/or confidence
+                  surrounding meditating correctly. Some people believed they
+                  were using making mistakes, that they "weren't doing it
+                  right." This provides support for a clear and
+                  beginner-friendly app.
+                </li>
+                <li>
+                  <span style={{ textDecoration: "underline" }}>
+                    Uncertainty:
+                  </span>{" "}
+                  Some people were uncertain about meditation as a whole,
+                  whether that be from lack of knowledge, doubt, or just
+                  unfamiliarity with the subject.
+                </li>
+                <li>
+                  <span style={{ textDecoration: "underline" }}>Variety:</span>{" "}
+                  Those who had used apps before expressed how they valued
+                  having lots of meditation options/topics.
+                </li>
+                <li>
+                  <span style={{ textDecoration: "underline" }}>
+                    Aesthetic appeal:
+                  </span>{" "}
+                  People emphasized that the app should be pleasant to look at.
+                  More specifically, they wanted apps that were light and
+                  colorful.
+                </li>
+                <li>
+                  <span style={{ textDecoration: "underline" }}>
+                    Stuck in emotions:
+                  </span>{" "}
+                  As for reasons for starting, the interviews highlighted that
+                  people would be willing to try meditation because they feel
+                  stuck emotionally or mentally. Some people want to manage and
+                  understand their emotions better. Others have more specific
+                  targets, such as depression or anxiety.
+                </li>
+                <li>
+                  <span style={{ textDecoration: "underline" }}>
+                    Habit forming:
+                  </span>{" "}
+                  Being able to see progress is the most motivating factor in
+                  forming a habit.
+                </li>
+              </ul>
+            </div>,
           ]}
-          images={[map]}
+          bottom={true}
         />
-        <p className="job">Key Findings</p>
-        <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          <li>
-            <span style={{ textDecoration: "underline" }}>
-              Lack of Confidence:
-            </span>{" "}
-            There is a general lack of knowledge and/or confidence surrounding
-            meditating correctly. Some people believed they were using making
-            mistakes, that they "weren't doing it right." This provides support
-            for a clear and beginner-friendly app.
-          </li>
-          <li>
-            <span style={{ textDecoration: "underline" }}>Uncertainty:</span>{" "}
-            Some people were uncertain about meditation as a whole, whether that
-            be from lack of knowledge, doubt, or just unfamiliarity with the
-            subject.
-          </li>
-          <li>
-            <span style={{ textDecoration: "underline" }}>Variety:</span> Those
-            who had used apps before expressed how they valued having lots of
-            meditation options/topics.
-          </li>
-          <li>
-            <span style={{ textDecoration: "underline" }}>
-              Aesthetic appeal:
-            </span>{" "}
-            People emphasized that the app should be pleasant to look at. More
-            specifically, they wanted apps that were light and colorful.
-          </li>
-          <li>
-            <span style={{ textDecoration: "underline" }}>
-              Stuck in emotions:
-            </span>{" "}
-            As for reasons for starting, the interviews highlighted that people
-            would be willing to try meditation because they feel stuck
-            emotionally or mentally. Some people want to manage and understand
-            their emotions better. Others have more specific targets, such as
-            depression or anxiety.
-          </li>
-          <li>
-            <span style={{ textDecoration: "underline" }}>Habit forming:</span>{" "}
-            Being able to see progress is the most motivating factor in forming
-            a habit.
-          </li>
-        </ul>
-        <Description
+        <Side
           title={"Competetive Analysis"}
           desc={[
             `Next, I looked to analyze the current top meditation apps. 
             In observing these apps, several key competetors were identified:`,
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <p className="job">Key Findings</p>
+              <ul
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "10px",
+                }}
+              >
+                <li>Guided meditations were available in all the apps.</li>
+                <li>
+                  Basic free tier for most apps, and users need to upgrade and
+                  pay to get premium content. Often, the freemium content is
+                  very limited.
+                </li>
+                <li>
+                  Wide range of content is a major strength BUT has the
+                  potential to be confusing to some users.
+                </li>
+                <li>
+                  All these top apps have various voice options. Some even
+                  feature celebrity narrators.
+                </li>
+              </ul>
+            </div>,
           ]}
           images={[]}
+          bottom={true}
         />
-      </div>
-      <img
-        loading="lazy"
-        alt="img"
-        src={table}
-        className="nav-image"
-        style={{ maxWidth: "100%" }}
-      />
-      <div className="project-main">
-        <p className="job" style={{ paddingTop: "40px" }}>
-          Key Findings
-        </p>
-        <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          <li>Guided meditations were available in all the apps.</li>
-          <li>
-            Basic free tier for most apps, and users need to upgrade and pay to
-            get premium content. Often, the freemium content is very limited.
-          </li>
-          <li>
-            Wide range of content is a major strength BUT has the potential to
-            be confusing to some users.
-          </li>
-          <li>
-            All these top apps have various voice options. Some even feature
-            celebrity narrators.
-          </li>
-        </ul>
-        <hr style={{ width: "12vw" }} />
+        {/* define---------------------------- */}
+
         <h4
           className="job"
           style={{
             color: "#EA5F27",
             fontWeight: "600",
             fontSize: "14px",
+            marginBottom: "40px",
           }}
         >
           DEFINE
         </h4>
-        <Description
+        <Side
           title={"Target Audience"}
           desc={[
             `Moti targets individuals with busy lives (professionals, students, parents 
                 alike) who value flexibility and ease of use.`,
           ]}
-          images={[]}
+          bottom={true}
         />
-        <Description
+        <Side
           title={"User Persona"}
           desc={[
             `After synthesizing my initial research, I was ready to develop a primary persona that 
@@ -247,42 +365,49 @@ export default function Moti() {
             throughout her life. Despite knowing the benefits of meditation, she is 
             unable to find time for herself. She has tried using meditation apps in the past but it has 
             'never stuck.'`,
+            <ul
+              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+            >
+              <li>
+                <span style={{ textDecoration: "underline" }}>Age:</span> 26
+              </li>
+              <li>
+                <span style={{ textDecoration: "underline" }}>Location:</span>{" "}
+                Boston, MA
+              </li>
+              <li>
+                <span style={{ textDecoration: "underline" }}>Occupation:</span>{" "}
+                office clerk
+              </li>
+              <li>
+                <span style={{ textDecoration: "underline" }}>Goals:</span>{" "}
+                start meditating, reduce anxiety, manage time more efficiently
+              </li>
+              <li>
+                <span style={{ textDecoration: "underline" }}>
+                  Frustrations:
+                </span>{" "}
+                not enough time in the day, feels controlled by her emotions
+              </li>
+            </ul>,
           ]}
           images={[]}
-        />{" "}
-        <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          <li>
-            <span style={{ textDecoration: "underline" }}>Age:</span> 26
-          </li>
-          <li>
-            <span style={{ textDecoration: "underline" }}>Location:</span>{" "}
-            Boston, MA
-          </li>
-          <li>
-            <span style={{ textDecoration: "underline" }}>Occupation:</span>{" "}
-            office clerk
-          </li>
-          <li>
-            <span style={{ textDecoration: "underline" }}>Goals:</span> start
-            meditating, reduce anxiety, manage time more efficiently
-          </li>
-          <li>
-            <span style={{ textDecoration: "underline" }}>Frustrations:</span>{" "}
-            not enough time in the day, feels controlled by her emotions
-          </li>
-        </ul>
-        <hr style={{ width: "12vw" }} />
+        />
+
+        {/* design---------------------------- */}
+
         <h4
           className="job"
           style={{
             color: "#EA5F27",
             fontWeight: "600",
             fontSize: "14px",
+            marginBottom: "40px",
           }}
         >
           DESIGN
         </h4>
-        <Description
+        <Side
           title={"Putting it all together"}
           desc={[
             `Based on the research findings, I began designing the app. Listed below is a collection
@@ -291,6 +416,12 @@ export default function Moti() {
           ]}
           images={[]}
         />
+
+        <SideImage
+          desc={["Notification system", "Streak tracking", "Emotion tracking"]}
+          content={<VideoOverlay video={searchVid} />}
+        />
+
         <p className="job">To include:</p>
         <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
           <li>
@@ -356,24 +487,39 @@ export default function Moti() {
             would feel more comfortable with a more masculine or feminine voice.
           </li>
         </ul>
-        <Description
+        <Side
           title={"Site Map"}
           desc={[
             `The site map outlines the structure of Moti, highlighting key sections 
             such as the home and explore pages, meditation categories, and profile features.`,
           ]}
-          images={[flow]}
+          bottom={true}
         />
-        <Description
+        <img
+          loading="lazy"
+          alt="img"
+          src={flow}
+          className="nav-image"
+          style={{ maxWidth: "100%", marginBottom: "100px" }}
+        />
+        <Side
           title={"Low-Fidelity Prototype"}
           desc={[
             `The low-fidelity prototype was designed to test 
             basic layouts and user flow before
              adding more detail. This stage involved gathering initial feedback.`,
           ]}
+          bottom={true}
           images={[low]}
         />
-        <Description
+        <img
+          loading="lazy"
+          alt="img"
+          src={low}
+          className="nav-image"
+          style={{ maxWidth: "100%", marginBottom: "100px" }}
+        />
+        <Side
           title={"Digital Wireframes"}
           desc={[
             `I next created the digital wireframes, keeping in mind a simple user interface that
@@ -381,15 +527,13 @@ export default function Moti() {
           ]}
           images={[]}
         />
-      </div>
-      <img
-        loading="lazy"
-        alt="img"
-        src={wireframe}
-        className="nav-image"
-        style={{ maxWidth: "100%", marginBottom: "20px" }}
-      />
-      <div className="project-main">
+        <img
+          loading="lazy"
+          alt="img"
+          src={wireframe}
+          className="nav-image"
+          style={{ maxWidth: "100%", marginBottom: "20px" }}
+        />
         <Description
           title={"Branding"}
           desc={[

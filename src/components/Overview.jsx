@@ -43,7 +43,7 @@ export default function Overview({
   }, []);
 
   return (
-    <div>
+    <div style={{marginBottom:"100px"}}>
       <div
         style={{
           display: "flex",
@@ -130,7 +130,7 @@ export default function Overview({
           <></>
         )}
       </div>
-      <div className="overview" style={{ flexDirection: "column" }}>
+      {/* <div className="overview" style={{ flexDirection: "column" }}>
         <div
           style={{
             display: "flex",
@@ -148,26 +148,33 @@ export default function Overview({
               marginBottom: "10px",
             }}
           >
-            OVERVIEW
+            1. OVERVIEW
           </h4>
+          {overview ? (
+            <div className="descriptions">
+              <h4 className="header-bold-small" style={{ flex: "1 0 30%" }}>
+                Background
+              </h4>
+              {overview.map((p) => {
+                return <p className="body-main overview-p">{p}</p>;
+              })}
+            </div>
+          ) : (
+            <></>
+          )}
 
-          <div className="descriptions">
-            <h4 className="header-bold-small" style={{ flex: "1 0 30%" }}>
-              Background
-            </h4>
-            {overview.map((p) => {
-              return <p className="body-main overview-p">{p}</p>;
-            })}
-          </div>
-
-          <div className="descriptions">
-            <h4 className="header-bold-small" style={{ flex: "1 0 30%" }}>
-              Goals
-            </h4>
-            {goals.map((p) => {
-              return <p className="body-main overview-p">{p}</p>;
-            })}
-          </div>
+          {goals ? (
+            <div className="descriptions">
+              <h4 className="header-bold-small" style={{ flex: "1 0 30%" }}>
+                Goals
+              </h4>
+              {goals.map((p) => {
+                return <p className="body-main overview-p">{p}</p>;
+              })}
+            </div>
+          ) : (
+            <></>
+          )}
 
           {problem ? (
             <div className="descriptions">
@@ -180,8 +187,7 @@ export default function Overview({
             <></>
           )}
         </div>
-      </div>{" "}
-      <hr style={{ width: "12vw" }} />
+      </div>{" "} */}
     </div>
   );
 }

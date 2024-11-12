@@ -4,9 +4,11 @@ import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
+    <div className="app-container">
+
     <BrowserRouter basename="/dev-portfolio">
       <AppRouter />
-    </BrowserRouter>
+    </BrowserRouter></div>
   );
 }
 

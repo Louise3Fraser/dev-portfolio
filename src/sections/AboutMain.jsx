@@ -5,6 +5,8 @@ import "../pages-css/Art.css";
 import { useTheme, useMediaQuery } from "@mui/material";
 import Column from "../components/organization/Column";
 import taz from "../media/taz.jpg";
+import solo from "../media/solo.png";
+
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { motion } from "framer-motion";
 import resume from "../docs/resume.pdf";
@@ -123,7 +125,7 @@ export default function About() {
           <img
             loading="lazy"
             alt="img"
-            src={taz}
+            src={solo}
             className="nav-image fade-in-section"
             style={{
               flex: "1",

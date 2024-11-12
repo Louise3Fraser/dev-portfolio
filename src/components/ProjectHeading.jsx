@@ -9,6 +9,7 @@ export default function ProjectHeading({
   type,
   bool,
   progress,
+  yes,
 }) {
   const themeQuery = useTheme();
   const screenSize = useMediaQuery(themeQuery.breakpoints.up("lg"));
@@ -16,32 +17,9 @@ export default function ProjectHeading({
   return (
     <div className="project-heading">
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+        className="full-width-section"
+        style={{ paddingBottom: yes ? "0px" : "" }}
       >
-        <h4 className="header-largest">{title}</h4>
-        <h4
-          className="body-main"
-          style={{
-            maxWidth: screenSize ? "50%" : "100%",
-            marginBottom: "30px",
-          }}
-        >
-          {subTitle}
-
-          {progress ? (
-            <span style={{ color: "#6264D3", fontWeight: "500" }}>
-              {"  "}*In progress
-            </span>
-          ) : (
-            <></>
-          )}
-        </h4>
-      </div>
-      <div className="full-width-section">
         {type === "img" ? (
           <img
             loading="lazy"
@@ -70,6 +48,35 @@ export default function ProjectHeading({
             }}
           />
         )}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+        }}
+      >
+        <h4 style={{
+            maxWidth: screenSize ? "50%" : "100%",
+            marginBottom: "30px",
+          }} className="header-largest">{title}</h4>
+        {/* <h4
+          className="body-main"
+          style={{
+            maxWidth: screenSize ? "50%" : "100%",
+            marginBottom: "30px",
+          }}
+        >
+          {subTitle}
+
+          {progress ? (
+            <span style={{ color: "#EA5F27", fontWeight: "500" }}>
+              {"  "}*In progress
+            </span>
+          ) : (
+            <></>
+          )}
+        </h4> */}
       </div>
     </div>
   );

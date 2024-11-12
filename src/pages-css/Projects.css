@@ -21,8 +21,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 60px;
-  margin-left: 14vw;
-  margin-right: 14vw;
 }
 
 .main {
@@ -86,21 +84,19 @@
 
 .full-width-section {
   background-color: #f2efe9;
-  width: 100vw;
   padding: 20px 0;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
   position: relative;
-  margin-left:-14vw;
-  height: 400px;
+  height: 450px;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 /* Image container adjustments */
 .full-width-section img {
-  width: 100%; /* Ensures image stretches across full width */
   max-width: none; /* Prevents image from shrinking */
   height: auto; /* Maintains the aspect ratio */
 }
@@ -181,22 +177,6 @@
   max-width: 240px;
 }
 
-.project-main {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-left: 13vw;
-  margin-right: 13vw;
-}
-
-@media (max-width: 900px) {
-  .project-main {
-    margin-left: 0vw;
-    margin-right: 0vw;
-  }
-}
-
-
 .quote {
   display: flex;
   background-color: #f2efe9;
@@ -215,4 +195,31 @@
   background-color: #12144c;
   padding: 2px 10px;
   border-radius: 5px;
+}
+
+.container {
+  position: relative;
+  width: 400px; /* Adjust width based on the PNG image size */
+  height: auto;
+  overflow: hidden; /* Keeps video within the container */
+}
+
+.overlay-video {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 87%;
+  transform: translate(-50%, -55%);
+  object-fit: contain; /* Scales the video to fit entirely within the container */
+  pointer-events: none;
+}
+
+.overlay-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1; /* Places the image above the video */
 }

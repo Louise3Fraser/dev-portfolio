@@ -46,7 +46,7 @@ export default function Navigation() {
   };
 
   return (
-    <div style={{marginBottom: "100px"}}>
+    <div style={{marginBottom: "50px"}}>
       <div
         className="navigation"
         style={{

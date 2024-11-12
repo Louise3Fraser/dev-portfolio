@@ -26,9 +26,7 @@
   flex-direction: column;
 }
 
-.large {
-  margin-left: -10vw;
-}
+
 .landing {
   width: 100%;
   display: flex;
