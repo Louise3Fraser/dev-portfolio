@@ -4,7 +4,7 @@ import "../../pages-css/Navigation.css";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
-import logo from "../../media/logo.png"
+import logo from "../../media/logo.png";
 export default function Navigation() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -46,32 +46,31 @@ export default function Navigation() {
   };
 
   return (
-    <div style={{marginBottom: "50px"}}>
-      <div
-        className="navigation"
+    <div
+      className="navigation"
+      style={{
+        flexDirection: screenSizeSm ? "row" : "column",
+        alignItems: screenSizeSm ? "flex-end" : "center",
+        gap: screenSizeSm ? "0px" : "20px",
+        marginBottom: "50px",
+      }}
+    >
+      <img
+        loading="lazy"
+        alt="img"
+        src={logo}
+        onClick={() => navigate("/")}
         style={{
-          flexDirection: screenSizeSm ? "row" : "column",
-          alignItems: screenSizeSm ? "flex-end" : "center",
-          gap: screenSizeSm ? "0px" : "20px"
+          margin: "0px",
+          width: "40px",
+          objectFit: "contain",
+          cursor: "pointer",
         }}
-      >
-         <img loading="lazy"
-            alt="img"
-            src={logo}
-            
-            onClick={() => navigate("/")}
-            style={{
-              margin: "0px",
-              width: "40px",
-              objectFit: "contain",
-              cursor: "pointer"
-            }}
-          />
-        <div className="menu-items">
-          {renderMenuButton("Work", "/")}
-          {renderMenuButton("Art", "/art")}
-          {renderMenuButton("About", "/about")}
-        </div>
+      />
+      <div className="menu-items">
+        {renderMenuButton("Work", "/")}
+        {renderMenuButton("Art", "/art")}
+        {renderMenuButton("About", "/about")}
       </div>
     </div>
   );

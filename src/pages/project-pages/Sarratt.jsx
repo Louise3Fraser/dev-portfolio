@@ -64,7 +64,7 @@ export default function Sarratt() {
         <h4
           className="job"
           style={{
-            color: "#6264D3",
+            color: "#EA5F27",
             fontWeight: "600",
             fontSize: "14px",
           }}
@@ -91,7 +91,7 @@ export default function Sarratt() {
         <h4
           className="job"
           style={{
-            color: "#6264D3",
+            color: "#EA5F27",
             fontWeight: "600",
             fontSize: "14px",
           }}
@@ -116,7 +116,7 @@ export default function Sarratt() {
         <h4
           className="job"
           style={{
-            color: "#6264D3",
+            color: "#EA5F27",
             fontWeight: "600",
             fontSize: "14px",
           }}

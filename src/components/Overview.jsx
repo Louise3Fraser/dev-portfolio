@@ -9,6 +9,7 @@ export default function Overview({
   overview,
   goals,
   problem,
+  title,
   tasks,
   dates,
   url,
@@ -19,7 +20,7 @@ export default function Overview({
   clientURL,
 }) {
   const theme = useTheme();
-  const screenSizeSm = useMediaQuery(theme.breakpoints.up("md"));
+  const screenSize = useMediaQuery(theme.breakpoints.up("md"));
 
   useEffect(() => {
     const highlights = document.querySelectorAll(".fade-in-section");
@@ -43,11 +44,20 @@ export default function Overview({
   }, []);
 
   return (
-    <div style={{marginBottom:"100px"}}>
+    <div style={{ marginBottom: "100px" }}>
+      <h4
+        style={{
+          maxWidth: screenSize ? "50%" : "100%",
+          marginBottom: "30px",
+        }}
+        className="header-largest"
+      >
+        {title}
+      </h4>
       <div
         style={{
           display: "flex",
-          flexDirection: screenSizeSm ? "row" : "column",
+          flexDirection: screenSize ? "row" : "column",
           gap: "30px",
           justifyContent: "space-between",
         }}
